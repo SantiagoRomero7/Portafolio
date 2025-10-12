@@ -47,7 +47,34 @@
     <section class="about" id="about">
         <h2 class="section__title">Sobre Mí</h2>
         <div class="about__container">
-            <img src="./img/sobremi.jpeg" alt="Foto de perfil" class="about__img">
+            <!-- Carrusel de Imágenes -->
+            <div class="carousel">
+                <div class="carousel__container">
+                    <div class="carousel__slide active">
+                        <img src="./img/sobremi2.jpeg" alt="Foto 1" class="carousel__img">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="./img/sobremi.jpeg" alt="Foto 2" class="carousel__img">
+                    </div>
+                </div>
+                
+                <!-- Botones de navegación -->
+                <button class="carousel__btn carousel__btn--prev" id="prevBtn">
+                    <span>&#10094;</span>
+                </button>
+                <button class="carousel__btn carousel__btn--next" id="nextBtn">
+                    <span>&#10095;</span>
+                </button>
+                
+                <!-- Indicadores -->
+                <div class="carousel__indicators">
+                    <span class="carousel__dot active" data-slide="0"></span>
+                    <span class="carousel__dot" data-slide="1"></span>
+                    <span class="carousel__dot" data-slide="2"></span>
+                    <span class="carousel__dot" data-slide="3"></span>
+                </div>
+            </div>
+
             <div class="about__text">
                 <h3>Desarrollador apasionado por la tecnología</h3>
                 <p>
@@ -64,7 +91,7 @@
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+<!-- SKILLS SECTION -->
     <section class="skills" id="skills">
         <h2 class="section__title">Habilidades</h2>
         
@@ -72,49 +99,93 @@
         <div class="skills__category">
             <h3 class="skills__subtitle">💻 Habilidades Técnicas</h3>
             <div class="skills__container">
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">🌐</div>
                     <h3 class="skill__name">HTML5</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="50">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">🎨</div>
                     <h3 class="skill__name">CSS3</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">⚡</div>
                     <h3 class="skill__name">JavaScript</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="150">
+                    <span class="skill__level">Intermedio</span>
                     <div class="skill__icon">🐍</div>
                     <h3 class="skill__name">Python</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="skill__level">Intermedio</span>
                     <div class="skill__icon">💚</div>
                     <h3 class="skill__name">Node.js</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="250">
+                    <span class="skill__level">Intermedio</span>
                     <div class="skill__icon">🗄️</div>
                     <h3 class="skill__name">MySQL</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">🍃</div>
                     <h3 class="skill__name">MongoDB</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="350">
+                    <span class="skill__level">Intermedio</span>
                     <div class="skill__icon">🚀</div>
                     <h3 class="skill__name">Express</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">🔌</div>
                     <h3 class="skill__name">APIs REST</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="450">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">📋</div>
                     <h3 class="skill__name">JSON</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card">
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="skill__level">Avanzado</span>
                     <div class="skill__icon">🔧</div>
                     <h3 class="skill__name">Git</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -123,41 +194,68 @@
         <div class="skills__category">
             <h3 class="skills__subtitle">🌟 Habilidades Blandas</h3>
             <div class="skills__container">
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up">
                     <div class="skill__icon">🎯</div>
                     <h3 class="skill__name">Disciplina</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="50">
                     <div class="skill__icon">💪</div>
                     <h3 class="skill__name">Constancia</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="100">
                     <div class="skill__icon">⚡</div>
                     <h3 class="skill__name">Aprendizaje Rápido</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="150">
                     <div class="skill__icon">❤️</div>
                     <h3 class="skill__name">Empatía</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="200">
                     <div class="skill__icon">🔄</div>
                     <h3 class="skill__name">Adaptabilidad</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="250">
                     <div class="skill__icon">✅</div>
                     <h3 class="skill__name">Responsabilidad</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="300">
                     <div class="skill__icon">👑</div>
                     <h3 class="skill__name">Liderazgo</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="350">
                     <div class="skill__icon">🚀</div>
                     <h3 class="skill__name">Proactividad</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
-                <div class="skill__card skill__card--soft">
+                <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="400">
                     <div class="skill__icon">🤝</div>
                     <h3 class="skill__name">Compromiso</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,11 +267,11 @@
         <div class="projects__container">
             <!-- Proyecto 1 -->
             <article class="project__card">
-                <img src="https://via.placeholder.com/400x200/6366f1/ffffff?text=Proyecto+1" alt="Proyecto 1" class="project__img">
+                <img src="./img/proyecto1.png" alt="Proyecto 1" class="project__img">
                 <div class="project__content">
-                    <h3 class="project__title">Proyecto Ejemplo 1</h3>
+                    <h3 class="project__title">Velvet & Co - Tienda Web Interactiva</h3>
                     <p class="project__description">
-                        Descripción breve del proyecto y las tecnologías utilizadas.
+                        Aplicación web responsive que consume productos desde una API pública, permite la navegación por catálogo, filtrado, ordenamiento, búsqueda y administración de un carrito de compras con persistencia de datos.
                     </p>
                     <div class="project__tech">
                         <span class="tech__tag">HTML</span>
