@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio profesional de desarrollo web con proyectos y experiencia">
     <title>Mi Portafolio - Desarrollador Web</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- HEADER -->
@@ -30,7 +30,7 @@
     <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="hero__container">
-            <h1 class="hero__title">¡Hola! Soy [Tu Nombre]</h1>
+            <h1 class="hero__title">¡Hola! Soy Santiago Romero</h1>
             <p class="hero__subtitle">Desarrollador Full Stack</p>
             <p class="hero__description">
                 Transformo ideas en experiencias digitales increíbles. 
@@ -47,7 +47,7 @@
     <section class="about" id="about">
         <h2 class="section__title">Sobre Mí</h2>
         <div class="about__container">
-            <img src="https://via.placeholder.com/400x400/6366f1/ffffff?text=Tu+Foto" alt="Foto de perfil" class="about__img">
+            <img src="./img/sobremi.jpeg" alt="Foto de perfil" class="about__img">
             <div class="about__text">
                 <h3>Desarrollador apasionado por la tecnología</h3>
                 <p>
@@ -67,30 +67,98 @@
     <!-- SKILLS SECTION -->
     <section class="skills" id="skills">
         <h2 class="section__title">Habilidades</h2>
-        <div class="skills__container">
-            <div class="skill__card">
-                <div class="skill__icon">🌐</div>
-                <h3 class="skill__name">HTML5</h3>
+        
+        <!-- Habilidades Técnicas -->
+        <div class="skills__category">
+            <h3 class="skills__subtitle">💻 Habilidades Técnicas</h3>
+            <div class="skills__container">
+                <div class="skill__card">
+                    <div class="skill__icon">🌐</div>
+                    <h3 class="skill__name">HTML5</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🎨</div>
+                    <h3 class="skill__name">CSS3</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">⚡</div>
+                    <h3 class="skill__name">JavaScript</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🐍</div>
+                    <h3 class="skill__name">Python</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">💚</div>
+                    <h3 class="skill__name">Node.js</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🗄️</div>
+                    <h3 class="skill__name">MySQL</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🍃</div>
+                    <h3 class="skill__name">MongoDB</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🚀</div>
+                    <h3 class="skill__name">Express</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🔌</div>
+                    <h3 class="skill__name">APIs REST</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">📋</div>
+                    <h3 class="skill__name">JSON</h3>
+                </div>
+                <div class="skill__card">
+                    <div class="skill__icon">🔧</div>
+                    <h3 class="skill__name">Git</h3>
+                </div>
             </div>
-            <div class="skill__card">
-                <div class="skill__icon">🎨</div>
-                <h3 class="skill__name">CSS3</h3>
-            </div>
-            <div class="skill__card">
-                <div class="skill__icon">⚡</div>
-                <h3 class="skill__name">JavaScript</h3>
-            </div>
-            <div class="skill__card">
-                <div class="skill__icon">⚛️</div>
-                <h3 class="skill__name">React</h3>
-            </div>
-            <div class="skill__card">
-                <div class="skill__icon">📱</div>
-                <h3 class="skill__name">Responsive</h3>
-            </div>
-            <div class="skill__card">
-                <div class="skill__icon">🔧</div>
-                <h3 class="skill__name">Git</h3>
+        </div>
+
+        <!-- Habilidades Blandas -->
+        <div class="skills__category">
+            <h3 class="skills__subtitle">🌟 Habilidades Blandas</h3>
+            <div class="skills__container">
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">🎯</div>
+                    <h3 class="skill__name">Disciplina</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">💪</div>
+                    <h3 class="skill__name">Constancia</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">⚡</div>
+                    <h3 class="skill__name">Aprendizaje Rápido</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">❤️</div>
+                    <h3 class="skill__name">Empatía</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">🔄</div>
+                    <h3 class="skill__name">Adaptabilidad</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">✅</div>
+                    <h3 class="skill__name">Responsabilidad</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">👑</div>
+                    <h3 class="skill__name">Liderazgo</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">🚀</div>
+                    <h3 class="skill__name">Proactividad</h3>
+                </div>
+                <div class="skill__card skill__card--soft">
+                    <div class="skill__icon">🤝</div>
+                    <h3 class="skill__name">Compromiso</h3>
+                </div>
             </div>
         </div>
     </section>
