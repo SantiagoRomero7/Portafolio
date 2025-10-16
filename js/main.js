@@ -119,7 +119,7 @@ contactForm.addEventListener('submit', (e) => {
     const message = document.getElementById('message').value;
     
     // IMPORTANTE: Cambia 'tucorreo@ejemplo.com' por tu correo real
-    const mailtoLink = `mailto:tucorreo@ejemplo.com?subject=Contacto de ${encodeURIComponent(name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
+    const mailtoLink = `mailto:santirmrm420@gmail.com?subject=Contacto de ${encodeURIComponent(name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
     
     // Abrir cliente de correo
     window.location.href = mailtoLink;
