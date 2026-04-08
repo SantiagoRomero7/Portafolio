@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de desarrollo web con proyectos y experiencia">
+    <title>Mi Portafolio - Desarrollador Web</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Mi Portafolio</a>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#home" class="nav__link">Inicio</a></li>
+                <li><a href="#about" class="nav__link">Sobre Mí</a></li>
+                <li><a href="#skills" class="nav__link">Habilidades</a></li>
+                <li><a href="#projects" class="nav__link">Proyectos</a></li>
+                <li><a href="#contact" class="nav__link">Contacto</a></li>
+            </ul>
+            <div class="nav__toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero__container">
+            <h1 class="hero__title">¡Hola! Soy Santiago Romero</h1>
+            <p class="hero__subtitle">Desarrollador Full Stack</p>
+            <p class="hero__description">
+                Transformo ideas en experiencias digitales increíbles. 
+                Especializado en crear aplicaciones web modernas, responsivas y funcionales.
+            </p>
+            <div class="hero__buttons">
+                <a href="#projects" class="btn btn--primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn--secondary">Contáctame</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <h2 class="section__title">Sobre Mí</h2>
+        <div class="about__container">
+            <!-- Carrusel de Imágenes -->
+            <div class="carousel">
+                <div class="carousel__container">
+                    <div class="carousel__slide active">
+                        <img src="./img/sobremi2.jpeg" alt="Foto 1" class="carousel__img">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="./img/sobremi.jpeg" alt="Foto 2" class="carousel__img">
+                    </div>
+                </div>
+                
+                <!-- Botones de navegación -->
+                <button class="carousel__btn carousel__btn--prev" id="prevBtn">
+                    <span>&#10094;</span>
+                </button>
+                <button class="carousel__btn carousel__btn--next" id="nextBtn">
+                    <span>&#10095;</span>
+                </button>
+                
+                <!-- Indicadores -->
+                <div class="carousel__indicators">
+                    <span class="carousel__dot active" data-slide="0"></span>
+                    <span class="carousel__dot" data-slide="1"></span>
+                    <span class="carousel__dot" data-slide="2"></span>
+                    <span class="carousel__dot" data-slide="3"></span>
+                </div>
+            </div>
+
+            <div class="about__text">
+                <h3>Desarrollador apasionado por la tecnología</h3>
+                <p>
+                    Soy un desarrollador web con experiencia en la creación de aplicaciones 
+                    modernas y funcionales. Me apasiona el diseño limpio, el código eficiente 
+                    y las soluciones innovadoras.
+                </p>
+                <p>
+                    Durante mi formación, he trabajado en diversos proyectos que demuestran 
+                    mi capacidad para resolver problemas complejos y crear experiencias de 
+                    usuario excepcionales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- SKILLS SECTION -->
+    <section class="skills" id="skills">
+        <h2 class="section__title">Habilidades</h2>
+        
+        <!-- Habilidades Técnicas -->
+        <div class="skills__category">
+            <h3 class="skills__subtitle">💻 Habilidades Técnicas</h3>
+            <div class="skills__container">
+                <div class="skill__card" data-aos="fade-up">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">🌐</div>
+                    <h3 class="skill__name">HTML5</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="50">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">🎨</div>
+                    <h3 class="skill__name">CSS3</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">⚡</div>
+                    <h3 class="skill__name">JavaScript</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="150">
+                    <span class="skill__level">Intermedio</span>
+                    <div class="skill__icon">🐍</div>
+                    <h3 class="skill__name">Python</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="skill__level">Intermedio</span>
+                    <div class="skill__icon">💚</div>
+                    <h3 class="skill__name">Node.js</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="250">
+                    <span class="skill__level">Intermedio</span>
+                    <div class="skill__icon">🗄️</div>
+                    <h3 class="skill__name">MySQL</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">🍃</div>
+                    <h3 class="skill__name">MongoDB</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="350">
+                    <span class="skill__level">Intermedio</span>
+                    <div class="skill__icon">🚀</div>
+                    <h3 class="skill__name">Express</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="400">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">🔌</div>
+                    <h3 class="skill__name">APIs REST</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="450">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">📋</div>
+                    <h3 class="skill__name">JSON</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="skill__level">Avanzado</span>
+                    <div class="skill__icon">🔧</div>
+                    <h3 class="skill__name">Git</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill__card" data-aos="fade-up" data-aos-delay="500">
+                    <span class="skill__level">Muy pronto</span>
+                    <div class="skill__icon">💡</div>
+                    <h3 class="skill__name">Nuevas Tecnologias</h3>
+                    <div class="skill__progress">
+                        <div class="skill__progress-bar"></div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- <!-- Habilidades Blandas -->
+<div class="skills__category">
+    <h3 class="skills__subtitle">🌟 Habilidades Blandas</h3>
+    <div class="skills__container">
+        <div class="skill__card skill__card--soft" data-aos="fade-up">
+            <div class="skill__icon">🎯</div>
+            <h3 class="skill__name">Disciplina</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="50">
+            <div class="skill__icon">💪</div>
+            <h3 class="skill__name">Constancia</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill__icon">⚡</div>
+            <h3 class="skill__name">Aprendizaje Rápido</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill__icon">❤️</div>
+            <h3 class="skill__name">Empatía</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill__icon">🔄</div>
+            <h3 class="skill__name">Adaptabilidad</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill__icon">✅</div>
+            <h3 class="skill__name">Responsabilidad</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill__icon">👑</div>
+            <h3 class="skill__name">Liderazgo</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="350">
+            <div class="skill__icon">🚀</div>
+            <h3 class="skill__name">Proactividad</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill__icon">🤝</div>
+            <h3 class="skill__name">Compromiso</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- 🆕 Nuevas habilidades blandas -->
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="450">
+            <div class="skill__icon">🧠</div>
+            <h3 class="skill__name">Pensamiento Crítico</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="500">
+            <div class="skill__icon">🎨</div>
+            <h3 class="skill__name">Creatividad</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+        <div class="skill__card skill__card--soft" data-aos="fade-up" data-aos-delay="550">
+            <div class="skill__icon">🗣️</div>
+            <h3 class="skill__name">Comunicación Efectiva</h3>
+            <div class="skill__progress">
+                <div class="skill__progress-bar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="projects__header">
+            <h2 class="section__title">Mis Proyectos</h2>
+            <p class="projects__subtitle">Proyectos destacados que demuestran mi experiencia y habilidades</p>
+        </div>
+
+        <div class="projects__container">
+            <!-- Proyecto 1 -->
+            <article class="project__card">
+                <div class="project__image-wrapper">
+                    <img src="./img/Gemini_Generated_Image_h2xyq0h2xyq0h2xy.png" alt="Proyecto 1" class="project__img">
+                    <div class="project__overlay">
+                        <div class="project__links">
+                            <a href="https://santiagoromero7.github.io/Velvetco_proyecto/" class="project__link project__link--demo" target="_blank">
+                                <span class="link__icon">🌐</span> Ver Demo
+                            </a>
+                            <a href="https://github.com/SantiagoRomero7/Velvetco_proyecto" class="project__link project__link--code" target="_blank">
+                                <span class="link__icon">💻</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project__content">
+                    <div class="project__header-card">
+                        <h3 class="project__title">Velvet & Co - Tienda Web</h3>
+                        <span class="project__date">2025</span>
+                    </div>
+                    
+                    <p class="project__description">
+                        Aplicación web responsive desarrollada con HTML, CSS y JavaScript puro que consume datos desde una API pública de productos. Permite la visualización dinámica del catálogo, con búsqueda, filtrado, ordenamiento y un carrito de compras con persistencia en localStorage. Su diseño moderno y adaptable ofrece una experiencia de usuario fluida e intuitiva en cualquier dispositivo.
+                    </p>
+                    
+                    <div class="project__tech">
+                        <span class="tech__tag">HTML5</span>
+                        <span class="tech__tag">CSS3</span>
+                        <span class="tech__tag">JavaScript</span>
+                    </div>
+                    
+                    <div class="project__features">
+                        <h4 class="features__title">✨ Características:</h4>
+                        <ul class="features__list">
+                            <li>Renderizado dinámico de DOM e integración con API. </li>
+                            <li>Carrito persistente con LocalStorage.</li>
+                            <li>Diseño UI/UX moderno y adaptable.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project__card">
+                <div class="project__image-wrapper">
+                    <img src="./img/Gemini_Generated_Image_7h9ji67h9ji67h9j.png" alt="Proyecto 2" class="project__img">
+                    <div class="project__overlay">
+                        <div class="project__links">
+                            <a href="https://github.com/DanielSantiagoV/GymMaster_CLI" class="project__link project__link--demo" target="_blank">
+                                <span class="link__icon">🌐</span> Ver Demo
+                            </a>
+                            <a href="https://github.com/DanielSantiagoV/GymMaster_CLI" class="project__link project__link--code" target="_blank">
+                                <span class="link__icon">💻</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project__content">
+                    <div class="project__header-card">
+                        <h3 class="project__title">GymMaster CLI - Sistema de Gestión de Gimnasio </h3>
+                        <span class="project__date">2025</span>
+                    </div>
+                    
+                    <p class="project__description">
+                        GymMaster CLI es un sistema completo de gestión de gimnasios desarrollado con Node.js, el controlador nativo de MongoDB e Inquirer.js. Este proyecto demuestra la implementación de transacciones atómicas, consultas con el marco de agregación y una arquitectura robusta. Sistema CRUD completo para clientes, planes de entrenamiento, seguimiento del progreso, nutrición, contratos y pagos.
+                    </p>
+                    
+                    <div class="project__tech">
+                        <span class="tech__tag">Inquirer.js</span>
+                        <span class="tech__tag">Node.js</span>
+                        <span class="tech__tag">MongoDB</span>
+                    </div>
+                    
+                    <div class="project__features">
+                        <h4 class="features__title">✨ Características:</h4>
+                        <ul class="features__list">
+                            <li>CRUD completo para clientes, planes, progreso, nutrición y contratos.</li>
+                            <li>Manejo de datos en consola mediante una interfaz CLI interactiva.</li>
+                            <li>Operaciones seguras con transacciones y validaciones avanzadas. </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project__card">
+                <div class="project__image-wrapper">
+                    <img src="./img/Gemini_Generated_Image_e1k0o1e1k0o1e1k0.png" alt="Proyecto 3" class="project__img">
+                    <div class="project__overlay">
+                        <div class="project__links">
+                            <a href="https://dataflixx.netlify.app/" class="project__link project__link--demo" target="_blank">
+                                <span class="link__icon">🌐</span> Ver Demo
+                            </a>
+                            <a href="https://github.com/DanielSantiagoV/DataFlix" class="project__link project__link--code" target="_blank">
+                                <span class="link__icon">💻</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project__content">
+                    <div class="project__header-card">
+                        <h3 class="project__title">DataFlix - Plataforma Educativa de Bases de Datos</h3>
+                        <span class="project__date">2025</span>
+                    </div>
+                    
+                    <p class="project__description">
+                        DataFlix es una plataforma web educativa diseñada para que cualquier persona pueda aprender bases de datos desde cero. El sitio ofrece cursos gratuitos, quizzes interactivos, seguimiento de progreso y un perfil de usuario personalizado. El objetivo es democratizar el acceso al conocimiento sobre bases de datos, motivando el aprendizaje autónomo y práctico a través de una experiencia moderna, visual y responsiva.                    </p>
+                    
+                    <div class="project__tech">
+                        <span class="tech__tag">HTML5</span>
+                        <span class="tech__tag">CSS</span>
+                        <span class="tech__tag">JavaScript - LocalStorage</span>
+                    </div>
+                    
+                    <div class="project__features">
+                        <h4 class="features__title">✨ Características:</h4>
+                        <ul class="features__list">
+                            <li>Cursos gratuitos integrados con YouTube.</li>
+                            <li>Cuestionarios interactivos con retroalimentación inmediata.</li>
+                            <li>Seguimiento del progreso y perfiles personalizados.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 4 (Opcional) -->
+            <article class="project__card">
+                <div class="project__image-wrapper">
+                    <img src="./img/Gemini_Generated_Image_xia66txia66txia6.png" alt="Proyecto 4" class="project__img">
+                    <div class="project__overlay">
+                        <div class="project__links">
+                            <a href="https://github.com/DanielSantiagoV/Pizza_Punto" class="project__link project__link--demo" target="_blank">
+                                <span class="link__icon">🌐</span> Ver Demo
+                            </a>
+                            <a href="https://github.com/DanielSantiagoV/Pizza_Punto" class="project__link project__link--code" target="_blank">
+                                <span class="link__icon">💻</span> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project__content">
+                    <div class="project__header-card">
+                        <h3 class="project__title">Pizza y Punto - Sistema de Gestión Elite</h3>
+                        <span class="project__date">2025</span>
+                    </div>
+                    
+                    <p class="project__description">
+                        Pizza y Punto es un sistema de gestión completo para pizzerías desarrollado con Node.js, MongoDB Driver Nativo y Inquirer.js. Este proyecto demuestra la implementación de transacciones atómicas, consultas con Aggregation Framework y una arquitectura robusta. Sistema CRUD completo, control de inventario, asignación automática de repartidores y análisis de ventas, todo en una aplicación CLI interactiva de nivel empresarial.
+                    </p>
+                    
+                    <div class="project__tech">
+                        <span class="tech__tag">Inquirer.js</span>
+                        <span class="tech__tag">Node.js</span>
+                        <span class="tech__tag">MongoDB</span>
+                    </div>
+                    
+                    <div class="project__features">
+                        <h4 class="features__title">✨ Características:</h4>
+                        <ul class="features__list">
+                            <li>Administra pedidos, clientes, inventario y repartidores desde una interfaz CLI intuitiva y eficiente.</li>
+                            <li>Implementa transacciones atómicas y consultas avanzadas con el Aggregation Framework para garantizar la consistencia y precisión de los datos.</li>
+                            <li>Ofrece reportes y métricas de ventas en tiempo real para optimizar la toma de decisiones y mejorar la productividad del negocio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="section__title">Contacto</h2>
+        <div class="contact__container">
+            <form class="contact__form" id="contactForm">
+                <div class="form__group">
+                    <label for="name" class="form__label">Nombre</label>
+                    <input type="text" id="name" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="message" class="form__label">Mensaje</label>
+                    <textarea id="message" class="form__textarea" required></textarea>
+                </div>
+                <button type="submit" class="form__button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__social">
+            <a href="https://github.com/SantiagoRomero7" class="footer__link">GitHub</a>
+            <a href="https://www.linkedin.com/in/santiago-romero-9a673a37a/" class="footer__link">LinkedIn</a>
+            <a href="https://api.whatsapp.com/send/?phone=573172681209&text=%C2%A1Hola%21+Vi+tu+portafolio+y+quiero+contactarte.&type=phone_number&app_absent=0" class="footer__link">Whatsapp</a>
+        </div>
+        <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

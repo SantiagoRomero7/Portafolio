@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi! I'm",
+    "role": "Full Stack Developer",
+    "description": "I transform ideas into incredible digital experiences. Specialized in creating modern, responsive, and functional web applications.",
+    "view_projects": "View Projects",
+    "contact_me": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate developer about technology",
+    "p1": "I am a web developer with experience in creating modern and functional applications. I am passionate about clean design, efficient code, and innovative solutions.",
+    "p2": "During my training, I have worked on various projects that demonstrate my ability to solve complex problems and create exceptional user experiences."
+  },
+  "skills": {
+    "title": "Skills",
+    "tech": "Technical Skills",
+    "soft": "Soft Skills"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Featured projects that demonstrate my experience and skills",
+    "view_demo": "View Demo",
+    "view_code": "Code",
+    "features": "Features"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully",
+    "error": "There was an error sending the message"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

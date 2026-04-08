@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans antialiased selection:bg-primary/30;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply border border-white/20 hover:border-primary/50 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2;
+  }
+}
+
+/* Custom transitions for i18n change */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
