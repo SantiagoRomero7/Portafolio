@@ -1,46 +1,136 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Me",
-    "skills": "Skills",
+    "about": "About",
+    "skills": "Stack",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "lets_talk": "Let's talk"
   },
   "hero": {
-    "greeting": "Hi! I'm",
-    "role": "Full Stack Developer",
-    "description": "I transform ideas into incredible digital experiences. Specialized in creating modern, responsive, and functional web applications.",
-    "view_projects": "View Projects",
-    "contact_me": "Contact Me"
+    "badge": "Available for projects",
+    "title_1": "I build web applications",
+    "title_2": "that work",
+    "subtitle": "I'm **Santiago Romero** — Full Stack Developer. I design and develop modern web applications that don't just work, they scale. From backend to frontend, from prototype to production.",
+    "cta_talk": "Let's talk",
+    "cta_projects": "View projects",
+    "stack_label": "MAIN STACK"
   },
   "about": {
-    "title": "About Me",
-    "subtitle": "Passionate developer about technology",
+    "label": "ABOUT ME",
+    "title_1": "Development with purpose,",
+    "title_2": "code with",
+    "title_accent": "passion",
     "p1": "I am a web developer with experience in creating modern and functional applications. I am passionate about clean design, efficient code, and innovative solutions.",
-    "p2": "During my training, I have worked on various projects that demonstrate my ability to solve complex problems and create exceptional user experiences."
+    "p2": "During my training, I have worked on various projects that demonstrate my ability to solve complex problems and create exceptional user experiences.",
+    "principles_label": "MY PRINCIPLES",
+    "principles": {
+      "clean_code": "Clean Code",
+      "performance": "Performance",
+      "ui_ux": "UI/UX Design",
+      "continuous_learning": "Continuous learning"
+    },
+    "cta_talk": "Let's work together",
+    "cta_projects": "View projects",
+    "available": "Immediate availability",
+    "location": "Bucaramanga, Colombia",
+    "open_to": "Open to freelance projects, collaborations and hybrid or remote opportunities.",
+    "years_exp": "Years experience",
+    "projects_done": "Projects done"
   },
   "skills": {
-    "title": "Skills",
-    "tech": "Technical Skills",
-    "soft": "Soft Skills"
+    "label": "TECH STACK",
+    "title_1": "Technologies I",
+    "title_accent": "master",
+    "subtitle": "A modern full-stack toolkit to build complete applications, from idea to production.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases",
+    "tools": "Tools",
+    "levels": {
+      "advanced": "Advanced",
+      "intermediate": "Intermediate",
+      "coming_soon": "Coming soon"
+    },
+    "learning_label": "Currently learning",
+    "learning_desc": "Always learning and exploring new technologies. Have a project that requires something specific?",
+    "cta_talk": "Let's talk"
   },
   "projects": {
-    "title": "My Projects",
-    "subtitle": "Featured projects that demonstrate my experience and skills",
-    "view_demo": "View Demo",
-    "view_code": "Code",
-    "features": "Features"
+    "label": "CASE STUDIES",
+    "title_1": "Main",
+    "title_accent": "projects",
+    "subtitle": "Real systems built with focus on functionality, usability and value.",
+    "view_demo": "View demo",
+    "view_code": "View code",
+    "features": "Features",
+    "status": {
+      "production": "Production",
+      "development": "In development"
+    },
+    "velvet": {
+      "category": "E-COMMERCE · FRONTEND",
+      "title": "Velvet & Co — Web Store",
+      "description": "Responsive web application built with HTML, CSS and vanilla JavaScript that consumes data from a public product API. Features dynamic catalog display with search, filtering, sorting and a shopping cart with localStorage persistence. Its modern and adaptive design offers a smooth and intuitive user experience on any device.",
+      "features": [
+        "Dynamic DOM rendering and API integration",
+        "Persistent cart with LocalStorage",
+        "Modern and adaptive UI/UX design"
+      ]
+    },
+    "gym": {
+      "category": "CLI · BACKEND · DATABASE",
+      "title": "GymMaster CLI — Gym Management System",
+      "description": "GymMaster CLI is a complete gym management system built with Node.js, native MongoDB driver and Inquirer.js. This project demonstrates the implementation of atomic transactions, aggregation framework queries and robust architecture. Complete CRUD system for clients, training plans, progress tracking, nutrition, contracts and payments.",
+      "features": [
+        "Complete CRUD for clients, plans, progress, nutrition and contracts",
+        "Console data management through interactive CLI interface",
+        "Secure operations with transactions and advanced validations"
+      ]
+    },
+    "dataflix": {
+      "category": "EDTECH · FRONTEND",
+      "title": "DataFlix — Database Educational Platform",
+      "description": "DataFlix is an educational web platform designed for anyone to learn databases from scratch. The site offers free courses, interactive quizzes, progress tracking and a personalized user profile. The goal is to democratize access to database knowledge, encouraging autonomous and practical learning through a modern, visual and responsive experience.",
+      "features": [
+        "Free courses integrated with YouTube",
+        "Interactive quizzes with immediate feedback",
+        "Progress tracking and personalized profiles"
+      ]
+    },
+    "pizza": {
+      "category": "CLI · BACKEND · DATABASE",
+      "title": "Pizza y Punto — Elite Management System",
+      "description": "Pizza y Punto is a complete management system for pizzerias built with Node.js, Native MongoDB Driver and Inquirer.js. This project demonstrates the implementation of atomic transactions, Aggregation Framework queries and robust architecture. Complete CRUD system, inventory control, automatic delivery driver assignment and sales analysis, all in an enterprise-level interactive CLI application.",
+      "features": [
+        "Manage orders, clients, inventory and drivers from an intuitive CLI interface",
+        "Implements atomic transactions and advanced queries with the Aggregation Framework",
+        "Real-time sales reports and metrics to optimize decision-making"
+      ]
+    },
+    "github_cta": "Want to see more?",
+    "github_desc": "Explore my GitHub for more projects and code.",
+    "github_btn": "View GitHub"
   },
   "contact": {
-    "title": "Contact",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send Message",
-    "success": "Message sent successfully",
-    "error": "There was an error sending the message"
+    "label": "CONTACT",
+    "title_1": "Have a project",
+    "title_accent": "in mind",
+    "title_2": "?",
+    "subtitle": "I'm available for freelance projects, collaborations and opportunities. Write me and let's talk about how I can help you.",
+    "email_label": "Email",
+    "email_cta": "Send message",
+    "whatsapp_label": "WhatsApp",
+    "whatsapp_cta": "Direct message",
+    "connect_label": "LET'S CONNECT",
+    "connect_desc": "Follow me to see my work and technical content.",
+    "response_note": "I respond within 24 hours. For urgent projects, WhatsApp is the best option."
   },
   "footer": {
-    "rights": "All rights reserved"
+    "description": "Full Stack Developer. I build web applications with clean code and modern architecture.",
+    "nav_title": "Navigation",
+    "connect_title": "Connect",
+    "rights": "All rights reserved",
+    "built_with": "Designed and developed with React + Vite + Framer Motion"
   }
 }

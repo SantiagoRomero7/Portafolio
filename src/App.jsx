@@ -12,16 +12,15 @@ function App() {
   const { i18n } = useTranslation();
 
   return (
-    <div className="relative">
+    <div className="relative bg-background min-h-screen">
       <Navbar />
-      
       <AnimatePresence mode="wait">
         <motion.main
           key={i18n.language}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
           <Hero />
           <About />
@@ -31,13 +30,6 @@ function App() {
           <Footer />
         </motion.main>
       </AnimatePresence>
-
-      {/* Cursor background effect */}
-      <div className="fixed inset-0 pointer-events-none -z-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[#0a0a0f]" />
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[150px] rounded-full" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/5 blur-[150px] rounded-full" />
-      </div>
     </div>
   );
 }

@@ -7,16 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0f",
-        primary: "#7c3aed",
-        secondary: "#06b6d4",
+        background: "#0a0a0a",
+        surface: "#141414",
+        accent: "#c8a97e",
+        "accent-light": "#e8d5b5",
       },
       fontFamily: {
-        sans: ["'Space Grotesk'", "sans-serif"],
+        sans: ["'Inter'", "system-ui", "sans-serif"],
+        serif: ["'Playfair Display'", "Georgia", "serif"],
       },
-      backdropBlur: {
-        xs: '2px',
-      }
     },
   },
   plugins: [],

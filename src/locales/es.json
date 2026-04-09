@@ -1,46 +1,136 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Sobre Mí",
-    "skills": "Habilidades",
+    "about": "Sobre mí",
+    "skills": "Stack",
     "projects": "Proyectos",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "lets_talk": "Hablemos"
   },
   "hero": {
-    "greeting": "¡Hola! Soy",
-    "role": "Desarrollador Full Stack",
-    "description": "Transformo ideas en experiencias digitales increíbles. Especializado en crear aplicaciones web modernas, responsivas y funcionales.",
-    "view_projects": "Ver Proyectos",
-    "contact_me": "Contáctame"
+    "badge": "Disponible para proyectos",
+    "title_1": "Construyo aplicaciones web",
+    "title_2": "que funcionan",
+    "subtitle": "Soy **Santiago Romero** — Full Stack Developer. Diseño y desarrollo aplicaciones web modernas que no solo funcionan, sino que escalan. Del backend al frontend, del prototipo a producción.",
+    "cta_talk": "Hablemos",
+    "cta_projects": "Ver proyectos",
+    "stack_label": "STACK PRINCIPAL"
   },
   "about": {
-    "title": "Sobre Mí",
-    "subtitle": "Desarrollador apasionado por la tecnología",
+    "label": "SOBRE MÍ",
+    "title_1": "Desarrollo con propósito,",
+    "title_2": "código con",
+    "title_accent": "pasión",
     "p1": "Soy un desarrollador web con experiencia en la creación de aplicaciones modernas y funcionales. Me apasiona el diseño limpio, el código eficiente y las soluciones innovadoras.",
-    "p2": "Durante mi formación, he trabajado en diversos proyectos que demuestran mi capacidad para resolver problemas complejos y crear experiencias de usuario excepcionales."
+    "p2": "Durante mi formación, he trabajado en diversos proyectos que demuestran mi capacidad para resolver problemas complejos y crear experiencias de usuario excepcionales.",
+    "principles_label": "MIS PRINCIPIOS",
+    "principles": {
+      "clean_code": "Código limpio",
+      "performance": "Performance",
+      "ui_ux": "Diseño UI/UX",
+      "continuous_learning": "Aprendizaje continuo"
+    },
+    "cta_talk": "Trabajemos juntos",
+    "cta_projects": "Ver proyectos",
+    "available": "Disponibilidad inmediata",
+    "location": "Bucaramanga, Colombia",
+    "open_to": "Abierto a proyectos freelance, colaboraciones y oportunidades híbridas o remotas.",
+    "years_exp": "Años experiencia",
+    "projects_done": "Proyectos listos"
   },
   "skills": {
-    "title": "Habilidades",
-    "tech": "Habilidades Técnicas",
-    "soft": "Habilidades Blandas"
+    "label": "STACK TÉCNICO",
+    "title_1": "Tecnologías que",
+    "title_accent": "domino",
+    "subtitle": "Un stack full-stack moderno para construir aplicaciones completas, desde la idea hasta producción.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "tools": "Herramientas",
+    "levels": {
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "coming_soon": "Muy pronto"
+    },
+    "learning_label": "Actualmente aprendiendo",
+    "learning_desc": "Siempre aprendiendo y explorando nuevas tecnologías. ¿Tienes un proyecto que requiere algo específico?",
+    "cta_talk": "Hablemos"
   },
   "projects": {
-    "title": "Mis Proyectos",
-    "subtitle": "Proyectos destacados que demuestran mi experiencia y habilidades",
-    "view_demo": "Ver Demo",
-    "view_code": "Código",
-    "features": "Características"
+    "label": "CASOS DE ESTUDIO",
+    "title_1": "Proyectos",
+    "title_accent": "principales",
+    "subtitle": "Sistemas reales construidos con foco en funcionalidad, usabilidad y valor.",
+    "view_demo": "Ver demo",
+    "view_code": "Ver código",
+    "features": "Características",
+    "status": {
+      "production": "Producción",
+      "development": "En desarrollo"
+    },
+    "velvet": {
+      "category": "E-COMMERCE · FRONTEND",
+      "title": "Velvet & Co — Tienda Web",
+      "description": "Aplicación web responsive desarrollada con HTML, CSS y JavaScript puro que consume datos desde una API pública de productos. Permite la visualización dinámica del catálogo, con búsqueda, filtrado, ordenamiento y un carrito de compras con persistencia en localStorage. Su diseño moderno y adaptable ofrece una experiencia de usuario fluida e intuitiva en cualquier dispositivo.",
+      "features": [
+        "Renderizado dinámico de DOM e integración con API",
+        "Carrito persistente con LocalStorage",
+        "Diseño UI/UX moderno y adaptable"
+      ]
+    },
+    "gym": {
+      "category": "CLI · BACKEND · BASE DE DATOS",
+      "title": "GymMaster CLI — Sistema de Gestión de Gimnasio",
+      "description": "GymMaster CLI es un sistema completo de gestión de gimnasios desarrollado con Node.js, el controlador nativo de MongoDB e Inquirer.js. Este proyecto demuestra la implementación de transacciones atómicas, consultas con el marco de agregación y una arquitectura robusta. Sistema CRUD completo para clientes, planes de entrenamiento, seguimiento del progreso, nutrición, contratos y pagos.",
+      "features": [
+        "CRUD completo para clientes, planes, progreso, nutrición y contratos",
+        "Manejo de datos en consola mediante interfaz CLI interactiva",
+        "Operaciones seguras con transacciones y validaciones avanzadas"
+      ]
+    },
+    "dataflix": {
+      "category": "EDTECH · FRONTEND",
+      "title": "DataFlix — Plataforma Educativa de Bases de Datos",
+      "description": "DataFlix es una plataforma web educativa diseñada para que cualquier persona pueda aprender bases de datos desde cero. El sitio ofrece cursos gratuitos, quizzes interactivos, seguimiento de progreso y un perfil de usuario personalizado. El objetivo es democratizar el acceso al conocimiento sobre bases de datos, motivando el aprendizaje autónomo y práctico a través de una experiencia moderna, visual y responsiva.",
+      "features": [
+        "Cursos gratuitos integrados con YouTube",
+        "Cuestionarios interactivos con retroalimentación inmediata",
+        "Seguimiento del progreso y perfiles personalizados"
+      ]
+    },
+    "pizza": {
+      "category": "CLI · BACKEND · BASE DE DATOS",
+      "title": "Pizza y Punto — Sistema de Gestión Elite",
+      "description": "Pizza y Punto es un sistema de gestión completo para pizzerías desarrollado con Node.js, MongoDB Driver Nativo y Inquirer.js. Este proyecto demuestra la implementación de transacciones atómicas, consultas con Aggregation Framework y una arquitectura robusta. Sistema CRUD completo, control de inventario, asignación automática de repartidores y análisis de ventas, todo en una aplicación CLI interactiva de nivel empresarial.",
+      "features": [
+        "Administra pedidos, clientes, inventario y repartidores desde una interfaz CLI intuitiva",
+        "Implementa transacciones atómicas y consultas avanzadas con el Aggregation Framework",
+        "Reportes y métricas de ventas en tiempo real para optimizar decisiones"
+      ]
+    },
+    "github_cta": "¿Quieres ver más?",
+    "github_desc": "Explora mi GitHub para más proyectos y código.",
+    "github_btn": "Ver GitHub"
   },
   "contact": {
-    "title": "Contacto",
-    "name": "Nombre",
-    "email": "Email",
-    "message": "Mensaje",
-    "send": "Enviar Mensaje",
-    "success": "Mensaje enviado con éxito",
-    "error": "Hubo un error al enviar el mensaje"
+    "label": "CONTACTO",
+    "title_1": "¿Tienes un proyecto",
+    "title_accent": "en mente",
+    "title_2": "?",
+    "subtitle": "Estoy disponible para proyectos freelance, colaboraciones y oportunidades. Escríbeme y hablemos sobre cómo puedo ayudarte.",
+    "email_label": "Email",
+    "email_cta": "Enviar mensaje",
+    "whatsapp_label": "WhatsApp",
+    "whatsapp_cta": "Mensaje directo",
+    "connect_label": "CONECTEMOS",
+    "connect_desc": "Sígueme para ver mi trabajo y contenido técnico.",
+    "response_note": "Respondo en menos de 24 horas. Para proyectos urgentes, WhatsApp es la mejor opción."
   },
   "footer": {
-    "rights": "Todos los derechos reservados"
+    "description": "Full Stack Developer. Construyo aplicaciones web con código limpio y arquitectura moderna.",
+    "nav_title": "Navegación",
+    "connect_title": "Conecta",
+    "rights": "Todos los derechos reservados",
+    "built_with": "Diseñado y desarrollado con React + Vite + Framer Motion"
   }
 }

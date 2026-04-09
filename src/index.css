@@ -1,46 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
-    @apply bg-background text-white font-sans antialiased selection:bg-primary/30;
+    @apply bg-background text-white font-sans antialiased;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    color: #e8e8e8;
+  }
+
+  ::selection {
+    background: rgba(200, 169, 126, 0.25);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
   }
 }
 
 @layer components {
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  /* Section label like deam.cloud: ── SOBRE MÍ */
+  .section-label {
+    @apply flex items-center gap-4 text-xs font-semibold tracking-[0.2em] text-white/40 uppercase mb-8;
   }
-  
-  .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2;
+  .section-label::before {
+    content: '';
+    @apply w-10 h-px bg-accent;
   }
-  
-  .btn-secondary {
-    @apply border border-white/20 hover:border-primary/50 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2;
-  }
-}
 
-/* Custom transitions for i18n change */
-.page-transition-enter {
-  opacity: 0;
-  transform: translateY(10px);
-}
-.page-transition-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.page-transition-exit {
-  opacity: 1;
-  transform: translateY(0);
-}
-.page-transition-exit-active {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 300ms, transform 300ms;
+  /* Accent italic (serif) - the signature deam.cloud style */
+  .accent-italic {
+    @apply font-serif italic text-accent;
+  }
+
+  /* Card with subtle border */
+  .card {
+    @apply bg-white/[0.03] border border-white/[0.06] rounded-2xl;
+    transition: border-color 0.3s ease;
+  }
+  .card:hover {
+    border-color: rgba(200, 169, 126, 0.15);
+  }
+
+  /* CTA button - light background like deam.cloud "Hablemos" */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/90 text-background font-semibold text-sm transition-all duration-300 hover:bg-white;
+  }
+
+  /* Ghost link button */
+  .btn-ghost {
+    @apply inline-flex items-center gap-1 text-sm font-medium text-white/60 hover:text-white transition-colors duration-300;
+  }
 }
