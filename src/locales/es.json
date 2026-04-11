@@ -18,17 +18,18 @@
   },
   "about": {
     "label": "SOBRE MÍ",
-    "title_1": "Desarrollo con propósito,",
-    "title_2": "código con",
-    "title_accent": "pasión",
-    "p1": "Soy un desarrollador web con experiencia en la creación de aplicaciones modernas y funcionales. Me apasiona el diseño limpio, el código eficiente y las soluciones innovadoras.",
-    "p2": "Durante mi formación, he trabajado en diversos proyectos que demuestran mi capacidad para resolver problemas complejos y crear experiencias de usuario excepcionales.",
+    "title_1": "Código limpio,",
+    "title_2": "soluciones",
+    "title_accent": "reales",
+    "p1": "Soy Santiago Romero, Full Stack Developer de Bucaramanga, Colombia. Me mueve la idea de que el código bien escrito puede transformar negocios y simplificar vidas.",
+    "p2": "Trabajo con el stack completo — frontend, backend y bases de datos — porque entender todo el sistema es lo que me permite tomar mejores decisiones. No me conformo con que algo funcione, me importa que esté bien construido.",
+    "p3": "Cuando no estoy programando, estoy aprendiendo algo nuevo. Siempre hay una tecnología por explorar, un problema por resolver o un proyecto por mejorar.",
     "principles_label": "MIS PRINCIPIOS",
     "principles": {
-      "clean_code": "Código limpio",
-      "performance": "Performance",
-      "ui_ux": "Diseño UI/UX",
-      "continuous_learning": "Aprendizaje continuo"
+      "clean_code": "Código limpio — Escribo código que cualquiera pueda entender",
+      "performance": "Performance — Aplicaciones rápidas, fluidas y eficientes",
+      "ui_ux": "Diseño UI/UX — Interfaces intuitivas que mejoran la experiencia",
+      "continuous_learning": "Aprendizaje continuo — Evoluciono constantemente como desarrollador"
     },
     "cta_talk": "Trabajemos juntos",
     "cta_projects": "Ver proyectos",

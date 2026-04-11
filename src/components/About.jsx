@@ -38,9 +38,10 @@ const About = () => {
           <div className="grid lg:grid-cols-5 gap-16">
             {/* Left: text + principles */}
             <div className="lg:col-span-3 space-y-8">
-              <div className="space-y-5 text-white/40 text-lg leading-relaxed">
+              <div className="space-y-6 text-white/40 text-lg leading-relaxed">
                 <p>{t('about.p1')}</p>
                 <p>{t('about.p2')}</p>
+                <p>{t('about.p3')}</p>
               </div>
 
               {/* Principles */}
@@ -48,7 +49,7 @@ const About = () => {
                 <p className="text-[10px] font-semibold tracking-widest text-white/25 uppercase mb-4">
                   {t('about.principles_label')}
                 </p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 gap-3">
                   {principles.map((key) => {
                     const Icon = principleIcons[key];
                     return (

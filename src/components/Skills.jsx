@@ -9,9 +9,11 @@ const categories = [
     key: 'frontend',
     skills: [
       { name: 'JavaScript', level: 'advanced' },
-      { name: 'React', level: 'advanced' },
+      { name: 'React', level: 'intermediate' },
       { name: 'Vue.js', level: 'intermediate' },
-      { name: 'HTML5/CSS3', level: 'advanced' },
+      { name: 'Tailwind CSS', level: 'advanced' },
+      { name: 'Next.js', level: 'intermediate' },
+      { name: 'TypeScript', level: 'intermediate' },
     ],
   },
   {
@@ -19,9 +21,10 @@ const categories = [
     key: 'backend',
     skills: [
       { name: 'Node.js', level: 'advanced' },
-      { name: 'Express', level: 'advanced' },
-      { name: 'Python', level: 'intermediate' },
+      { name: 'Express', level: 'intermediate' },
+      { name: 'Python', level: 'advanced' },
       { name: 'APIs REST', level: 'advanced' },
+      { name: 'Autenticación JWT', level: 'intermediate' },
     ],
   },
   {
@@ -38,22 +41,24 @@ const categories = [
     key: 'tools',
     skills: [
       { name: 'Git', level: 'advanced' },
-      { name: 'Vite/Vercel', level: 'advanced' },
-      { name: 'Docker', level: 'intermediate' },
+      { name: 'Vite', level: 'intermediate' },
+      { name: 'Vercel', level: 'advanced' },
+      { name: 'Postman', level: 'intermediate' },
     ],
   },
 ];
 
 const learningItems = [
-  { name: 'React (Avanzado)', status: 'progress' },
-  { name: 'TypeScript', status: 'studying' },
-  { name: 'Next.js', status: 'next' },
+  { name: 'TypeScript', status: 'progress' },
+  { name: 'Automatización con n8n', status: 'progress' },
+  { name: 'Docker', status: 'next' },
+  { name: 'Testing', status: 'next' },
+  { name: 'CI/CD básico', status: 'next' },
 ];
 
 const statusLabels = {
   progress: { es: 'EN PROGRESO', en: 'IN PROGRESS' },
-  studying: { es: 'ESTUDIANDO', en: 'STUDYING' },
-  next: { es: 'PRÓXIMO', en: 'NEXT' },
+  next: { es: 'PRÓXIMAMENTE', en: 'UPCOMING' },
 };
 
 const Skills = () => {
@@ -127,17 +132,34 @@ const Skills = () => {
               {t('skills.learning_label')}
             </h3>
           </div>
-          <div className="grid sm:grid-cols-3 gap-4 mb-8">
-            {learningItems.map((item) => (
-              <div key={item.name} className="card px-5 py-4">
-                <p className="text-sm font-medium text-white/70 mb-1">{item.name}</p>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-accent/70">
-                  {statusLabels[item.status][i18n.language] || statusLabels[item.status].en}
-                </p>
-              </div>
-            ))}
+          <div className="space-y-12">
+            {['progress', 'next'].map((statusKey) => {
+              const filteredItems = learningItems.filter(item => item.status === statusKey);
+              if (filteredItems.length === 0) return null;
+
+              return (
+                <div key={statusKey}>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/20 mb-6 flex items-center gap-4">
+                    <span className="shrink-0">{statusLabels[statusKey][i18n.language] || statusLabels[statusKey].en}</span>
+                    <span className="h-px w-full bg-white/5" />
+                  </p>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {filteredItems.map((item) => (
+                      <div key={item.name} className="card px-5 py-6 group hover:border-accent/20 transition-colors">
+                        <p className="text-sm font-medium text-white/70 mb-1 group-hover:text-white transition-colors">
+                          {item.name}
+                        </p>
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-accent/50 group-hover:text-accent/80 transition-colors">
+                          {statusLabels[item.status][i18n.language] || statusLabels[item.status].en}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="text-center">
+          <div className="text-center mt-12 border-t border-white/[0.04] pt-8">
             <p className="text-white/30 text-sm mb-5">{t('skills.learning_desc')}</p>
             <Link to="contact" smooth={true} offset={-80}>
               <button className="btn-primary text-sm">
