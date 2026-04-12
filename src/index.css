@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-bg: 10 10 10;
+    --color-surface: 20 20 20;
+    --color-text: 232 232 232;
+    --color-card-bg: rgba(255, 255, 255, 0.03);
+    --color-card-border: rgba(255, 255, 255, 0.06);
+  }
+
+  .light {
+    --color-bg: 248 247 244;
+    --color-surface: 255 255 255;
+    --color-text: 26 26 26;
+    --color-card-bg: #ffffff;
+    --color-card-border: rgba(0, 0, 0, 0.08);
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -10,33 +26,31 @@
   }
 
   body {
-    @apply bg-background text-white font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    color: #e8e8e8;
   }
 
   ::selection {
     background: rgba(200, 169, 126, 0.25);
-    color: white;
+    @apply text-foreground;
   }
 
   ::-webkit-scrollbar {
     width: 4px;
   }
   ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    @apply bg-background;
   }
   ::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 10px;
+    @apply bg-foreground/20 rounded-full;
   }
 }
 
 @layer components {
   /* Section label like deam.cloud: ── SOBRE MÍ */
   .section-label {
-    @apply flex items-center gap-4 text-xs font-semibold tracking-[0.2em] text-white/40 uppercase mb-8;
+    @apply flex items-center gap-4 text-xs font-semibold tracking-[0.2em] text-foreground/40 uppercase mb-8 transition-colors duration-300;
   }
   .section-label::before {
     content: '';
@@ -50,8 +64,13 @@
 
   /* Card with subtle border */
   .card {
-    @apply bg-white/[0.03] border border-white/[0.06] rounded-2xl;
-    transition: border-color 0.3s ease;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    @apply rounded-2xl;
+    transition: all 0.3s ease;
+  }
+  .light .card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
   .card:hover {
     border-color: rgba(200, 169, 126, 0.15);
@@ -59,11 +78,11 @@
 
   /* CTA button - light background like deam.cloud "Hablemos" */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/90 text-background font-semibold text-sm transition-all duration-300 hover:bg-white;
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground/90 text-background font-semibold text-sm transition-all duration-300 hover:bg-foreground;
   }
 
   /* Ghost link button */
   .btn-ghost {
-    @apply inline-flex items-center gap-1 text-sm font-medium text-white/60 hover:text-white transition-colors duration-300;
+    @apply inline-flex items-center gap-1 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors duration-300;
   }
 }

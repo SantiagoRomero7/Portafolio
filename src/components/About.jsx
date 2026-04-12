@@ -38,7 +38,7 @@ const About = () => {
           <div className="grid lg:grid-cols-5 gap-16">
             {/* Left: text + principles */}
             <div className="lg:col-span-3 space-y-8">
-              <div className="space-y-6 text-white/40 text-lg leading-relaxed">
+              <div className="space-y-6 text-foreground/40 text-lg leading-relaxed">
                 <p>{t('about.p1')}</p>
                 <p>{t('about.p2')}</p>
                 <p>{t('about.p3')}</p>
@@ -46,7 +46,7 @@ const About = () => {
 
               {/* Principles */}
               <div>
-                <p className="text-[10px] font-semibold tracking-widest text-white/25 uppercase mb-4">
+                <p className="text-[10px] font-semibold tracking-widest text-foreground/25 uppercase mb-4">
                   {t('about.principles_label')}
                 </p>
                 <div className="grid grid-cols-1 gap-3">
@@ -58,7 +58,7 @@ const About = () => {
                         className="card px-4 py-3.5 flex items-center gap-3"
                       >
                         <Icon size={16} className="text-accent shrink-0" />
-                        <span className="text-sm font-medium text-white/60">
+                        <span className="text-sm font-medium text-foreground/60">
                           {t(`about.principles.${key}`)}
                         </span>
                       </div>
@@ -101,23 +101,23 @@ const About = () => {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-emerald-400/80 font-medium">{t('about.available')}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-white/40">
+                <div className="flex items-center gap-2 text-sm text-foreground/40">
                   <MapPin size={14} />
                   <span>{t('about.location')}</span>
                 </div>
-                <p className="text-sm text-white/30 leading-relaxed">
+                <p className="text-sm text-foreground/30 leading-relaxed">
                   {t('about.open_to')}
                 </p>
 
                 {/* Stats */}
-                <div className="flex gap-6 pt-2 border-t border-white/[0.04]">
+                <div className="flex gap-6 pt-2 border-t border-foreground/[0.04]">
                   <div>
                     <p className="text-2xl font-bold text-accent">2+</p>
-                    <p className="text-[10px] uppercase tracking-wider text-white/25">{t('about.years_exp')}</p>
+                    <p className="text-[10px] uppercase tracking-wider text-foreground/25">{t('about.years_exp')}</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-accent">10+</p>
-                    <p className="text-[10px] uppercase tracking-wider text-white/25">{t('about.projects_done')}</p>
+                    <p className="text-[10px] uppercase tracking-wider text-foreground/25">{t('about.projects_done')}</p>
                   </div>
                 </div>
               </div>

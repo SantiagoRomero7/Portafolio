@@ -79,7 +79,7 @@ const Skills = () => {
             {t('skills.title_1')}{' '}
             <span className="accent-italic">{t('skills.title_accent')}</span>
           </h2>
-          <p className="text-white/30 text-lg mb-16 max-w-2xl">
+          <p className="text-foreground/30 text-lg mb-16 max-w-2xl">
             {t('skills.subtitle')}
           </p>
         </motion.div>
@@ -103,11 +103,11 @@ const Skills = () => {
                 {cat.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex justify-between items-center py-3 border-b border-white/[0.04] last:border-b-0"
+                    className="flex justify-between items-center py-3 border-b border-foreground/[0.04] last:border-b-0"
                   >
-                    <span className="text-sm text-white/60">{skill.name}</span>
+                    <span className="text-sm text-foreground/60">{skill.name}</span>
                     <span className={`text-[10px] font-semibold uppercase tracking-wider ${
-                      skill.level === 'advanced' ? 'text-accent' : 'text-white/25'
+                      skill.level === 'advanced' ? 'text-accent' : 'text-foreground/25'
                     }`}>
                       {t(`skills.levels.${skill.level}`)}
                     </span>
@@ -139,14 +139,14 @@ const Skills = () => {
 
               return (
                 <div key={statusKey}>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/20 mb-6 flex items-center gap-4">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-foreground/20 mb-6 flex items-center gap-4">
                     <span className="shrink-0">{statusLabels[statusKey][i18n.language] || statusLabels[statusKey].en}</span>
-                    <span className="h-px w-full bg-white/5" />
+                    <span className="h-px w-full bg-foreground/5" />
                   </p>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {filteredItems.map((item) => (
                       <div key={item.name} className="card px-5 py-6 group hover:border-accent/20 transition-colors">
-                        <p className="text-sm font-medium text-white/70 mb-1 group-hover:text-white transition-colors">
+                        <p className="text-sm font-medium text-foreground/70 mb-1 group-hover:text-foreground transition-colors">
                           {item.name}
                         </p>
                         <p className="text-[10px] font-bold uppercase tracking-wider text-accent/50 group-hover:text-accent/80 transition-colors">
@@ -159,8 +159,8 @@ const Skills = () => {
               );
             })}
           </div>
-          <div className="text-center mt-12 border-t border-white/[0.04] pt-8">
-            <p className="text-white/30 text-sm mb-5">{t('skills.learning_desc')}</p>
+          <div className="text-center mt-12 border-t border-foreground/[0.04] pt-8">
+            <p className="text-foreground/30 text-sm mb-5">{t('skills.learning_desc')}</p>
             <Link to="contact" smooth={true} offset={-80}>
               <button className="btn-primary text-sm">
                 {t('skills.cta_talk')} <ArrowRight size={14} />

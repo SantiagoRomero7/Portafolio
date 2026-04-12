@@ -23,7 +23,7 @@ const Contact = () => {
             <span className="accent-italic">{t('contact.title_accent')}</span>
             {t('contact.title_2')}
           </h2>
-          <p className="text-white/30 text-lg mb-16 max-w-2xl">
+          <p className="text-foreground/30 text-lg mb-16 max-w-2xl">
             {t('contact.subtitle')}
           </p>
 
@@ -36,14 +36,14 @@ const Contact = () => {
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <Mail size={18} className="text-accent" />
-                  <span className="text-sm font-semibold text-white/40 uppercase tracking-wider">
+                  <span className="text-sm font-semibold text-foreground/40 uppercase tracking-wider">
                     {t('contact.email_label')}
                   </span>
                 </div>
                 <p className="text-lg font-semibold mb-1">santirmrm420@gmail.com</p>
                 <p className="text-sm text-accent font-medium">{t('contact.email_cta')}</p>
               </div>
-              <ArrowUpRight size={18} className="text-white/20 group-hover:text-accent transition-colors" />
+              <ArrowUpRight size={18} className="text-foreground/20 group-hover:text-accent transition-colors" />
             </a>
 
             {/* WhatsApp card */}
@@ -56,14 +56,14 @@ const Contact = () => {
               <div>
                 <div className="flex items-center gap-3 mb-3">
                   <MessageCircle size={18} className="text-emerald-400" />
-                  <span className="text-sm font-semibold text-white/40 uppercase tracking-wider">
+                  <span className="text-sm font-semibold text-foreground/40 uppercase tracking-wider">
                     {t('contact.whatsapp_label')}
                   </span>
                 </div>
                 <p className="text-lg font-semibold mb-1">+57 317 268 1209</p>
                 <p className="text-sm text-emerald-400 font-medium">{t('contact.whatsapp_cta')}</p>
               </div>
-              <ArrowUpRight size={18} className="text-white/20 group-hover:text-emerald-400 transition-colors" />
+              <ArrowUpRight size={18} className="text-foreground/20 group-hover:text-emerald-400 transition-colors" />
             </a>
           </div>
 
@@ -71,17 +71,17 @@ const Contact = () => {
           <div className="card p-8">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
               <div>
-                <p className="text-[10px] font-semibold tracking-widest text-white/25 uppercase mb-2">
+                <p className="text-[10px] font-semibold tracking-widest text-foreground/25 uppercase mb-2">
                   {t('contact.connect_label')}
                 </p>
-                <p className="text-white/30 text-sm">{t('contact.connect_desc')}</p>
+                <p className="text-foreground/30 text-sm">{t('contact.connect_desc')}</p>
               </div>
               <div className="flex items-center gap-3">
                 <a
                   href="https://github.com/SantiagoRomero7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 border border-white/[0.06] rounded-xl text-white/25 hover:text-white hover:border-white/20 transition-all"
+                  className="p-3 border border-foreground/[0.06] rounded-xl text-foreground/25 hover:text-foreground hover:border-foreground/20 transition-all"
                 >
                   <Github size={17} />
                 </a>
@@ -89,13 +89,13 @@ const Contact = () => {
                   href="https://www.linkedin.com/in/santiago-romero-9a673a37a/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 border border-white/[0.06] rounded-xl text-white/25 hover:text-white hover:border-white/20 transition-all"
+                  className="p-3 border border-foreground/[0.06] rounded-xl text-foreground/25 hover:text-foreground hover:border-foreground/20 transition-all"
                 >
                   <Linkedin size={17} />
                 </a>
               </div>
             </div>
-            <p className="text-white/20 text-xs mt-5 pt-4 border-t border-white/[0.04]">
+            <p className="text-foreground/20 text-xs mt-5 pt-4 border-t border-foreground/[0.04]">
               {t('contact.response_note')}
             </p>
           </div>

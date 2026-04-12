@@ -36,9 +36,9 @@ const Hero = () => {
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.p variants={item} className="text-lg md:text-xl text-white/40 leading-relaxed max-w-2xl mb-12">
+          <motion.p variants={item} className="text-lg md:text-xl text-foreground/40 leading-relaxed max-w-2xl mb-12">
             {t('hero.subtitle').split('**').map((part, i) =>
-              i % 2 === 1 ? <strong key={i} className="text-white font-semibold">{part}</strong> : part
+              i % 2 === 1 ? <strong key={i} className="text-foreground font-semibold">{part}</strong> : part
             )}
           </motion.p>
 
@@ -61,29 +61,29 @@ const Hero = () => {
             {/* Socials */}
             <div className="flex items-center gap-3">
               <a href="https://github.com/SantiagoRomero7" target="_blank" rel="noopener noreferrer"
-                className="p-2.5 border border-white/[0.06] rounded-xl text-white/30 hover:text-white hover:border-white/20 transition-all">
+                className="p-2.5 border border-foreground/[0.06] rounded-xl text-foreground/30 hover:text-foreground hover:border-foreground/20 transition-all">
                 <Github size={16} />
               </a>
               <a href="https://www.linkedin.com/in/santiago-romero-9a673a37a/" target="_blank" rel="noopener noreferrer"
-                className="p-2.5 border border-white/[0.06] rounded-xl text-white/30 hover:text-white hover:border-white/20 transition-all">
+                className="p-2.5 border border-foreground/[0.06] rounded-xl text-foreground/30 hover:text-foreground hover:border-foreground/20 transition-all">
                 <Linkedin size={16} />
               </a>
               <a href="https://api.whatsapp.com/send/?phone=573172681209" target="_blank" rel="noopener noreferrer"
-                className="p-2.5 border border-white/[0.06] rounded-xl text-white/30 hover:text-white hover:border-white/20 transition-all">
+                className="p-2.5 border border-foreground/[0.06] rounded-xl text-foreground/30 hover:text-foreground hover:border-foreground/20 transition-all">
                 <MessageCircle size={16} />
               </a>
             </div>
 
             {/* Divider */}
-            <div className="hidden sm:block w-px h-6 bg-white/10" />
+            <div className="hidden sm:block w-px h-6 bg-foreground/10" />
 
             {/* Stack */}
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-[10px] font-semibold tracking-widest text-white/25 uppercase mr-1">
+              <span className="text-[10px] font-semibold tracking-widest text-foreground/25 uppercase mr-1">
                 {t('hero.stack_label')}
               </span>
               {stackItems.map((s) => (
-                <span key={s} className="text-xs text-white/30 border border-white/[0.06] px-2.5 py-1 rounded-md">
+                <span key={s} className="text-xs text-foreground/30 border border-foreground/[0.06] px-2.5 py-1 rounded-md">
                   {s}
                 </span>
               ))}
