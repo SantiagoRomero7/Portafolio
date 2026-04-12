@@ -8,9 +8,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark';
-  });
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -25,7 +23,6 @@ const Navbar = () => {
     } else {
       root.classList.remove('light');
     }
-    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleLanguage = () => {
