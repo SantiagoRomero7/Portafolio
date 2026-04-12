@@ -62,51 +62,86 @@
     "title_1": "Main",
     "title_accent": "projects",
     "subtitle": "Real systems built with focus on functionality, usability and value.",
-    "view_demo": "View demo",
+    "view_demo": "View project →",
     "view_code": "View code",
-    "features": "Features",
+    "problem_label": "PROBLEM",
+    "solution_label": "SOLUTION",
     "status": {
       "production": "Production",
       "development": "In development"
     },
     "velvet": {
-      "category": "E-COMMERCE · FRONTEND",
+      "category": "WEB STORE · E-COMMERCE",
       "title": "Velvet & Co — Web Store",
-      "description": "Responsive web application built with HTML, CSS and vanilla JavaScript that consumes data from a public product API. Features dynamic catalog display with search, filtering, sorting and a shopping cart with localStorage persistence. Its modern and adaptive design offers a smooth and intuitive user experience on any device.",
-      "features": [
-        "Dynamic DOM rendering and API integration",
-        "Persistent cart with LocalStorage",
-        "Modern and adaptive UI/UX design"
+      "description": "Responsive web application that consumes a public product API with a shopping cart and a fluid user experience.",
+      "problem": "Need for a modern web store that dynamically displayed products, allowed filtering, and maintained a persistent cart without its own backend.",
+      "solution": [
+        "Dynamic catalog with public API",
+        "Search, filtering, and sorting",
+        "Persistent cart with localStorage",
+        "Responsive and modern design",
+        "Dynamic DOM rendering",
+        "Clean and intuitive UI/UX"
       ]
     },
     "gym": {
-      "category": "CLI · BACKEND · DATABASE",
+      "category": "CLI · MANAGEMENT SYSTEM",
       "title": "GymMaster CLI — Gym Management System",
-      "description": "GymMaster CLI is a complete gym management system built with Node.js, native MongoDB driver and Inquirer.js. This project demonstrates the implementation of atomic transactions, aggregation framework queries and robust architecture. Complete CRUD system for clients, training plans, progress tracking, nutrition, contracts and payments.",
-      "features": [
-        "Complete CRUD for clients, plans, progress, nutrition and contracts",
-        "Console data management through interactive CLI interface",
-        "Secure operations with transactions and advanced validations"
+      "description": "Complete command-line gym management system with MongoDB database and advanced operations.",
+      "problem": "A gym needed to manage clients, plans, payments, and progress from a single robust and reliable tool without an expensive graphical interface.",
+      "solution": [
+        "Complete CRUD for clients and plans",
+        "Progress and nutrition tracking",
+        "Contracts and payments control",
+        "Interactive CLI interface with Inquirer.js",
+        "Atomic transactions in MongoDB",
+        "Secure validations and operations"
       ]
     },
     "dataflix": {
-      "category": "EDTECH · FRONTEND",
+      "category": "EDTECH · EDUCATIONAL PLATFORM",
       "title": "DataFlix — Database Educational Platform",
-      "description": "DataFlix is an educational web platform designed for anyone to learn databases from scratch. The site offers free courses, interactive quizzes, progress tracking and a personalized user profile. The goal is to democratize access to database knowledge, encouraging autonomous and practical learning through a modern, visual and responsive experience.",
-      "features": [
+      "description": "Web platform to learn databases from scratch with courses, quizzes, and personalized progress tracking.",
+      "problem": "There was no free, visual, and accessible platform to learn databases practically and autonomously.",
+      "solution": [
         "Free courses integrated with YouTube",
-        "Interactive quizzes with immediate feedback",
-        "Progress tracking and personalized profiles"
+        "Interactive quizzes with feedback",
+        "User progress tracking",
+        "Personalized profiles with localStorage",
+        "Modern and responsive design",
+        "Free access without mandatory registration"
       ]
     },
     "pizza": {
-      "category": "CLI · BACKEND · DATABASE",
-      "title": "Pizza y Punto — Elite Management System",
-      "description": "Pizza y Punto is a complete management system for pizzerias built with Node.js, Native MongoDB Driver and Inquirer.js. This project demonstrates the implementation of atomic transactions, Aggregation Framework queries and robust architecture. Complete CRUD system, inventory control, automatic delivery driver assignment and sales analysis, all in an enterprise-level interactive CLI application.",
-      "features": [
-        "Manage orders, clients, inventory and drivers from an intuitive CLI interface",
-        "Implements atomic transactions and advanced queries with the Aggregation Framework",
-        "Real-time sales reports and metrics to optimize decision-making"
+      "category": "CLI · ENTERPRISE SYSTEM",
+      "title": "Pizza y Punto — Management System",
+      "description": "Complete ERP for pizzerias with order control, inventory, drivers, and real-time sales analysis.",
+      "problem": "A pizzeria needed to centralize the management of orders, inventory, drivers, and billing in a single efficient and reliable system.",
+      "solution": [
+        "Order and client management",
+        "Inventory control with stock",
+        "Automatic driver assignment",
+        "Real-time sales reports and analysis",
+        "Guaranteed atomic transactions",
+        "Aggregation Framework for metrics"
+      ]
+    },
+    "distrib-app": {
+      "category": "MOBILE APP · ENTERPRISE SYSTEM",
+      "title": "DistribApp — Management System for Distributors",
+      "description": "Complete mobile app for panela distributors with real-time control of sales, inventory, clients, and accounting from a smartphone.",
+      "problem": "A panela distributor in Colombia managed all their sales and inventory in physical notebooks, causing information loss, difficulty in calculating profits, and lack of total control over the business.",
+      "solution": [
+        "Sales tracking with multiple products",
+        "Flexible pricing per client",
+        "Real-time inventory control",
+        "Low stock alerts",
+        "Credit system with payment history",
+        "Daily, weekly, and monthly reports",
+        "Manual cash register closing",
+        "Discreet mode to hide margins",
+        "PIN authentication with secure session",
+        "Deployed as PWA (iPhone) and APK (Android)"
       ]
     },
     "github_cta": "Want to see more?",

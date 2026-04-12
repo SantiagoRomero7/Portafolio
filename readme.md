@@ -1,68 +1,85 @@
-# 💼 Portafolio Web - Santiago Romero
+# 💼 Portafolio Profesional — Santiago Romero
 
-Bienvenido a mi portafolio personal, una aplicación web responsive diseñada para presentar mis proyectos, habilidades y trayectoria como desarrollador Full Stack.  
-Este sitio refleja mi crecimiento en el mundo del desarrollo, combinando diseño moderno, código limpio y una experiencia fluida tanto en escritorio como en dispositivos móviles.
+Bienvenido a mi portafolio personal. Este proyecto representa mi evolución como desarrollador Full Stack, habiendo escalado de una landing page estática en HTML/CSS/JS vanilla a una aplicación web robusta, modular y de alto rendimiento construida con **React + Vite**.
 
----
-
-## 🚀 Características principales
-
-- 🌐 **Diseño responsive:** Totalmente adaptable a cualquier dispositivo (móvil, tablet o PC).  
-- 💡 **Secciones dinámicas:** Presentación personal, proyectos, habilidades y contacto.  
-- ⚙️ **Interactividad:** Navegación fluida con animaciones suaves y enlaces funcionales.  
-- 📩 **Formulario de contacto:** Redirige directamente a mi correo para facilitar la comunicación.  
-- 🧠 **Optimización:** Código estructurado y optimizado para un rendimiento rápido y accesible.
+Este sitio no solo muestra mis proyectos, sino que refleja mi compromiso con el código limpio, el diseño centrado en el usuario y la mejora continua.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🚀 Características Principales
 
-- **HTML5** — Estructura semántica y limpia  
-- **CSS3** — Diseño moderno, animaciones y maquetación responsive  
-- **JavaScript** — Interactividad y validaciones  
-- **GSAP / Animaciones** — Efectos suaves para una experiencia más atractiva  
-- **Git & GitHub Pages** — Control de versiones y despliegue en línea  
+- 🌎 **Sistema Bilingüe (i18n):** Soporte completo para español e inglés integrado con `react-i18next`.
+- ✨ **Animaciones Premium:** Experiencia fluida y profesional mediante `Framer Motion`.
+- 🌙 **Dark Mode Elegante:** Interfaz diseñada para reducir la fatiga visual con una estética moderna.
+- 📐 **Case Studies:** Proyectos principales documentados detalladamente, enfocados en Problema/Solución.
+- 📱 **Diseño Responsive:** Optimización total para cualquier tamaño de pantalla.
 
 ---
 
-## 🗂️ Estructura del proyecto
+## 🛠️ Tech Stack
+
+- **Frontend:** React + Vite
+- **Estilos:** Tailwind CSS
+- **Animaciones:** Framer Motion
+- **Internacionalización:** react-i18next
+- **Despliegue:** Vercel
+
+---
+
+## 🌍 Visualiza el Proyecto
+
+Puedes ver la versión en línea aquí:  
+👉 [Mi Portafolio (Vercel)](https://santiago-romero-portfolio.vercel.app/) *(Placeholder)*
+
+---
+
+## 🗂️ Estructura del Proyecto
 
 ```plaintext
-📁 portafolio/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── assets/
-    ├── img/
-    └── icons/
+portfolio/
+├── public/
+│   └── img/          # Activos estáticos
+├── src/
+│   ├── components/   # Componentes modulares de React
+│   ├── locales/      # Archivos de traducción (ES/EN)
+│   ├── i18n.js       # Configuración de internacionalización
+│   ├── App.jsx       # Componente principal
+│   └── main.jsx      # Punto de entrada
+├── index.html        # HTML base
+└── vercel.json       # Configuración de despliegue
 ```
 
 ---
 
-## 🌍 Visualiza el portafolio
+## ⚙️ Getting Started
 
-Puedes ver la versión en línea aquí:  
-👉 [Mi Portafolio](https://santiagoromero7.github.io/Portafolio/)
+Si deseas correr este proyecto localmente:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/SantiagoRomero7/portfolio
+   ```
+2. Entra al directorio:
+   ```bash
+   cd portfolio
+   ```
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
 ---
 
 ## 📬 Contacto
 
-Si deseas comunicarte conmigo, puedes escribirme directamente a:  
-📧 **santirmrm420@gmail.com**  
-o visitar mi perfil en redes:  
-- 💻 [GitHub](https://github.com/SantiagoRomero7)  
+- 📧 **santirmrm420@gmail.com**
 - 💼 [LinkedIn](https://www.linkedin.com/in/santiago-romero-9a673a37a/)
- 
+- 💻 [GitHub](https://github.com/SantiagoRomero7)
 
 ---
 
-## 🏆 Autor
-
-Desarrollado con dedicación por **Santiago Romero**  
-💻 _"Construyendo mi camino en la tecnología con disciplina, enfoque y pasión por el aprendizaje."_  
-
----
-
+> "Del HTML al React — siempre construyendo, siempre aprendiendo." 🚀

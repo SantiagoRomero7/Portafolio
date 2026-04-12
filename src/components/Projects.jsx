@@ -1,37 +1,33 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 const projectsData = [
   {
-    key: 'velvet',
-    img: '/img/Gemini_Generated_Image_h2xyq0h2xyq0h2xy.png',
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
-    demo: 'https://santiagoromero7.github.io/Velvetco_proyecto/',
-    repo: 'https://github.com/SantiagoRomero7/Velvetco_proyecto',
+    key: 'distrib-app',
+    tech: ['React Native', 'Expo', 'Supabase', 'PostgreSQL', 'Expo Router', 'Vercel'],
+    demo: null,
+    repo: 'https://github.com/SantiagoRomero7/distrib-app',
     status: 'production',
   },
   {
     key: 'gym',
-    img: '/img/Gemini_Generated_Image_7h9ji67h9ji67h9j.png',
     tech: ['Node.js', 'MongoDB', 'Inquirer.js'],
-    demo: 'https://github.com/DanielSantiagoV/GymMaster_CLI',
+    demo: null,
     repo: 'https://github.com/DanielSantiagoV/GymMaster_CLI',
     status: 'production',
   },
   {
     key: 'dataflix',
-    img: '/img/Gemini_Generated_Image_e1k0o1e1k0o1e1k0.png',
-    tech: ['HTML5', 'CSS', 'JavaScript'],
+    tech: ['HTML5', 'CSS', 'JavaScript', 'LocalStorage'],
     demo: 'https://dataflixx.netlify.app/',
     repo: 'https://github.com/DanielSantiagoV/DataFlix',
     status: 'production',
   },
   {
     key: 'pizza',
-    img: '/img/Gemini_Generated_Image_xia66txia66txia6.png',
     tech: ['Node.js', 'MongoDB', 'Inquirer.js'],
-    demo: 'https://github.com/DanielSantiagoV/Pizza_Punto',
+    demo: null,
     repo: 'https://github.com/DanielSantiagoV/Pizza_Punto',
     status: 'production',
   },
@@ -49,114 +45,125 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
-          <div className="section-label">{t('projects.label')}</div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 max-w-3xl">
+          <div className="section-label inline-block mb-4">{t('projects.label')}</div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6">
             {t('projects.title_1')}{' '}
             <span className="accent-italic">{t('projects.title_accent')}</span>
           </h2>
-          <p className="text-white/30 text-lg mb-16 max-w-2xl">
+          <p className="text-white/30 text-lg max-w-2xl mx-auto">
             {t('projects.subtitle')}
           </p>
         </motion.div>
 
-        {/* Projects — vertical stack */}
-        <div className="space-y-8">
+        {/* Projects Space */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {projectsData.map((project, index) => {
-            const features = t(`projects.${project.key}.features`, { returnObjects: true });
+            const solution = t(`projects.${project.key}.solution`, { returnObjects: true });
+            
+            // Si es la última card de un grid de cantidad impar, la centramos
+            const isLastOdd = projectsData.length % 2 !== 0 && index === projectsData.length - 1;
+            const colSpanClass = isLastOdd ? 'md:col-span-2 md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.5rem)] md:mx-auto' : '';
 
             return (
               <motion.article
                 key={project.key}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
-                className="card overflow-hidden"
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className={`flex flex-col h-full bg-[#111118]/80 backdrop-blur-sm border border-white/5 rounded-2xl p-8 lg:p-10 shadow-xl ${colSpanClass}`}
               >
-                <div className="grid lg:grid-cols-5 gap-0">
-                  {/* Image */}
-                  <div className="lg:col-span-2 relative overflow-hidden">
-                    <img
-                      src={project.img}
-                      alt={t(`projects.${project.key}.title`)}
-                      className="w-full h-full object-cover min-h-[240px] lg:min-h-full"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/80 hidden lg:block" />
+                {/* Header: Category + Status */}
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                  <span className="text-[10px] md:text-[11px] font-semibold tracking-widest text-white/40 uppercase">
+                    {t(`projects.${project.key}.category`)}
+                  </span>
+                  <span className={`text-[10px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full ${
+                    project.status === 'production'
+                      ? 'text-amber-400 bg-amber-400/10 border border-amber-400/20'
+                      : 'text-rose-400 bg-rose-400/10 border border-rose-400/20'
+                  }`}>
+                    {t(`projects.status.${project.status}`)}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-white">
+                  {t(`projects.${project.key}.title`)}
+                </h3>
+
+                {/* Description */}
+                <p className="text-white/50 text-sm md:text-base lg:text-lg leading-relaxed mb-8">
+                  {t(`projects.${project.key}.description`)}
+                </p>
+
+                {/* Separator */}
+                <hr className="border-white/5 mb-8" />
+
+                {/* Problema Section */}
+                <div className="mb-8">
+                  <div className="flex items-center gap-2 mb-3">
+                    <AlertTriangle className="text-accent shrink-0" size={18} />
+                    <span className="text-xs font-bold tracking-widest text-accent uppercase">
+                      {t('projects.problem_label')}
+                    </span>
                   </div>
+                  <p className="text-white/60 leading-relaxed text-sm lg:text-base">
+                    {t(`projects.${project.key}.problem`)}
+                  </p>
+                </div>
 
-                  {/* Content */}
-                  <div className="lg:col-span-3 p-8 lg:p-10">
-                    {/* Category + Status */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                      <span className="text-[10px] font-semibold tracking-widest text-white/25 uppercase">
-                        {t(`projects.${project.key}.category`)}
-                      </span>
-                      <span className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
-                        project.status === 'production'
-                          ? 'text-emerald-400 border-emerald-400/20 bg-emerald-400/5'
-                          : 'text-amber-400 border-amber-400/20 bg-amber-400/5'
-                      }`}>
-                        {t(`projects.status.${project.status}`)}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
-                      {t(`projects.${project.key}.title`)}
-                    </h3>
-
-                    {/* Description — always visible */}
-                    <p className="text-white/35 leading-relaxed mb-6">
-                      {t(`projects.${project.key}.description`)}
-                    </p>
-
-                    {/* Features */}
-                    {Array.isArray(features) && features.length > 0 && (
-                      <div className="mb-6">
-                        <p className="text-[10px] font-semibold tracking-widest text-white/20 uppercase mb-3">
-                          {t('projects.features')}
-                        </p>
-                        <ul className="space-y-2">
-                          {features.map((f, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-white/30">
-                              <span className="text-accent mt-0.5">•</span>
-                              {f}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {/* Tech tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tech.map((tech) => (
-                        <span key={tech} className="text-[10px] text-white/20 border border-white/[0.06] px-2.5 py-1 rounded-md">
-                          {tech}
-                        </span>
+                {/* Solución Section */}
+                <div className="mb-10">
+                  <div className="flex items-center gap-2 mb-4">
+                    <CheckCircle2 className="text-emerald-400 shrink-0" size={18} />
+                    <span className="text-xs font-bold tracking-widest text-emerald-400 uppercase">
+                      {t('projects.solution_label')}
+                    </span>
+                  </div>
+                  {Array.isArray(solution) && solution.length > 0 && (
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-x-6 gap-y-3">
+                      {solution.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2.5 text-sm lg:text-base text-white/60">
+                          <span className="text-emerald-400/50 mt-1 shrink-0">•</span>
+                          <span className="leading-snug">{item}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
+                  )}
+                </div>
 
-                    {/* Actions */}
-                    <div className="flex items-center gap-6">
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-light transition-colors"
-                      >
-                        {t('projects.view_demo')} <ExternalLink size={13} />
-                      </a>
-                      <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm text-white/25 hover:text-white/50 transition-colors"
-                      >
-                        <Github size={13} /> {t('projects.view_code')}
-                      </a>
-                    </div>
-                  </div>
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mb-10 mt-auto">
+                  {project.tech.map((tech) => (
+                    <span key={tech} className="text-[10px] md:text-[11px] font-medium text-white/80 bg-[#1a1a24] border border-white/10 px-3.5 py-1.5 rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="flex flex-wrap items-center gap-6">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-bold text-accent hover:text-accent-light transition-colors"
+                    >
+                      {t('projects.view_demo')} <ExternalLink size={16} />
+                    </a>
+                  )}
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white/40 hover:text-white/80 transition-colors"
+                  >
+                    <Github size={16} /> {t('projects.view_code')}
+                  </a>
                 </div>
               </motion.article>
             );
@@ -169,10 +176,10 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="card p-8 mt-12 text-center"
+          className="max-w-3xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 mt-16 text-center"
         >
           <p className="text-lg font-bold mb-2">{t('projects.github_cta')}</p>
-          <p className="text-white/30 text-sm mb-5">{t('projects.github_desc')}</p>
+          <p className="text-white/40 text-sm mb-6">{t('projects.github_desc')}</p>
           <a
             href="https://github.com/SantiagoRomero7"
             target="_blank"

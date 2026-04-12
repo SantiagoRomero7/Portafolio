@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {/* Email card */}
             <a
-              href="mailto:santiromero.dev@gmail.com"
+              href="mailto:santirmrm420@gmail.com"
               className="card p-8 flex justify-between items-start group hover:border-accent/20 transition-colors"
             >
               <div>
@@ -40,7 +40,7 @@ const Contact = () => {
                     {t('contact.email_label')}
                   </span>
                 </div>
-                <p className="text-lg font-semibold mb-1">santiromero.dev@gmail.com</p>
+                <p className="text-lg font-semibold mb-1">santirmrm420@gmail.com</p>
                 <p className="text-sm text-accent font-medium">{t('contact.email_cta')}</p>
               </div>
               <ArrowUpRight size={18} className="text-white/20 group-hover:text-accent transition-colors" />

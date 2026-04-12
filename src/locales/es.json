@@ -62,51 +62,86 @@
     "title_1": "Proyectos",
     "title_accent": "principales",
     "subtitle": "Sistemas reales construidos con foco en funcionalidad, usabilidad y valor.",
-    "view_demo": "Ver demo",
+    "view_demo": "Ver proyecto →",
     "view_code": "Ver código",
-    "features": "Características",
+    "problem_label": "PROBLEMA",
+    "solution_label": "SOLUCIÓN",
     "status": {
       "production": "Producción",
       "development": "En desarrollo"
     },
     "velvet": {
-      "category": "E-COMMERCE · FRONTEND",
+      "category": "TIENDA WEB · E-COMMERCE",
       "title": "Velvet & Co — Tienda Web",
-      "description": "Aplicación web responsive desarrollada con HTML, CSS y JavaScript puro que consume datos desde una API pública de productos. Permite la visualización dinámica del catálogo, con búsqueda, filtrado, ordenamiento y un carrito de compras con persistencia en localStorage. Su diseño moderno y adaptable ofrece una experiencia de usuario fluida e intuitiva en cualquier dispositivo.",
-      "features": [
-        "Renderizado dinámico de DOM e integración con API",
-        "Carrito persistente con LocalStorage",
-        "Diseño UI/UX moderno y adaptable"
+      "description": "Aplicación web responsive que consume una API pública de productos con carrito de compras y experiencia de usuario fluida.",
+      "problem": "Necesidad de una tienda web moderna que mostrara productos dinámicamente, permitiera filtrarlos y mantuviera un carrito persistente sin backend propio.",
+      "solution": [
+        "Catálogo dinámico con API pública",
+        "Búsqueda, filtrado y ordenamiento",
+        "Carrito persistente con localStorage",
+        "Diseño responsive y moderno",
+        "Renderizado dinámico del DOM",
+        "UI/UX limpio e intuitivo"
       ]
     },
     "gym": {
-      "category": "CLI · BACKEND · BASE DE DATOS",
+      "category": "CLI · SISTEMA DE GESTIÓN",
       "title": "GymMaster CLI — Sistema de Gestión de Gimnasio",
-      "description": "GymMaster CLI es un sistema completo de gestión de gimnasios desarrollado con Node.js, el controlador nativo de MongoDB e Inquirer.js. Este proyecto demuestra la implementación de transacciones atómicas, consultas con el marco de agregación y una arquitectura robusta. Sistema CRUD completo para clientes, planes de entrenamiento, seguimiento del progreso, nutrición, contratos y pagos.",
-      "features": [
-        "CRUD completo para clientes, planes, progreso, nutrición y contratos",
-        "Manejo de datos en consola mediante interfaz CLI interactiva",
-        "Operaciones seguras con transacciones y validaciones avanzadas"
+      "description": "Sistema completo de gestión de gimnasios por línea de comandos con base de datos MongoDB y operaciones avanzadas.",
+      "problem": "Un gimnasio necesitaba gestionar clientes, planes, pagos y progreso desde una sola herramienta robusta y confiable sin interfaz gráfica costosa.",
+      "solution": [
+        "CRUD completo de clientes y planes",
+        "Seguimiento de progreso y nutrición",
+        "Control de contratos y pagos",
+        "Interfaz CLI interactiva con Inquirer.js",
+        "Transacciones atómicas en MongoDB",
+        "Validaciones y operaciones seguras"
       ]
     },
     "dataflix": {
-      "category": "EDTECH · FRONTEND",
+      "category": "EDTECH · PLATAFORMA EDUCATIVA",
       "title": "DataFlix — Plataforma Educativa de Bases de Datos",
-      "description": "DataFlix es una plataforma web educativa diseñada para que cualquier persona pueda aprender bases de datos desde cero. El sitio ofrece cursos gratuitos, quizzes interactivos, seguimiento de progreso y un perfil de usuario personalizado. El objetivo es democratizar el acceso al conocimiento sobre bases de datos, motivando el aprendizaje autónomo y práctico a través de una experiencia moderna, visual y responsiva.",
-      "features": [
+      "description": "Plataforma web para aprender bases de datos desde cero con cursos, quizzes y seguimiento de progreso personalizado.",
+      "problem": "No existía una plataforma gratuita, visual y accesible para aprender bases de datos de forma práctica y autónoma en español.",
+      "solution": [
         "Cursos gratuitos integrados con YouTube",
-        "Cuestionarios interactivos con retroalimentación inmediata",
-        "Seguimiento del progreso y perfiles personalizados"
+        "Quizzes interactivos con retroalimentación",
+        "Seguimiento de progreso del usuario",
+        "Perfiles personalizados con localStorage",
+        "Diseño moderno y responsive",
+        "Acceso libre sin registro obligatorio"
       ]
     },
     "pizza": {
-      "category": "CLI · BACKEND · BASE DE DATOS",
+      "category": "CLI · SISTEMA EMPRESARIAL",
       "title": "Pizza y Punto — Sistema de Gestión Elite",
-      "description": "Pizza y Punto es un sistema de gestión completo para pizzerías desarrollado con Node.js, MongoDB Driver Nativo y Inquirer.js. Este proyecto demuestra la implementación de transacciones atómicas, consultas con Aggregation Framework y una arquitectura robusta. Sistema CRUD completo, control de inventario, asignación automática de repartidores y análisis de ventas, todo en una aplicación CLI interactiva de nivel empresarial.",
-      "features": [
-        "Administra pedidos, clientes, inventario y repartidores desde una interfaz CLI intuitiva",
-        "Implementa transacciones atómicas y consultas avanzadas con el Aggregation Framework",
-        "Reportes y métricas de ventas en tiempo real para optimizar decisiones"
+      "description": "ERP completo para pizzerías con control de pedidos, inventario, repartidores y análisis de ventas en tiempo real.",
+      "problem": "Una pizzería necesitaba centralizar la gestión de pedidos, inventario, repartidores y facturación en un solo sistema eficiente y confiable.",
+      "solution": [
+        "Gestión de pedidos y clientes",
+        "Control de inventario con stock",
+        "Asignación automática de repartidores",
+        "Análisis y reportes de ventas",
+        "Transacciones atómicas garantizadas",
+        "Aggregation Framework para métricas"
+      ]
+    },
+    "distrib-app": {
+      "category": "MOBILE APP · SISTEMA EMPRESARIAL",
+      "title": "DistribApp — Sistema de Gestión para Distribuidora",
+      "description": "App móvil completa para distribuidoras de panela con control de ventas, inventario, clientes y contabilidad en tiempo real desde el celular.",
+      "problem": "Una distribuidora de panela en Colombia manejaba todas sus ventas e inventario en cuadernos físicos, generando pérdida de información, dificultad para calcular ganancias y falta de control total sobre el negocio.",
+      "solution": [
+        "Registro de ventas con múltiples productos",
+        "Precios flexibles por cliente",
+        "Control de inventario en tiempo real",
+        "Alertas de stock bajo",
+        "Sistema de créditos con historial de abonos",
+        "Reportes diarios, semanales y mensuales",
+        "Cierre de caja manual",
+        "Modo discreto para ocultar márgenes",
+        "Autenticación por PIN con sesión segura",
+        "Desplegada como PWA (iPhone) y APK (Android)"
       ]
     },
     "github_cta": "¿Quieres ver más?",
