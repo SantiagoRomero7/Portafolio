@@ -2,28 +2,101 @@
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
+    "experience": "Trayectoria",
     "skills": "Stack",
     "projects": "Proyectos",
     "contact": "Contacto",
     "lets_talk": "Hablemos"
   },
   "hero": {
-    "badge": "Disponible para proyectos",
+    "badge": "Full Stack Developer · Autodidacta",
     "title_1": "Construyo aplicaciones web",
     "title_2": "que funcionan",
-    "subtitle": "Soy **Santiago Romero** — Full Stack Developer. Diseño y desarrollo aplicaciones web modernas que no solo funcionan, sino que escalan. Del backend al frontend, del prototipo a producción.",
+    "subtitle": "Soy **Santiago Romero**, desarrollador full stack de Bucaramanga. Aprendí por mi cuenta y hoy construyo aplicaciones web y móviles de punta a punta, del prototipo a producción. En **Cajasan** automatizo procesos que antes tomaban días.",
     "cta_talk": "Hablemos",
     "cta_projects": "Ver proyectos",
-    "stack_label": "STACK PRINCIPAL"
+    "stack_label": "STACK PRINCIPAL",
+    "stats": {
+      "automations": "automatizaciones entregadas en Cajasan",
+      "production": "app en producción con cliente real",
+      "repos": "repositorios públicos en GitHub"
+    },
+    "deck_hint": "Pasa el mouse: tres de mis proyectos"
+  },
+  "featured": {
+    "label": "PROYECTO DESTACADO",
+    "title_1": "Una semana de trabajo manual,",
+    "title_accent": "en 15 segundos.",
+    "p1": "Construí este sitio para mostrar lo que hago en Cajasan: 25 herramientas en Python, RPA y Power Automate que convierten procesos de horas o días en segundos.",
+    "p2": "Y es, a la vez, un proyecto full stack: Next.js 16, React 19, TypeScript estricto, animaciones guiadas por scroll, una demo que ejecuta un algoritmo real en el navegador y CI con GitHub Actions.",
+    "clock_label": "Tiempo manual",
+    "clock_done": "Con la herramienta",
+    "clock_note": "Caso real: consolidar las compras de un área tomaba cerca de una semana.",
+    "stats": {
+      "tools": "herramientas entregadas",
+      "time": "de trabajo manual, ahora ~1 h",
+      "fastest": "más rápido en el mejor caso",
+      "areas": "áreas principales atendidas"
+    },
+    "slides": {
+      "hero": "Portada: el reloj que comprime el tiempo",
+      "week": "La cuenta: tres semanas de trabajo manual",
+      "archive": "El archivo: 25 herramientas con su antes y después"
+    },
+    "cta_site": "Visitar el sitio",
+    "cta_code": "Ver código"
+  },
+  "experience": {
+    "label": "TRAYECTORIA",
+    "title_1": "De aprender por mi cuenta a",
+    "title_accent": "entregar en producción",
+    "items": {
+      "cajasan": {
+        "when": "Actual",
+        "org": "Cajasan · Bucaramanga",
+        "role": "Desarrollador de automatizaciones",
+        "summary": "Trabajo con las áreas de soporte estratégico: me siento con los equipos, entiendo dónde se les va el día y construyo la herramienta que se los devuelve.",
+        "points": [
+          "25 herramientas entregadas: aplicaciones de escritorio en Python, robots RPA y flujos en Power Automate",
+          "Procesos de días o semanas reducidos a segundos o minutos",
+          "Validación de datos a gran escala, OCR de documentos y conciliaciones contables"
+        ],
+        "cta": "Ver el proyecto destacado"
+      },
+      "freelance": {
+        "when": "En producción",
+        "org": "Freelance · DistribApp",
+        "role": "Desarrollador full stack",
+        "summary": "Diseñé y construí la app con la que una distribuidora de panela dejó los cuadernos: ventas, inventario, créditos y cierre de caja desde el celular.",
+        "points": [
+          "App multiplataforma con React Native, Expo y Supabase",
+          "Publicada como PWA para iPhone y APK para Android",
+          "Seguridad con PIN y modo discreto para ocultar márgenes"
+        ],
+        "cta": "Ver el proyecto"
+      },
+      "self": {
+        "when": "Continuo",
+        "org": "Proyectos propios y en equipo",
+        "role": "Formación autodidacta",
+        "summary": "Aprendí el stack construyendo: APIs con Node.js y Express, bases de datos SQL y NoSQL, frontends en React y Vue. Varios proyectos los desarrollé en equipo, con Git colaborativo y SCRUM.",
+        "points": [
+          "Sistemas de gestión por consola con MongoDB y transacciones atómicas",
+          "Plataforma educativa web con cursos, quizzes y progreso",
+          "Cada tecnología llegó porque un proyecto la necesitaba"
+        ],
+        "cta": "Ver proyectos"
+      }
+    }
   },
   "about": {
     "label": "SOBRE MÍ",
     "title_1": "Código limpio,",
     "title_2": "soluciones",
     "title_accent": "reales",
-    "p1": "Soy Santiago Romero, Full Stack Developer de Bucaramanga, Colombia. Me mueve la idea de que el código bien escrito puede transformar negocios y simplificar vidas.",
-    "p2": "Trabajo con el stack completo — frontend, backend y bases de datos — porque entender todo el sistema es lo que me permite tomar mejores decisiones. No me conformo con que algo funcione, me importa que esté bien construido.",
-    "p3": "Cuando no estoy programando, estoy aprendiendo algo nuevo. Siempre hay una tecnología por explorar, un problema por resolver o un proyecto por mejorar.",
+    "p1": "Soy Santiago Romero, desarrollador full stack de Bucaramanga, Colombia. Aprendí a programar por mi cuenta, a punta de construir: cada tecnología de mi stack llegó porque un proyecto la necesitaba.",
+    "p2": "Trabajo el stack completo —frontend, backend y bases de datos— porque entender todo el sistema es lo que me permite tomar mejores decisiones. No me conformo con que algo funcione: me importa que esté bien construido.",
+    "p3": "Hoy aplico eso en Cajasan, automatizando procesos para los equipos, y en mis proyectos personales, donde sigo aprendiendo algo nuevo cada semana.",
     "principles_label": "MIS PRINCIPIOS",
     "principles": {
       "clean_code": "Código limpio — Escribo código que cualquiera pueda entender",
@@ -33,75 +106,100 @@
     },
     "cta_talk": "Trabajemos juntos",
     "cta_projects": "Ver proyectos",
-    "available": "Disponibilidad inmediata",
+    "available": "Abierto a oportunidades",
     "location": "Bucaramanga, Colombia",
     "open_to": "Abierto a proyectos freelance, colaboraciones y oportunidades híbridas o remotas.",
-    "years_exp": "Años experiencia",
-    "projects_done": "Proyectos listos"
+    "stat_automations": "Automatizaciones",
+    "stat_repos": "Repos públicos"
   },
   "skills": {
     "label": "STACK TÉCNICO",
     "title_1": "Tecnologías que",
-    "title_accent": "domino",
-    "subtitle": "Un stack full-stack moderno para construir aplicaciones completas, desde la idea hasta producción.",
+    "title_accent": "uso de verdad",
+    "subtitle": "Aprendidas por mi cuenta y probadas en proyectos. Al lado de cada una, dónde la he usado.",
     "frontend": "Frontend",
     "backend": "Backend",
-    "databases": "Bases de Datos",
+    "databases": "Bases de datos",
+    "automation": "Automatización",
     "tools": "Herramientas",
-    "levels": {
-      "advanced": "Avanzado",
-      "intermediate": "Intermedio",
-      "coming_soon": "Muy pronto"
+    "learning_label": "Bitácora de aprendizaje",
+    "learning_intro": "Así evoluciona mi stack. Lo que estaba en «aprendiendo» el año pasado hoy ya está en proyectos.",
+    "learning": {
+      "done": "Ya en proyectos",
+      "progress": "En progreso",
+      "next": "Siguiente"
     },
-    "learning_label": "Actualmente aprendiendo",
-    "learning_desc": "Siempre aprendiendo y explorando nuevas tecnologías. ¿Tienes un proyecto que requiere algo específico?",
+    "learning_desc": "¿Tienes un proyecto que requiere algo específico?",
     "cta_talk": "Hablemos"
   },
   "projects": {
     "label": "CASOS DE ESTUDIO",
-    "title_1": "Proyectos",
-    "title_accent": "principales",
+    "title_1": "Más",
+    "title_accent": "proyectos",
     "subtitle": "Sistemas reales construidos con foco en funcionalidad, usabilidad y valor.",
-    "view_demo": "Ver proyecto →",
+    "view_demo": "Ver demo",
     "view_code": "Ver código",
+    "view_case": "Problema y solución",
+    "hide_case": "Ocultar",
     "problem_label": "PROBLEMA",
     "solution_label": "SOLUCIÓN",
+    "team": "En equipo con",
+    "cli_note": "Interfaz de consola (ilustrativa)",
+    "maintenance_note": "La base de datos está temporalmente fuera de servicio. El código está disponible.",
     "status": {
-      "production": "Producción",
-      "development": "En desarrollo"
+      "production": "En producción",
+      "live": "Demo en vivo",
+      "maintenance": "En mantenimiento",
+      "completed": "Completado"
     },
-    "velvet": {
-      "category": "TIENDA WEB · E-COMMERCE",
-      "title": "Velvet & Co — Tienda Web",
-      "description": "Aplicación web responsive que consume una API pública de productos con carrito de compras y experiencia de usuario fluida.",
-      "problem": "Necesidad de una tienda web moderna que mostrara productos dinámicamente, permitiera filtrarlos y mantuviera un carrito persistente sin backend propio.",
+    "distrib-app": {
+      "category": "MOBILE APP · SISTEMA EMPRESARIAL",
+      "title": "DistribApp — Gestión para una distribuidora",
+      "description": "App móvil completa para una distribuidora de panela: ventas, inventario, clientes y contabilidad en tiempo real desde el celular.",
+      "problem": "Una distribuidora de panela en Colombia manejaba todas sus ventas e inventario en cuadernos físicos, generando pérdida de información, dificultad para calcular ganancias y falta de control sobre el negocio.",
       "solution": [
-        "Catálogo dinámico con API pública",
-        "Búsqueda, filtrado y ordenamiento",
-        "Carrito persistente con localStorage",
-        "Diseño responsive y moderno",
-        "Renderizado dinámico del DOM",
-        "UI/UX limpio e intuitivo"
-      ]
+        "Registro de ventas con múltiples productos",
+        "Precios flexibles por cliente",
+        "Control de inventario en tiempo real",
+        "Alertas de stock bajo",
+        "Sistema de créditos con historial de abonos",
+        "Reportes diarios, semanales y mensuales",
+        "Cierre de caja",
+        "Modo discreto para ocultar márgenes",
+        "Autenticación por PIN con sesión segura",
+        "Desplegada como PWA (iPhone) y APK (Android)"
+      ],
+      "phone": {
+        "title": "DistribApp",
+        "subtitle": "Distribuidora de panela",
+        "features": [
+          "PIN al abrir la app",
+          "Inventario por cajas",
+          "Alertas de stock bajo",
+          "Créditos y abonos",
+          "Cierre de caja",
+          "Modo discreto"
+        ]
+      }
     },
-    "gym": {
-      "category": "CLI · SISTEMA DE GESTIÓN",
-      "title": "GymMaster CLI — Sistema de Gestión de Gimnasio",
-      "description": "Sistema completo de gestión de gimnasios por línea de comandos con base de datos MongoDB y operaciones avanzadas.",
-      "problem": "Un gimnasio necesitaba gestionar clientes, planes, pagos y progreso desde una sola herramienta robusta y confiable sin interfaz gráfica costosa.",
+    "misfinanzas": {
+      "category": "PWA · FINANZAS PERSONALES",
+      "title": "MisFinanzas — Finanzas personales",
+      "description": "PWA instalable para seguir gastos, límites y metas de ahorro, con datos por usuario en la nube.",
+      "problem": "Llevar las finanzas personales en notas u hojas de cálculo hace difícil saber a dónde se va el dinero cada mes y cumplir las metas de ahorro.",
       "solution": [
-        "CRUD completo de clientes y planes",
-        "Seguimiento de progreso y nutrición",
-        "Control de contratos y pagos",
-        "Interfaz CLI interactiva con Inquirer.js",
-        "Transacciones atómicas en MongoDB",
-        "Validaciones y operaciones seguras"
+        "Registro e inicio de sesión con Supabase Auth",
+        "Dashboard con balance e ingresos vs. gastos del mes",
+        "Transacciones por categoría",
+        "Límites de gasto y metas de ahorro",
+        "Instalable como app en iPhone y Android",
+        "Datos por usuario en PostgreSQL"
       ]
     },
     "dataflix": {
       "category": "EDTECH · PLATAFORMA EDUCATIVA",
-      "title": "DataFlix — Plataforma Educativa de Bases de Datos",
-      "description": "Plataforma web para aprender bases de datos desde cero con cursos, quizzes y seguimiento de progreso personalizado.",
+      "title": "DataFlix — Aprende bases de datos",
+      "description": "Plataforma web para aprender bases de datos desde cero con cursos, quizzes y seguimiento de progreso.",
       "problem": "No existía una plataforma gratuita, visual y accesible para aprender bases de datos de forma práctica y autónoma en español.",
       "solution": [
         "Cursos gratuitos integrados con YouTube",
@@ -112,11 +210,25 @@
         "Acceso libre sin registro obligatorio"
       ]
     },
+    "gym": {
+      "category": "CLI · SISTEMA DE GESTIÓN",
+      "title": "GymMaster CLI",
+      "description": "Sistema de gestión de gimnasios por consola con MongoDB, transacciones atómicas y reportes.",
+      "problem": "Un gimnasio necesitaba gestionar clientes, planes, pagos y progreso desde una sola herramienta robusta, sin una interfaz gráfica costosa.",
+      "solution": [
+        "CRUD completo de clientes y planes",
+        "Seguimiento de progreso y nutrición",
+        "Control de contratos y pagos",
+        "Interfaz interactiva con Inquirer.js",
+        "Transacciones atómicas en MongoDB",
+        "Validaciones y operaciones seguras"
+      ]
+    },
     "pizza": {
       "category": "CLI · SISTEMA EMPRESARIAL",
-      "title": "Pizza y Punto — Sistema de Gestión Elite",
-      "description": "ERP completo para pizzerías con control de pedidos, inventario, repartidores y análisis de ventas en tiempo real.",
-      "problem": "Una pizzería necesitaba centralizar la gestión de pedidos, inventario, repartidores y facturación en un solo sistema eficiente y confiable.",
+      "title": "Pizza y Punto",
+      "description": "Sistema para pizzerías con pedidos, inventario, repartidores y análisis de ventas.",
+      "problem": "Una pizzería necesitaba centralizar pedidos, inventario, repartidores y facturación en un solo sistema eficiente y confiable.",
       "solution": [
         "Gestión de pedidos y clientes",
         "Control de inventario con stock",
@@ -124,24 +236,6 @@
         "Análisis y reportes de ventas",
         "Transacciones atómicas garantizadas",
         "Aggregation Framework para métricas"
-      ]
-    },
-    "distrib-app": {
-      "category": "MOBILE APP · SISTEMA EMPRESARIAL",
-      "title": "DistribApp — Sistema de Gestión para Distribuidora",
-      "description": "App móvil completa para distribuidoras de panela con control de ventas, inventario, clientes y contabilidad en tiempo real desde el celular.",
-      "problem": "Una distribuidora de panela en Colombia manejaba todas sus ventas e inventario en cuadernos físicos, generando pérdida de información, dificultad para calcular ganancias y falta de control total sobre el negocio.",
-      "solution": [
-        "Registro de ventas con múltiples productos",
-        "Precios flexibles por cliente",
-        "Control de inventario en tiempo real",
-        "Alertas de stock bajo",
-        "Sistema de créditos con historial de abonos",
-        "Reportes diarios, semanales y mensuales",
-        "Cierre de caja manual",
-        "Modo discreto para ocultar márgenes",
-        "Autenticación por PIN con sesión segura",
-        "Desplegada como PWA (iPhone) y APK (Android)"
       ]
     },
     "github_cta": "¿Quieres ver más?",
@@ -153,20 +247,20 @@
     "title_1": "¿Tienes un proyecto",
     "title_accent": "en mente",
     "title_2": "?",
-    "subtitle": "Estoy disponible para proyectos freelance, colaboraciones y oportunidades. Escríbeme y hablemos sobre cómo puedo ayudarte.",
+    "subtitle": "Estoy abierto a proyectos freelance, colaboraciones y oportunidades. Escríbeme y hablemos sobre cómo puedo ayudarte.",
     "email_label": "Email",
     "email_cta": "Enviar mensaje",
     "whatsapp_label": "WhatsApp",
     "whatsapp_cta": "Mensaje directo",
     "connect_label": "CONECTEMOS",
     "connect_desc": "Sígueme para ver mi trabajo y contenido técnico.",
-    "response_note": "Respondo en menos de 24 horas. Para proyectos urgentes, WhatsApp es la mejor opción."
+    "response_note": "Respondo en menos de 24 horas. Para temas urgentes, WhatsApp es la mejor opción."
   },
   "footer": {
-    "description": "Full Stack Developer. Construyo aplicaciones web con código limpio y arquitectura moderna.",
+    "description": "Full Stack Developer autodidacta. Construyo aplicaciones web y automatizo procesos.",
     "nav_title": "Navegación",
     "connect_title": "Conecta",
     "rights": "Todos los derechos reservados",
-    "built_with": "Diseñado y desarrollado con React + Vite + Framer Motion"
+    "built_with": "Diseñado y desarrollado con React, Vite, Tailwind CSS y Framer Motion"
   }
 }

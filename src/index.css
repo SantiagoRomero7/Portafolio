@@ -76,7 +76,27 @@
     border-color: rgba(200, 169, 126, 0.15);
   }
 
-  /* CTA button - light background like deam.cloud "Hablemos" */
+  /* Halo dorado que sigue al cursor (ver hooks/spotlight.js) */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(200, 169, 126, 0.09), transparent 45%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+
+  /* Botón principal */
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground/90 text-background font-semibold text-sm transition-all duration-300 hover:bg-foreground;
   }

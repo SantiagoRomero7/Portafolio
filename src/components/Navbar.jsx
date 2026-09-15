@@ -8,7 +8,14 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  // Oscuro por defecto; la elección del visitante se recuerda entre visitas
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('theme') === 'light' ? 'light' : 'dark';
+    } catch {
+      return 'dark';
+    }
+  });
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -17,11 +24,11 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (theme === 'light') {
-      root.classList.add('light');
-    } else {
-      root.classList.remove('light');
+    document.documentElement.classList.toggle('light', theme === 'light');
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {
+      // Sin almacenamiento disponible: el tema solo dura la sesión
     }
   }, [theme]);
 
@@ -34,9 +41,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: t('nav.about'), to: 'about' },
-    { name: t('nav.projects'), to: 'projects' },
+    { name: t('nav.projects'), to: 'featured' },
+    { name: t('nav.experience'), to: 'experience' },
     { name: t('nav.skills'), to: 'skills' },
+    { name: t('nav.about'), to: 'about' },
     { name: t('nav.contact'), to: 'contact' },
   ];
 

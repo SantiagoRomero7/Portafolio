@@ -112,12 +112,12 @@ const About = () => {
                 {/* Stats */}
                 <div className="flex gap-6 pt-2 border-t border-foreground/[0.04]">
                   <div>
-                    <p className="text-2xl font-bold text-accent">2+</p>
-                    <p className="text-[10px] uppercase tracking-wider text-foreground/25">{t('about.years_exp')}</p>
+                    <p className="text-2xl font-bold text-accent">25</p>
+                    <p className="text-[10px] uppercase tracking-wider text-foreground/25">{t('about.stat_automations')}</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-accent">10+</p>
-                    <p className="text-[10px] uppercase tracking-wider text-foreground/25">{t('about.projects_done')}</p>
+                    <p className="text-2xl font-bold text-accent">30+</p>
+                    <p className="text-[10px] uppercase tracking-wider text-foreground/25">{t('about.stat_repos')}</p>
                   </div>
                 </div>
               </div>
