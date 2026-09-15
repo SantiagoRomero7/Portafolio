@@ -9,25 +9,118 @@
     "lets_talk": "Let's talk"
   },
   "hero": {
-    "badge": "Full Stack Developer · Bucaramanga",
-    "title_1": "I build web applications",
-    "title_2": "that work",
-    "subtitle": "I'm **Santiago Romero**, a full stack developer. I trained as a Full Stack Software Development Technician at **Campuslands**, I'm studying Software Engineering and I build web and mobile apps end to end. At **Cajasan** I automate processes that used to take days.",
+    "badge": "Full Stack Software Developer",
+    "title_1": "I build software",
+    "title_2": "that works in production",
+    "subtitle": "I'm **Santiago Romero**. I design and build web and mobile applications, APIs and business process automation, from problem analysis to deployment. I currently develop the automation solutions at **Cajasan**.",
     "cta_talk": "Let's talk",
     "cta_projects": "View projects",
     "stack_label": "MAIN STACK",
     "stats": {
-      "automations": "automations delivered at Cajasan",
-      "production": "app in production with a real client",
-      "repos": "public repositories on GitHub"
+      "automations": "automation solutions in production",
+      "projects": "software projects developed",
+      "tech": "technologies in my stack"
     },
     "deck_hint": "Hover: three of my projects"
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "title_1": "Engineering applied",
+    "title_2": "to real",
+    "title_accent": "problems",
+    "p1": "I'm a full stack software developer based in Bucaramanga, Colombia. My work spans two fronts: building web and mobile applications, and automating business processes.",
+    "p2": "I take every project end to end: I understand the process, design the architecture, build the frontend, backend and database, and ship it to production. I care that software doesn't just work, but is maintainable and its impact can be measured.",
+    "p3": "I trained as a Full Stack Software Development Technician at Campuslands and I'm pursuing a Software Engineering degree at Universidad de Santander, complementing hands-on experience with solid engineering fundamentals.",
+    "principles_label": "HOW I WORK",
+    "principles": {
+      "architecture": {
+        "title": "Maintainable architecture",
+        "desc": "Modular, readable code built to grow."
+      },
+      "performance": {
+        "title": "Performance",
+        "desc": "Fast, efficient applications on any device."
+      },
+      "ux": {
+        "title": "Real adoption",
+        "desc": "Clear interfaces teams use from day one."
+      },
+      "impact": {
+        "title": "Measurable impact",
+        "desc": "Every delivery is judged by the time and errors it removes."
+      }
+    },
+    "cta_talk": "Let's work together",
+    "cta_experience": "View experience",
+    "available": "Available for new opportunities",
+    "location": "Bucaramanga, Colombia",
+    "languages": "Spanish (native) · English B1",
+    "open_to": "Open to full-time roles, freelance projects and collaborations — on-site, hybrid or remote.",
+    "education_label": "EDUCATION",
+    "edu_1": {
+      "title": "Software Engineering",
+      "org": "Universidad de Santander · In progress"
+    },
+    "edu_2": {
+      "title": "Full Stack Software Development Technician",
+      "org": "Campuslands · 2025"
+    }
+  },
+  "experience": {
+    "label": "EXPERIENCE",
+    "title_1": "Experience and",
+    "title_accent": "education",
+    "items": {
+      "cajasan": {
+        "when": "Current",
+        "org": "Cajasan · Bucaramanga",
+        "role": "Process Automation Developer",
+        "summary": "Design, development and implementation of automation solutions for the strategic support units, from mapping each department's process to delivering the tool in production.",
+        "points": [
+          "25 solutions in production: Python desktop apps, RPA bots and flows in Power Automate and n8n",
+          "Processes that took days or weeks reduced to seconds or minutes, with validations that remove manual errors",
+          "Reporting and analysis with Power BI and Excel for decision-making"
+        ],
+        "cta": "See the featured project"
+      },
+      "freelance": {
+        "when": "In production",
+        "org": "Freelance project · DistribApp",
+        "role": "Full Stack Developer",
+        "summary": "Analysis, design and development of a cross-platform application that digitized a distributor's entire operation: sales, inventory, credit and cash closing.",
+        "points": [
+          "Architecture with React Native, Expo and Supabase (PostgreSQL)",
+          "Shipped as a PWA for iPhone and an APK for Android",
+          "PIN authentication, secure sessions and a discreet mode for sensitive data"
+        ],
+        "cta": "See the project"
+      },
+      "udes": {
+        "when": "2026 · In progress",
+        "org": "Universidad de Santander",
+        "role": "Software Engineering",
+        "summary": "University degree in software engineering, pursued alongside my role at Cajasan.",
+        "points": []
+      },
+      "campuslands": {
+        "when": "Feb – Nov 2025",
+        "org": "Campuslands · Floridablanca",
+        "role": "Full Stack Software Development Technician",
+        "summary": "Intensive full stack program with Scrum and collaborative Git, focused on projects with real-world requirements.",
+        "points": [
+          "FoodStars: REST API with MVC architecture, JWT and weighted ranking in MongoDB",
+          "GymMaster and Pizza y Punto: management systems with atomic transactions",
+          "DataFlix: web learning platform with courses, assessments and progress tracking"
+        ],
+        "cta": "See projects"
+      }
+    }
   },
   "featured": {
     "label": "FEATURED PROJECT",
     "title_1": "A week of manual work,",
     "title_accent": "in 15 seconds.",
-    "p1": "I built this site to show what I do at Cajasan: 25 tools in Python, RPA and Power Automate that turn processes of hours or days into seconds.",
+    "p1": "A site presenting the solutions I've delivered at Cajasan: 25 tools in Python, RPA and Power Automate that turn processes of hours or days into seconds.",
     "p2": "It is also a full stack project in itself: Next.js 16, React 19, strict TypeScript, scroll-driven animations, a demo that runs a real algorithm in the browser and CI with GitHub Actions.",
     "clock_label": "Manual time",
     "clock_done": "With the tool",
@@ -46,112 +139,37 @@
     "cta_site": "Visit the site",
     "cta_code": "View code"
   },
-  "experience": {
-    "label": "EXPERIENCE",
-    "title_1": "From Campuslands to",
-    "title_accent": "shipping to production",
-    "items": {
-      "cajasan": {
-        "when": "Current",
-        "org": "Cajasan · Bucaramanga",
-        "role": "Automation Developer",
-        "summary": "I work with the strategic support units: I sit down with the teams, find where their day goes and build the tool that gives it back.",
-        "points": [
-          "25 tools delivered: Python desktop apps, RPA bots and flows in Power Automate and n8n",
-          "Reporting with Power BI and Excel for the departments",
-          "Processes that took days or weeks reduced to seconds or minutes"
-        ],
-        "cta": "See the featured project"
-      },
-      "freelance": {
-        "when": "In production",
-        "org": "Freelance · DistribApp",
-        "role": "Full Stack Developer",
-        "summary": "I designed and built the app that let a panela distributor leave its paper notebooks behind: sales, inventory, credit and cash closing from a phone.",
-        "points": [
-          "Cross-platform app with React Native, Expo and Supabase",
-          "Shipped as a PWA for iPhone and an APK for Android",
-          "PIN security and a discreet mode to hide margins"
-        ],
-        "cta": "See the project"
-      },
-      "udes": {
-        "when": "2026 · Ongoing",
-        "org": "Universidad de Santander",
-        "role": "Software Engineering",
-        "summary": "University degree in software engineering, alongside my work at Cajasan. It complements the hands-on foundation from Campuslands with engineering fundamentals.",
-        "points": []
-      },
-      "campuslands": {
-        "when": "Feb – Nov 2025",
-        "org": "Campuslands · Floridablanca",
-        "role": "Full Stack Software Development Technician",
-        "summary": "Intensive full stack training, working in teams with Scrum and collaborative Git: APIs with Node.js and Express, SQL and NoSQL databases, and frontends with React and Vue.",
-        "points": [
-          "FoodStars: REST API with MVC architecture, JWT and weighted ranking in MongoDB",
-          "GymMaster and Pizza y Punto: command-line systems with atomic transactions",
-          "DataFlix: web learning platform with courses, quizzes and progress"
-        ],
-        "cta": "See projects"
-      }
-    }
-  },
-  "about": {
-    "label": "ABOUT ME",
-    "title_1": "Clean code,",
-    "title_2": "real",
-    "title_accent": "solutions",
-    "p1": "I'm Santiago Romero, a full stack developer from Bucaramanga, Colombia. I trained at Campuslands as a Full Stack Software Development Technician and I'm now studying Software Engineering at Universidad de Santander.",
-    "p2": "I work across the whole stack — frontend, backend and databases — because understanding the entire system is what lets me make better decisions. I don't settle for something that just works; I care that it's well built.",
-    "p3": "Today I apply that at Cajasan, automating processes for the teams, and in my personal projects, where I keep learning something new every week.",
-    "principles_label": "MY PRINCIPLES",
-    "principles": {
-      "clean_code": "Clean Code — I write code that anyone can understand",
-      "performance": "Performance — Fast, smooth, and efficient applications",
-      "ui_ux": "UI/UX Design — Intuitive interfaces that enhance the experience",
-      "continuous_learning": "Continuous learning — Constantly evolving as a developer"
-    },
-    "cta_talk": "Let's work together",
-    "cta_projects": "View projects",
-    "available": "Open to opportunities",
-    "location": "Bucaramanga, Colombia",
-    "languages": "Spanish (native) · English B1",
-    "open_to": "Open to freelance projects, collaborations and hybrid or remote opportunities.",
-    "stat_automations": "Automations",
-    "stat_repos": "Public repos"
-  },
   "skills": {
     "label": "TECH STACK",
-    "title_1": "Technologies I",
-    "title_accent": "actually use",
-    "subtitle": "Learned at Campuslands and proven in real projects. Each card shows where I've used it; filter by category to explore.",
-    "summary": "technologies across 5 areas",
-    "training": "From my training",
-    "cats": {
-      "all": "All",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "databases": "Databases",
-      "automation": "Automation",
-      "tools": "Tools"
+    "title_1": "Tools for every",
+    "title_accent": "layer of the system",
+    "subtitle": "Organized by layer and backed by projects: each technology shows where I've applied it.",
+    "summary": "technologies",
+    "core_label": "Core stack",
+    "core": {
+      "react": "Web, PWA and mobile interfaces",
+      "typescript": "End-to-end static typing",
+      "node": "REST APIs and backend services",
+      "python": "Automation, data and OCR",
+      "postgresql": "Relational modeling with Supabase",
+      "mongodb": "NoSQL, aggregations and transactions"
     },
-    "learning_label": "Learning log",
-    "learning_intro": "This is how my stack evolves: what used to be under “learning” is now in projects.",
-    "learning": {
-      "done": "Now in projects",
-      "progress": "In progress",
-      "next": "Next"
+    "groups": {
+      "frontend": { "title": "Frontend & mobile", "desc": "Web interfaces, PWAs and cross-platform apps." },
+      "backend": { "title": "Backend & APIs", "desc": "Services, authentication and business logic." },
+      "databases": { "title": "Databases", "desc": "Relational and NoSQL modeling." },
+      "automation": { "title": "Automation & data", "desc": "RPA, workflows and business reporting." },
+      "tools": { "title": "DevOps & practices", "desc": "Version control, continuous deployment and methodology." }
     },
-    "english": "English B1 → B2",
-    "degree": "Software Engineering",
-    "learning_desc": "Have a project that requires something specific?",
+    "training": "Training",
+    "cta_desc": "Looking for this stack for your team or project?",
     "cta_talk": "Let's talk"
   },
   "projects": {
     "label": "CASE STUDIES",
-    "title_1": "More",
+    "title_1": "Selected",
     "title_accent": "projects",
-    "subtitle": "Real systems built with focus on functionality, usability and value.",
+    "subtitle": "Systems built end to end: from the problem to deployment.",
     "view_demo": "View demo",
     "view_code": "View code",
     "view_case": "Problem and solution",
@@ -171,7 +189,7 @@
     "distrib-app": {
       "category": "MOBILE APP · BUSINESS SYSTEM",
       "title": "DistribApp — Management for a distributor",
-      "description": "Complete mobile app for a panela distributor: sales, inventory, clients and accounting in real time from a phone.",
+      "description": "Mobile application that digitized a panela distributor's operation: sales, inventory, clients and accounting in real time.",
       "problem": "A panela distributor in Colombia managed all their sales and inventory in paper notebooks, causing information loss, difficulty calculating profits and a lack of control over the business.",
       "solution": [
         "Sales tracking with multiple products",
@@ -201,7 +219,7 @@
     "misfinanzas": {
       "category": "PWA · PERSONAL FINANCE",
       "title": "MisFinanzas — Personal finance",
-      "description": "Installable PWA to track expenses, spending limits and savings goals, with per-user data in the cloud.",
+      "description": "Installable PWA to manage expenses, spending limits and savings goals, with per-user data in the cloud.",
       "problem": "Keeping personal finances in notes or spreadsheets makes it hard to know where the money goes each month and to reach savings goals.",
       "solution": [
         "Sign-up and login with Supabase Auth",
@@ -215,7 +233,7 @@
     "dataflix": {
       "category": "EDTECH · LEARNING PLATFORM",
       "title": "DataFlix — Learn databases",
-      "description": "Web platform to learn databases from scratch with courses, quizzes and progress tracking.",
+      "description": "Web platform to learn databases from scratch, with courses, assessments and progress tracking.",
       "problem": "There was no free, visual and accessible platform to learn databases practically and autonomously in Spanish.",
       "solution": [
         "Free courses integrated with YouTube",
@@ -277,8 +295,8 @@
     "title_1": "Have a project",
     "title_accent": "in mind",
     "title_2": "?",
-    "subtitle": "I'm open to freelance projects, collaborations and job opportunities. Tell me what you need and I'll reply with an idea of how I'd build it.",
-    "available": "Open to opportunities",
+    "subtitle": "Available for full-time roles, freelance projects and collaborations. Tell me what you need and I'll reply with a concrete proposal.",
+    "available": "Available for new opportunities",
     "local_time": "In Bucaramanga it's",
     "email_label": "Write me at",
     "email_cta": "Send email",
@@ -290,12 +308,12 @@
     "channels": {
       "whatsapp": { "label": "WhatsApp", "desc": "The fastest way" },
       "linkedin": { "label": "LinkedIn", "desc": "Experience and recommendations" },
-      "github": { "label": "GitHub", "desc": "All my code, public" }
+      "github": { "label": "GitHub", "desc": "Public code and projects" }
     },
     "response_note": "I respond within 24 hours. For urgent matters, WhatsApp is the best option."
   },
   "footer": {
-    "description": "Full Stack Developer trained at Campuslands. I build web applications and automate processes.",
+    "description": "Full Stack Software Developer. Web and mobile applications, APIs and business process automation.",
     "nav_title": "Navigation",
     "connect_title": "Connect",
     "rights": "All rights reserved",

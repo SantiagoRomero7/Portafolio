@@ -41,10 +41,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: t('nav.projects'), to: 'featured' },
-    { name: t('nav.experience'), to: 'experience' },
-    { name: t('nav.skills'), to: 'skills' },
     { name: t('nav.about'), to: 'about' },
+    { name: t('nav.experience'), to: 'experience' },
+    { name: t('nav.projects'), to: 'featured' },
+    { name: t('nav.skills'), to: 'skills' },
     { name: t('nav.contact'), to: 'contact' },
   ];
 

@@ -30,11 +30,11 @@ function App() {
           transition={{ duration: 0.3 }}
         >
           <Hero />
+          <About />
+          <Experience />
           <Featured />
           <Projects />
-          <Experience />
           <Skills />
-          <About />
           <Contact />
           <Footer />
         </motion.main>

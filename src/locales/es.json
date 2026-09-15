@@ -9,26 +9,119 @@
     "lets_talk": "Hablemos"
   },
   "hero": {
-    "badge": "Full Stack Developer · Bucaramanga",
-    "title_1": "Construyo aplicaciones web",
-    "title_2": "que funcionan",
-    "subtitle": "Soy **Santiago Romero**, desarrollador full stack. Me formé como Técnico en Desarrollo de Software Full Stack en **Campuslands**, estudio Ingeniería de Software y construyo aplicaciones web y móviles de punta a punta. En **Cajasan** automatizo procesos que antes tomaban días.",
+    "badge": "Desarrollador de Software Full Stack",
+    "title_1": "Desarrollo software",
+    "title_2": "que funciona en producción",
+    "subtitle": "Soy **Santiago Romero**. Diseño y construyo aplicaciones web y móviles, APIs y automatizaciones de procesos empresariales, desde el análisis del problema hasta el despliegue. Actualmente desarrollo las soluciones de automatización de **Cajasan**.",
     "cta_talk": "Hablemos",
     "cta_projects": "Ver proyectos",
     "stack_label": "STACK PRINCIPAL",
     "stats": {
-      "automations": "automatizaciones entregadas en Cajasan",
-      "production": "app en producción con cliente real",
-      "repos": "repositorios públicos en GitHub"
+      "automations": "soluciones de automatización en producción",
+      "projects": "proyectos de software desarrollados",
+      "tech": "tecnologías en mi stack"
     },
     "deck_hint": "Pasa el mouse: tres de mis proyectos"
+  },
+  "about": {
+    "label": "SOBRE MÍ",
+    "title_1": "Ingeniería aplicada",
+    "title_2": "a problemas",
+    "title_accent": "reales",
+    "p1": "Soy desarrollador de software full stack en Bucaramanga, Colombia. Mi trabajo combina dos frentes: el desarrollo de aplicaciones web y móviles, y la automatización de procesos empresariales.",
+    "p2": "Abordo cada proyecto de extremo a extremo: entiendo el proceso, diseño la arquitectura, construyo frontend, backend y base de datos, y lo llevo a producción. Me importa que el software no solo funcione, sino que sea mantenible y que su impacto se pueda medir.",
+    "p3": "Me formé como Técnico en Desarrollo de Software Full Stack en Campuslands y curso Ingeniería de Software en la Universidad de Santander, complementando la experiencia práctica con fundamentos sólidos de ingeniería.",
+    "principles_label": "CÓMO TRABAJO",
+    "principles": {
+      "architecture": {
+        "title": "Arquitectura mantenible",
+        "desc": "Código modular, legible y preparado para crecer."
+      },
+      "performance": {
+        "title": "Rendimiento",
+        "desc": "Aplicaciones rápidas y eficientes en cualquier dispositivo."
+      },
+      "ux": {
+        "title": "Adopción real",
+        "desc": "Interfaces claras que los equipos usan desde el primer día."
+      },
+      "impact": {
+        "title": "Impacto medible",
+        "desc": "Cada entrega se evalúa por el tiempo y los errores que elimina."
+      }
+    },
+    "cta_talk": "Trabajemos juntos",
+    "cta_experience": "Ver trayectoria",
+    "available": "Disponible para nuevas oportunidades",
+    "location": "Bucaramanga, Colombia",
+    "languages": "Español nativo · Inglés B1",
+    "open_to": "Abierto a oportunidades laborales, proyectos freelance y colaboraciones, en modalidad presencial, híbrida o remota.",
+    "education_label": "FORMACIÓN",
+    "edu_1": {
+      "title": "Ingeniería de Software",
+      "org": "Universidad de Santander · En curso"
+    },
+    "edu_2": {
+      "title": "Técnico en Desarrollo de Software Full Stack",
+      "org": "Campuslands · 2025"
+    }
+  },
+  "experience": {
+    "label": "TRAYECTORIA",
+    "title_1": "Experiencia y",
+    "title_accent": "formación",
+    "items": {
+      "cajasan": {
+        "when": "Actual",
+        "org": "Cajasan · Bucaramanga",
+        "role": "Desarrollador de Automatización de Procesos",
+        "summary": "Diseño, desarrollo e implementación de soluciones de automatización para las unidades de soporte estratégico, desde el levantamiento del proceso con cada área hasta la entrega de la herramienta en producción.",
+        "points": [
+          "25 soluciones en producción: aplicaciones de escritorio en Python, robots RPA y flujos en Power Automate y n8n",
+          "Procesos de días o semanas reducidos a segundos o minutos, con validaciones que eliminan errores manuales",
+          "Reportería y análisis con Power BI y Excel para la toma de decisiones"
+        ],
+        "cta": "Ver el proyecto destacado"
+      },
+      "freelance": {
+        "when": "En producción",
+        "org": "Proyecto freelance · DistribApp",
+        "role": "Desarrollador Full Stack",
+        "summary": "Análisis, diseño y desarrollo de una aplicación multiplataforma que digitalizó la operación completa de una distribuidora: ventas, inventario, créditos y cierre de caja.",
+        "points": [
+          "Arquitectura con React Native, Expo y Supabase (PostgreSQL)",
+          "Despliegue como PWA para iPhone y APK para Android",
+          "Autenticación por PIN, sesiones seguras y modo discreto para información sensible"
+        ],
+        "cta": "Ver el proyecto"
+      },
+      "udes": {
+        "when": "2026 · En curso",
+        "org": "Universidad de Santander",
+        "role": "Ingeniería de Software",
+        "summary": "Formación profesional en ingeniería de software, cursada en paralelo con mi rol en Cajasan.",
+        "points": []
+      },
+      "campuslands": {
+        "when": "Feb – Nov 2025",
+        "org": "Campuslands · Floridablanca",
+        "role": "Técnico en Desarrollo de Software Full Stack",
+        "summary": "Programa intensivo de desarrollo full stack con metodología Scrum y trabajo colaborativo en Git, orientado a proyectos con requisitos reales.",
+        "points": [
+          "FoodStars: API REST con arquitectura MVC, JWT y ranking ponderado en MongoDB",
+          "GymMaster y Pizza y Punto: sistemas de gestión con transacciones atómicas",
+          "DataFlix: plataforma educativa web con cursos, evaluaciones y seguimiento"
+        ],
+        "cta": "Ver proyectos"
+      }
+    }
   },
   "featured": {
     "label": "PROYECTO DESTACADO",
     "title_1": "Una semana de trabajo manual,",
     "title_accent": "en 15 segundos.",
-    "p1": "Construí este sitio para mostrar lo que hago en Cajasan: 25 herramientas en Python, RPA y Power Automate que convierten procesos de horas o días en segundos.",
-    "p2": "Y es, a la vez, un proyecto full stack: Next.js 16, React 19, TypeScript estricto, animaciones guiadas por scroll, una demo que ejecuta un algoritmo real en el navegador y CI con GitHub Actions.",
+    "p1": "Sitio que presenta las soluciones que he entregado en Cajasan: 25 herramientas en Python, RPA y Power Automate que convierten procesos de horas o días en segundos.",
+    "p2": "Es, a la vez, un proyecto full stack en sí mismo: Next.js 16, React 19, TypeScript estricto, animaciones guiadas por scroll, una demo que ejecuta un algoritmo real en el navegador y CI con GitHub Actions.",
     "clock_label": "Tiempo manual",
     "clock_done": "Con la herramienta",
     "clock_note": "Caso real: consolidar las compras de un área tomaba cerca de una semana.",
@@ -46,112 +139,37 @@
     "cta_site": "Visitar el sitio",
     "cta_code": "Ver código"
   },
-  "experience": {
-    "label": "TRAYECTORIA",
-    "title_1": "De Campuslands a",
-    "title_accent": "entregar en producción",
-    "items": {
-      "cajasan": {
-        "when": "Actual",
-        "org": "Cajasan · Bucaramanga",
-        "role": "Desarrollador de automatizaciones",
-        "summary": "Trabajo con las unidades de soporte estratégico: me siento con los equipos, entiendo dónde se les va el día y construyo la herramienta que se los devuelve.",
-        "points": [
-          "25 herramientas entregadas: aplicaciones de escritorio en Python, robots RPA y flujos en Power Automate y n8n",
-          "Reportería con Power BI y Excel para las áreas",
-          "Procesos de días o semanas reducidos a segundos o minutos"
-        ],
-        "cta": "Ver el proyecto destacado"
-      },
-      "freelance": {
-        "when": "En producción",
-        "org": "Freelance · DistribApp",
-        "role": "Desarrollador full stack",
-        "summary": "Diseñé y construí la app con la que una distribuidora de panela dejó los cuadernos: ventas, inventario, créditos y cierre de caja desde el celular.",
-        "points": [
-          "App multiplataforma con React Native, Expo y Supabase",
-          "Publicada como PWA para iPhone y APK para Android",
-          "Seguridad con PIN y modo discreto para ocultar márgenes"
-        ],
-        "cta": "Ver el proyecto"
-      },
-      "udes": {
-        "when": "2026 · En curso",
-        "org": "Universidad de Santander",
-        "role": "Ingeniería de Software",
-        "summary": "Formación profesional en ingeniería de software, en paralelo con mi trabajo en Cajasan. Complementa la base práctica de Campuslands con fundamentos de ingeniería.",
-        "points": []
-      },
-      "campuslands": {
-        "when": "Feb – Nov 2025",
-        "org": "Campuslands · Floridablanca",
-        "role": "Técnico en Desarrollo de Software Full Stack",
-        "summary": "Formación intensiva en desarrollo full stack, trabajando en equipo bajo Scrum y con Git colaborativo: APIs con Node.js y Express, bases de datos SQL y NoSQL, y frontends con React y Vue.",
-        "points": [
-          "FoodStars: API REST con arquitectura MVC, JWT y ranking ponderado en MongoDB",
-          "GymMaster y Pizza y Punto: sistemas por consola con transacciones atómicas",
-          "DataFlix: plataforma educativa web con cursos, quizzes y progreso"
-        ],
-        "cta": "Ver proyectos"
-      }
-    }
-  },
-  "about": {
-    "label": "SOBRE MÍ",
-    "title_1": "Código limpio,",
-    "title_2": "soluciones",
-    "title_accent": "reales",
-    "p1": "Soy Santiago Romero, desarrollador full stack de Bucaramanga, Colombia. Me formé en Campuslands como Técnico en Desarrollo de Software Full Stack y hoy estudio Ingeniería de Software en la Universidad de Santander.",
-    "p2": "Trabajo el stack completo —frontend, backend y bases de datos— porque entender todo el sistema es lo que me permite tomar mejores decisiones. No me conformo con que algo funcione: me importa que esté bien construido.",
-    "p3": "Hoy aplico eso en Cajasan, automatizando procesos para los equipos, y en mis proyectos personales, donde sigo aprendiendo algo nuevo cada semana.",
-    "principles_label": "MIS PRINCIPIOS",
-    "principles": {
-      "clean_code": "Código limpio — Escribo código que cualquiera pueda entender",
-      "performance": "Performance — Aplicaciones rápidas, fluidas y eficientes",
-      "ui_ux": "Diseño UI/UX — Interfaces intuitivas que mejoran la experiencia",
-      "continuous_learning": "Aprendizaje continuo — Evoluciono constantemente como desarrollador"
-    },
-    "cta_talk": "Trabajemos juntos",
-    "cta_projects": "Ver proyectos",
-    "available": "Abierto a oportunidades",
-    "location": "Bucaramanga, Colombia",
-    "languages": "Español nativo · Inglés B1",
-    "open_to": "Abierto a proyectos freelance, colaboraciones y oportunidades híbridas o remotas.",
-    "stat_automations": "Automatizaciones",
-    "stat_repos": "Repos públicos"
-  },
   "skills": {
-    "label": "STACK TÉCNICO",
-    "title_1": "Tecnologías que",
-    "title_accent": "uso de verdad",
-    "subtitle": "Aprendidas en Campuslands y probadas en proyectos reales. Cada tarjeta dice dónde la he usado; filtra por categoría para explorar.",
-    "summary": "tecnologías en 5 áreas",
-    "training": "En mi formación",
-    "cats": {
-      "all": "Todas",
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "databases": "Bases de datos",
-      "automation": "Automatización",
-      "tools": "Herramientas"
+    "label": "STACK TECNOLÓGICO",
+    "title_1": "Herramientas para cada",
+    "title_accent": "capa del sistema",
+    "subtitle": "Organizado por capa y respaldado por proyectos: cada tecnología indica dónde la he aplicado.",
+    "summary": "tecnologías",
+    "core_label": "Stack principal",
+    "core": {
+      "react": "Interfaces web, PWA y móviles",
+      "typescript": "Tipado estático de punta a punta",
+      "node": "APIs REST y servicios backend",
+      "python": "Automatización, datos y OCR",
+      "postgresql": "Modelado relacional con Supabase",
+      "mongodb": "NoSQL, agregaciones y transacciones"
     },
-    "learning_label": "Bitácora de aprendizaje",
-    "learning_intro": "Así evoluciona mi stack: lo que antes estaba en «aprendiendo» hoy ya está en proyectos.",
-    "learning": {
-      "done": "Ya en proyectos",
-      "progress": "En progreso",
-      "next": "Siguiente"
+    "groups": {
+      "frontend": { "title": "Frontend y móvil", "desc": "Interfaces web, PWA y aplicaciones multiplataforma." },
+      "backend": { "title": "Backend y APIs", "desc": "Servicios, autenticación y lógica de negocio." },
+      "databases": { "title": "Bases de datos", "desc": "Modelado relacional y NoSQL." },
+      "automation": { "title": "Automatización y datos", "desc": "RPA, flujos de trabajo y reportería empresarial." },
+      "tools": { "title": "DevOps y prácticas", "desc": "Control de versiones, despliegue continuo y metodología." }
     },
-    "english": "Inglés B1 → B2",
-    "degree": "Ingeniería de Software",
-    "learning_desc": "¿Tienes un proyecto que requiere algo específico?",
+    "training": "Formación",
+    "cta_desc": "¿Buscas este stack para tu equipo o tu proyecto?",
     "cta_talk": "Hablemos"
   },
   "projects": {
     "label": "CASOS DE ESTUDIO",
-    "title_1": "Más",
-    "title_accent": "proyectos",
-    "subtitle": "Sistemas reales construidos con foco en funcionalidad, usabilidad y valor.",
+    "title_1": "Proyectos",
+    "title_accent": "seleccionados",
+    "subtitle": "Sistemas construidos de extremo a extremo: del problema al despliegue.",
     "view_demo": "Ver demo",
     "view_code": "Ver código",
     "view_case": "Problema y solución",
@@ -171,7 +189,7 @@
     "distrib-app": {
       "category": "MOBILE APP · SISTEMA EMPRESARIAL",
       "title": "DistribApp — Gestión para una distribuidora",
-      "description": "App móvil completa para una distribuidora de panela: ventas, inventario, clientes y contabilidad en tiempo real desde el celular.",
+      "description": "Aplicación móvil que digitalizó la operación de una distribuidora de panela: ventas, inventario, clientes y contabilidad en tiempo real.",
       "problem": "Una distribuidora de panela en Colombia manejaba todas sus ventas e inventario en cuadernos físicos, generando pérdida de información, dificultad para calcular ganancias y falta de control sobre el negocio.",
       "solution": [
         "Registro de ventas con múltiples productos",
@@ -201,7 +219,7 @@
     "misfinanzas": {
       "category": "PWA · FINANZAS PERSONALES",
       "title": "MisFinanzas — Finanzas personales",
-      "description": "PWA instalable para seguir gastos, límites y metas de ahorro, con datos por usuario en la nube.",
+      "description": "PWA instalable para gestionar gastos, límites y metas de ahorro, con datos por usuario en la nube.",
       "problem": "Llevar las finanzas personales en notas u hojas de cálculo hace difícil saber a dónde se va el dinero cada mes y cumplir las metas de ahorro.",
       "solution": [
         "Registro e inicio de sesión con Supabase Auth",
@@ -215,7 +233,7 @@
     "dataflix": {
       "category": "EDTECH · PLATAFORMA EDUCATIVA",
       "title": "DataFlix — Aprende bases de datos",
-      "description": "Plataforma web para aprender bases de datos desde cero con cursos, quizzes y seguimiento de progreso.",
+      "description": "Plataforma web para aprender bases de datos desde cero, con cursos, evaluaciones y seguimiento de progreso.",
       "problem": "No existía una plataforma gratuita, visual y accesible para aprender bases de datos de forma práctica y autónoma en español.",
       "solution": [
         "Cursos gratuitos integrados con YouTube",
@@ -277,8 +295,8 @@
     "title_1": "¿Tienes un proyecto",
     "title_accent": "en mente",
     "title_2": "?",
-    "subtitle": "Estoy abierto a proyectos freelance, colaboraciones y oportunidades laborales. Cuéntame qué necesitas y te respondo con una idea de cómo lo construiría.",
-    "available": "Abierto a oportunidades",
+    "subtitle": "Disponible para oportunidades laborales, proyectos freelance y colaboraciones. Cuéntame qué necesitas y te respondo con una propuesta concreta.",
+    "available": "Disponible para nuevas oportunidades",
     "local_time": "En Bucaramanga son las",
     "email_label": "Escríbeme a",
     "email_cta": "Enviar correo",
@@ -290,12 +308,12 @@
     "channels": {
       "whatsapp": { "label": "WhatsApp", "desc": "La vía más rápida" },
       "linkedin": { "label": "LinkedIn", "desc": "Trayectoria y recomendaciones" },
-      "github": { "label": "GitHub", "desc": "Todo mi código, público" }
+      "github": { "label": "GitHub", "desc": "Código y proyectos públicos" }
     },
     "response_note": "Respondo en menos de 24 horas. Para temas urgentes, WhatsApp es la mejor opción."
   },
   "footer": {
-    "description": "Full Stack Developer formado en Campuslands. Construyo aplicaciones web y automatizo procesos.",
+    "description": "Desarrollador de Software Full Stack. Aplicaciones web y móviles, APIs y automatización de procesos empresariales.",
     "nav_title": "Navegación",
     "connect_title": "Conecta",
     "rights": "Todos los derechos reservados",

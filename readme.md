@@ -4,8 +4,8 @@
 
 # Santiago Romero — Full Stack Developer
 
-**Desarrollador full stack en Bucaramanga, Colombia · Formado en Campuslands · Estudiante de Ingeniería de Software.**<br />
-Construyo aplicaciones web y móviles de punta a punta y, en Cajasan, automatizo procesos que antes tomaban días.
+**Desarrollador de Software Full Stack · Bucaramanga, Colombia**<br />
+Aplicaciones web y móviles, APIs y automatización de procesos empresariales, desde el análisis del problema hasta el despliegue.
 
 [![Sitio en vivo](https://img.shields.io/badge/sitio-srmdev.vercel.app-c8a97e?style=flat-square)](https://srmdev.vercel.app/)
 ![React 18](https://img.shields.io/badge/React-18-0a0a0a?style=flat-square&logo=react)
@@ -21,12 +21,13 @@ Construyo aplicaciones web y móviles de punta a punta y, en Cajasan, automatizo
 
 | Sección | Qué muestra |
 | --- | --- |
-| **Portada** | Quién soy en una frase, cifras verificables y un mazo con capturas reales de mis proyectos que se abre al pasar el mouse. |
-| **Proyecto destacado** | [Automatizaciones](https://portafolio-automatizacion.vercel.app): el sitio que construí para mostrar las 25 herramientas que entregué en Cajasan. Capturas en rotación y un reloj que pasa de `40:00:00` a `00:00:15` con el scroll. |
-| **Proyectos** | Casos de estudio con su visual: celular para DistribApp, capturas reales y terminales para los proyectos de consola. Los proyectos en equipo están señalados como tales. |
+| **Portada** | Propuesta de valor, cifras verificables y un mazo con capturas reales de mis proyectos que se abre al pasar el mouse. |
+| **Sobre mí** | Perfil profesional, cómo trabajo, formación e idiomas. |
 | **Trayectoria** | Cajasan, trabajo freelance, Ingeniería de Software (UDES) y Campuslands, en una línea de tiempo. |
-| **Stack** | 35 tecnologías con su logo, filtrables por categoría; cada una dice en qué proyecto la usé. Incluye una bitácora de aprendizaje. |
-| **Sobre mí y contacto** | Mi historia, mis principios, hora local, correo con copia en un clic y descarga del CV en español o inglés. |
+| **Proyecto destacado** | [Automatizaciones](https://portafolio-automatizacion.vercel.app): el sitio que presenta las 25 soluciones que entregué en Cajasan. Capturas en rotación y un reloj que pasa de `40:00:00` a `00:00:15` con el scroll. |
+| **Proyectos** | Casos de estudio con su visual: celular para DistribApp, capturas reales y terminales para consola y API. Los proyectos en equipo están señalados como tales. |
+| **Stack** | 35 tecnologías con su logo: stack principal destacado y el resto organizado por capa del sistema, cada una con los proyectos donde se aplicó. |
+| **Contacto** | Disponibilidad y hora local, correo con copia en un clic, descarga del CV en español o inglés y canales directos. |
 
 <table>
   <tr>

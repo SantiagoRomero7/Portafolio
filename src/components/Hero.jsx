@@ -9,8 +9,8 @@ const stackItems = ['React', 'Node.js', 'TypeScript', 'Next.js', 'Python', 'Supa
 
 const stats = [
   { value: '25', key: 'automations' },
-  { value: '1', key: 'production' },
-  { value: '30+', key: 'repos' },
+  { value: '7', key: 'projects' },
+  { value: '35', key: 'tech' },
 ];
 
 // Mazo de capturas reales: reposo apilado, se abre en abanico al pasar el mouse
