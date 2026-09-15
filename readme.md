@@ -4,7 +4,7 @@
 
 # Santiago Romero — Full Stack Developer
 
-**Desarrollador full stack autodidacta en Bucaramanga, Colombia.**<br />
+**Desarrollador full stack en Bucaramanga, Colombia · Formado en Campuslands · Estudiante de Ingeniería de Software.**<br />
 Construyo aplicaciones web y móviles de punta a punta y, en Cajasan, automatizo procesos que antes tomaban días.
 
 [![Sitio en vivo](https://img.shields.io/badge/sitio-srmdev.vercel.app-c8a97e?style=flat-square)](https://srmdev.vercel.app/)
@@ -24,9 +24,9 @@ Construyo aplicaciones web y móviles de punta a punta y, en Cajasan, automatizo
 | **Portada** | Quién soy en una frase, cifras verificables y un mazo con capturas reales de mis proyectos que se abre al pasar el mouse. |
 | **Proyecto destacado** | [Automatizaciones](https://portafolio-automatizacion.vercel.app): el sitio que construí para mostrar las 25 herramientas que entregué en Cajasan. Capturas en rotación y un reloj que pasa de `40:00:00` a `00:00:15` con el scroll. |
 | **Proyectos** | Casos de estudio con su visual: celular para DistribApp, capturas reales y terminales para los proyectos de consola. Los proyectos en equipo están señalados como tales. |
-| **Trayectoria** | Cajasan, trabajo freelance y formación autodidacta, en una línea de tiempo. |
-| **Stack** | Cada tecnología dice en qué proyecto la usé, en lugar de un nivel autoevaluado. Incluye una bitácora de aprendizaje: qué ya está en proyectos, qué estoy aprendiendo y qué sigue. |
-| **Sobre mí y contacto** | Mi historia, mis principios y cómo escribirme. |
+| **Trayectoria** | Cajasan, trabajo freelance, Ingeniería de Software (UDES) y Campuslands, en una línea de tiempo. |
+| **Stack** | 35 tecnologías con su logo, filtrables por categoría; cada una dice en qué proyecto la usé. Incluye una bitácora de aprendizaje. |
+| **Sobre mí y contacto** | Mi historia, mis principios, hora local, correo con copia en un clic y descarga del CV en español o inglés. |
 
 <table>
   <tr>

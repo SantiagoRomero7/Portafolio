@@ -1,24 +1,34 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Briefcase, GraduationCap } from 'lucide-react';
 import { spotlight } from '../hooks/spotlight';
 
+// De lo más reciente a lo más antiguo
 const items = [
   {
     key: 'cajasan',
+    kind: 'work',
     current: true,
-    tags: ['Python', 'pandas', 'openpyxl', 'OCR', 'Power Automate', 'Pix RPA', 'Tkinter'],
+    tags: ['Python', 'pandas', 'Power Automate', 'n8n', 'Power BI', 'Pix Studio', 'OCR'],
     target: 'featured',
   },
   {
     key: 'freelance',
+    kind: 'work',
     tags: ['React Native', 'Expo', 'Supabase', 'PostgreSQL'],
     target: 'projects',
   },
   {
-    key: 'self',
-    tags: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'React', 'Vue.js', 'Git'],
+    key: 'udes',
+    kind: 'education',
+    current: true,
+    tags: [],
+  },
+  {
+    key: 'campuslands',
+    kind: 'education',
+    tags: ['Node.js', 'Express', 'MongoDB', 'JWT', 'MySQL', 'React', 'Vue.js', 'Git', 'Scrum'],
     target: 'projects',
   },
 ];
@@ -45,16 +55,16 @@ const Experience = () => {
           {items.map((item, i) => {
             const base = `experience.items.${item.key}`;
             const points = t(`${base}.points`, { returnObjects: true });
+            const KindIcon = item.kind === 'education' ? GraduationCap : Briefcase;
             return (
               <motion.li
                 key={item.key}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
                 className="relative grid gap-4 pl-8 md:grid-cols-4 md:gap-10 md:pl-0"
               >
-                {/* Punto de la línea de tiempo */}
                 <span
                   className={`absolute left-0 top-8 h-[15px] w-[15px] rounded-full border-2 border-background md:left-[calc(25%-8px)] ${
                     item.current ? 'bg-emerald-400 shadow-[0_0_0_4px_rgba(52,211,153,0.15)]' : 'bg-accent'
@@ -73,9 +83,12 @@ const Experience = () => {
                 </div>
 
                 <div onMouseMove={spotlight} className="spotlight card p-7 md:col-span-3 md:ml-4 lg:p-8">
-                  <h3 className="mb-3 text-2xl font-bold">{t(`${base}.role`)}</h3>
+                  <div className="mb-3 flex items-center gap-3">
+                    <KindIcon size={18} className="shrink-0 text-accent" />
+                    <h3 className="text-2xl font-bold">{t(`${base}.role`)}</h3>
+                  </div>
                   <p className="mb-5 leading-relaxed text-foreground/50">{t(`${base}.summary`)}</p>
-                  {Array.isArray(points) && (
+                  {Array.isArray(points) && points.length > 0 && (
                     <ul className="mb-6 space-y-2">
                       {points.map((p) => (
                         <li key={p} className="flex gap-3 text-sm leading-relaxed text-foreground/60">
@@ -85,26 +98,30 @@ const Experience = () => {
                       ))}
                     </ul>
                   )}
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <div className="flex flex-wrap gap-2">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-md border border-foreground/[0.08] px-2.5 py-1 text-[11px] text-foreground/45"
+                  {(item.tags.length > 0 || item.target) && (
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <div className="flex flex-wrap gap-2">
+                        {item.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-md border border-foreground/[0.08] px-2.5 py-1 text-[11px] text-foreground/45"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      {item.target && (
+                        <Link
+                          to={item.target}
+                          smooth={true}
+                          offset={-80}
+                          className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent-light"
                         >
-                          {tag}
-                        </span>
-                      ))}
+                          {t(`${base}.cta`)} <ArrowRight size={14} />
+                        </Link>
+                      )}
                     </div>
-                    <Link
-                      to={item.target}
-                      smooth={true}
-                      offset={-80}
-                      className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent-light"
-                    >
-                      {t(`${base}.cta`)} <ArrowRight size={14} />
-                    </Link>
-                  </div>
+                  )}
                 </div>
               </motion.li>
             );

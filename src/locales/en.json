@@ -9,10 +9,10 @@
     "lets_talk": "Let's talk"
   },
   "hero": {
-    "badge": "Full Stack Developer · Self-taught",
+    "badge": "Full Stack Developer · Bucaramanga",
     "title_1": "I build web applications",
     "title_2": "that work",
-    "subtitle": "I'm **Santiago Romero**, a full stack developer from Bucaramanga, Colombia. I taught myself to code and now build web and mobile apps end to end, from prototype to production. At **Cajasan** I automate processes that used to take days.",
+    "subtitle": "I'm **Santiago Romero**, a full stack developer. I trained as a Full Stack Software Development Technician at **Campuslands**, I'm studying Software Engineering and I build web and mobile apps end to end. At **Cajasan** I automate processes that used to take days.",
     "cta_talk": "Let's talk",
     "cta_projects": "View projects",
     "stack_label": "MAIN STACK",
@@ -48,18 +48,18 @@
   },
   "experience": {
     "label": "EXPERIENCE",
-    "title_1": "From teaching myself to",
+    "title_1": "From Campuslands to",
     "title_accent": "shipping to production",
     "items": {
       "cajasan": {
         "when": "Current",
         "org": "Cajasan · Bucaramanga",
         "role": "Automation Developer",
-        "summary": "I work with the strategic support departments: I sit down with the teams, find where their day goes and build the tool that gives it back.",
+        "summary": "I work with the strategic support units: I sit down with the teams, find where their day goes and build the tool that gives it back.",
         "points": [
-          "25 tools delivered: Python desktop apps, RPA bots and Power Automate flows",
-          "Processes that took days or weeks reduced to seconds or minutes",
-          "Large-scale data validation, document OCR and accounting reconciliations"
+          "25 tools delivered: Python desktop apps, RPA bots and flows in Power Automate and n8n",
+          "Reporting with Power BI and Excel for the departments",
+          "Processes that took days or weeks reduced to seconds or minutes"
         ],
         "cta": "See the featured project"
       },
@@ -75,15 +75,22 @@
         ],
         "cta": "See the project"
       },
-      "self": {
-        "when": "Ongoing",
-        "org": "Personal and team projects",
-        "role": "Self-taught training",
-        "summary": "I learned the stack by building: APIs with Node.js and Express, SQL and NoSQL databases, frontends in React and Vue. Several projects were built as a team, with collaborative Git and SCRUM.",
+      "udes": {
+        "when": "2026 · Ongoing",
+        "org": "Universidad de Santander",
+        "role": "Software Engineering",
+        "summary": "University degree in software engineering, alongside my work at Cajasan. It complements the hands-on foundation from Campuslands with engineering fundamentals.",
+        "points": []
+      },
+      "campuslands": {
+        "when": "Feb – Nov 2025",
+        "org": "Campuslands · Floridablanca",
+        "role": "Full Stack Software Development Technician",
+        "summary": "Intensive full stack training, working in teams with Scrum and collaborative Git: APIs with Node.js and Express, SQL and NoSQL databases, and frontends with React and Vue.",
         "points": [
-          "Command-line management systems with MongoDB and atomic transactions",
-          "Web learning platform with courses, quizzes and progress",
-          "Every technology arrived because a project needed it"
+          "FoodStars: REST API with MVC architecture, JWT and weighted ranking in MongoDB",
+          "GymMaster and Pizza y Punto: command-line systems with atomic transactions",
+          "DataFlix: web learning platform with courses, quizzes and progress"
         ],
         "cta": "See projects"
       }
@@ -94,7 +101,7 @@
     "title_1": "Clean code,",
     "title_2": "real",
     "title_accent": "solutions",
-    "p1": "I'm Santiago Romero, a full stack developer from Bucaramanga, Colombia. I taught myself to code by building: every technology in my stack arrived because a project needed it.",
+    "p1": "I'm Santiago Romero, a full stack developer from Bucaramanga, Colombia. I trained at Campuslands as a Full Stack Software Development Technician and I'm now studying Software Engineering at Universidad de Santander.",
     "p2": "I work across the whole stack — frontend, backend and databases — because understanding the entire system is what lets me make better decisions. I don't settle for something that just works; I care that it's well built.",
     "p3": "Today I apply that at Cajasan, automating processes for the teams, and in my personal projects, where I keep learning something new every week.",
     "principles_label": "MY PRINCIPLES",
@@ -108,6 +115,7 @@
     "cta_projects": "View projects",
     "available": "Open to opportunities",
     "location": "Bucaramanga, Colombia",
+    "languages": "Spanish (native) · English B1",
     "open_to": "Open to freelance projects, collaborations and hybrid or remote opportunities.",
     "stat_automations": "Automations",
     "stat_repos": "Public repos"
@@ -116,19 +124,26 @@
     "label": "TECH STACK",
     "title_1": "Technologies I",
     "title_accent": "actually use",
-    "subtitle": "Self-taught and proven in projects. Next to each one, where I've used it.",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "databases": "Databases",
-    "automation": "Automation",
-    "tools": "Tools",
+    "subtitle": "Learned at Campuslands and proven in real projects. Each card shows where I've used it; filter by category to explore.",
+    "summary": "technologies across 5 areas",
+    "training": "From my training",
+    "cats": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "automation": "Automation",
+      "tools": "Tools"
+    },
     "learning_label": "Learning log",
-    "learning_intro": "This is how my stack evolves. What was under “learning” last year is now in projects.",
+    "learning_intro": "This is how my stack evolves: what used to be under “learning” is now in projects.",
     "learning": {
       "done": "Now in projects",
       "progress": "In progress",
       "next": "Next"
     },
+    "english": "English B1 → B2",
+    "degree": "Software Engineering",
     "learning_desc": "Have a project that requires something specific?",
     "cta_talk": "Let's talk"
   },
@@ -145,6 +160,7 @@
     "solution_label": "SOLUTION",
     "team": "Team project with",
     "cli_note": "Command-line interface (illustrative)",
+    "api_note": "API response (illustrative)",
     "maintenance_note": "The database is temporarily down. The code is available.",
     "status": {
       "production": "In production",
@@ -210,6 +226,20 @@
         "Free access without mandatory registration"
       ]
     },
+    "foodstars": {
+      "category": "FULL STACK · REST API",
+      "title": "FoodStars — Restaurant ranking",
+      "description": "Platform to discover, rate and rank restaurants: a REST API with Node.js and Express, and a frontend with search and an admin dashboard.",
+      "problem": "Review platforms usually sort only by average stars, ignoring community interaction and how recent the reviews are.",
+      "solution": [
+        "REST API with MVC architecture",
+        "JWT authentication with user and admin roles",
+        "Weighted ranking by rating, likes and recency",
+        "Transactions and Aggregation Framework in MongoDB",
+        "Rate limiting and multi-layer validation",
+        "Frontend with search, filters and admin dashboard"
+      ]
+    },
     "gym": {
       "category": "CLI · MANAGEMENT SYSTEM",
       "title": "GymMaster CLI",
@@ -247,17 +277,25 @@
     "title_1": "Have a project",
     "title_accent": "in mind",
     "title_2": "?",
-    "subtitle": "I'm open to freelance projects, collaborations and opportunities. Write me and let's talk about how I can help you.",
-    "email_label": "Email",
-    "email_cta": "Send message",
-    "whatsapp_label": "WhatsApp",
-    "whatsapp_cta": "Direct message",
-    "connect_label": "LET'S CONNECT",
-    "connect_desc": "Follow me to see my work and technical content.",
+    "subtitle": "I'm open to freelance projects, collaborations and job opportunities. Tell me what you need and I'll reply with an idea of how I'd build it.",
+    "available": "Open to opportunities",
+    "local_time": "In Bucaramanga it's",
+    "email_label": "Write me at",
+    "email_cta": "Send email",
+    "copy": "Copy email",
+    "copied": "Copied!",
+    "cv": "Download CV",
+    "cv_note": "Résumé in PDF, in English.",
+    "cv_other": "Download in Spanish",
+    "channels": {
+      "whatsapp": { "label": "WhatsApp", "desc": "The fastest way" },
+      "linkedin": { "label": "LinkedIn", "desc": "Experience and recommendations" },
+      "github": { "label": "GitHub", "desc": "All my code, public" }
+    },
     "response_note": "I respond within 24 hours. For urgent matters, WhatsApp is the best option."
   },
   "footer": {
-    "description": "Self-taught full stack developer. I build web applications and automate processes.",
+    "description": "Full Stack Developer trained at Campuslands. I build web applications and automate processes.",
     "nav_title": "Navigation",
     "connect_title": "Connect",
     "rights": "All rights reserved",

@@ -9,10 +9,10 @@
     "lets_talk": "Hablemos"
   },
   "hero": {
-    "badge": "Full Stack Developer · Autodidacta",
+    "badge": "Full Stack Developer · Bucaramanga",
     "title_1": "Construyo aplicaciones web",
     "title_2": "que funcionan",
-    "subtitle": "Soy **Santiago Romero**, desarrollador full stack de Bucaramanga. Aprendí por mi cuenta y hoy construyo aplicaciones web y móviles de punta a punta, del prototipo a producción. En **Cajasan** automatizo procesos que antes tomaban días.",
+    "subtitle": "Soy **Santiago Romero**, desarrollador full stack. Me formé como Técnico en Desarrollo de Software Full Stack en **Campuslands**, estudio Ingeniería de Software y construyo aplicaciones web y móviles de punta a punta. En **Cajasan** automatizo procesos que antes tomaban días.",
     "cta_talk": "Hablemos",
     "cta_projects": "Ver proyectos",
     "stack_label": "STACK PRINCIPAL",
@@ -48,18 +48,18 @@
   },
   "experience": {
     "label": "TRAYECTORIA",
-    "title_1": "De aprender por mi cuenta a",
+    "title_1": "De Campuslands a",
     "title_accent": "entregar en producción",
     "items": {
       "cajasan": {
         "when": "Actual",
         "org": "Cajasan · Bucaramanga",
         "role": "Desarrollador de automatizaciones",
-        "summary": "Trabajo con las áreas de soporte estratégico: me siento con los equipos, entiendo dónde se les va el día y construyo la herramienta que se los devuelve.",
+        "summary": "Trabajo con las unidades de soporte estratégico: me siento con los equipos, entiendo dónde se les va el día y construyo la herramienta que se los devuelve.",
         "points": [
-          "25 herramientas entregadas: aplicaciones de escritorio en Python, robots RPA y flujos en Power Automate",
-          "Procesos de días o semanas reducidos a segundos o minutos",
-          "Validación de datos a gran escala, OCR de documentos y conciliaciones contables"
+          "25 herramientas entregadas: aplicaciones de escritorio en Python, robots RPA y flujos en Power Automate y n8n",
+          "Reportería con Power BI y Excel para las áreas",
+          "Procesos de días o semanas reducidos a segundos o minutos"
         ],
         "cta": "Ver el proyecto destacado"
       },
@@ -75,15 +75,22 @@
         ],
         "cta": "Ver el proyecto"
       },
-      "self": {
-        "when": "Continuo",
-        "org": "Proyectos propios y en equipo",
-        "role": "Formación autodidacta",
-        "summary": "Aprendí el stack construyendo: APIs con Node.js y Express, bases de datos SQL y NoSQL, frontends en React y Vue. Varios proyectos los desarrollé en equipo, con Git colaborativo y SCRUM.",
+      "udes": {
+        "when": "2026 · En curso",
+        "org": "Universidad de Santander",
+        "role": "Ingeniería de Software",
+        "summary": "Formación profesional en ingeniería de software, en paralelo con mi trabajo en Cajasan. Complementa la base práctica de Campuslands con fundamentos de ingeniería.",
+        "points": []
+      },
+      "campuslands": {
+        "when": "Feb – Nov 2025",
+        "org": "Campuslands · Floridablanca",
+        "role": "Técnico en Desarrollo de Software Full Stack",
+        "summary": "Formación intensiva en desarrollo full stack, trabajando en equipo bajo Scrum y con Git colaborativo: APIs con Node.js y Express, bases de datos SQL y NoSQL, y frontends con React y Vue.",
         "points": [
-          "Sistemas de gestión por consola con MongoDB y transacciones atómicas",
-          "Plataforma educativa web con cursos, quizzes y progreso",
-          "Cada tecnología llegó porque un proyecto la necesitaba"
+          "FoodStars: API REST con arquitectura MVC, JWT y ranking ponderado en MongoDB",
+          "GymMaster y Pizza y Punto: sistemas por consola con transacciones atómicas",
+          "DataFlix: plataforma educativa web con cursos, quizzes y progreso"
         ],
         "cta": "Ver proyectos"
       }
@@ -94,7 +101,7 @@
     "title_1": "Código limpio,",
     "title_2": "soluciones",
     "title_accent": "reales",
-    "p1": "Soy Santiago Romero, desarrollador full stack de Bucaramanga, Colombia. Aprendí a programar por mi cuenta, a punta de construir: cada tecnología de mi stack llegó porque un proyecto la necesitaba.",
+    "p1": "Soy Santiago Romero, desarrollador full stack de Bucaramanga, Colombia. Me formé en Campuslands como Técnico en Desarrollo de Software Full Stack y hoy estudio Ingeniería de Software en la Universidad de Santander.",
     "p2": "Trabajo el stack completo —frontend, backend y bases de datos— porque entender todo el sistema es lo que me permite tomar mejores decisiones. No me conformo con que algo funcione: me importa que esté bien construido.",
     "p3": "Hoy aplico eso en Cajasan, automatizando procesos para los equipos, y en mis proyectos personales, donde sigo aprendiendo algo nuevo cada semana.",
     "principles_label": "MIS PRINCIPIOS",
@@ -108,6 +115,7 @@
     "cta_projects": "Ver proyectos",
     "available": "Abierto a oportunidades",
     "location": "Bucaramanga, Colombia",
+    "languages": "Español nativo · Inglés B1",
     "open_to": "Abierto a proyectos freelance, colaboraciones y oportunidades híbridas o remotas.",
     "stat_automations": "Automatizaciones",
     "stat_repos": "Repos públicos"
@@ -116,19 +124,26 @@
     "label": "STACK TÉCNICO",
     "title_1": "Tecnologías que",
     "title_accent": "uso de verdad",
-    "subtitle": "Aprendidas por mi cuenta y probadas en proyectos. Al lado de cada una, dónde la he usado.",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "databases": "Bases de datos",
-    "automation": "Automatización",
-    "tools": "Herramientas",
+    "subtitle": "Aprendidas en Campuslands y probadas en proyectos reales. Cada tarjeta dice dónde la he usado; filtra por categoría para explorar.",
+    "summary": "tecnologías en 5 áreas",
+    "training": "En mi formación",
+    "cats": {
+      "all": "Todas",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de datos",
+      "automation": "Automatización",
+      "tools": "Herramientas"
+    },
     "learning_label": "Bitácora de aprendizaje",
-    "learning_intro": "Así evoluciona mi stack. Lo que estaba en «aprendiendo» el año pasado hoy ya está en proyectos.",
+    "learning_intro": "Así evoluciona mi stack: lo que antes estaba en «aprendiendo» hoy ya está en proyectos.",
     "learning": {
       "done": "Ya en proyectos",
       "progress": "En progreso",
       "next": "Siguiente"
     },
+    "english": "Inglés B1 → B2",
+    "degree": "Ingeniería de Software",
     "learning_desc": "¿Tienes un proyecto que requiere algo específico?",
     "cta_talk": "Hablemos"
   },
@@ -145,6 +160,7 @@
     "solution_label": "SOLUCIÓN",
     "team": "En equipo con",
     "cli_note": "Interfaz de consola (ilustrativa)",
+    "api_note": "Respuesta de la API (ilustrativa)",
     "maintenance_note": "La base de datos está temporalmente fuera de servicio. El código está disponible.",
     "status": {
       "production": "En producción",
@@ -210,6 +226,20 @@
         "Acceso libre sin registro obligatorio"
       ]
     },
+    "foodstars": {
+      "category": "FULL STACK · API REST",
+      "title": "FoodStars — Ranking de restaurantes",
+      "description": "Plataforma para descubrir, calificar y rankear restaurantes: una API REST con Node.js y Express, y un frontend con búsqueda y panel de administración.",
+      "problem": "Las plataformas de reseñas suelen ordenar solo por el promedio de estrellas, sin considerar la interacción de la comunidad ni qué tan recientes son las opiniones.",
+      "solution": [
+        "API REST con arquitectura MVC",
+        "Autenticación JWT con roles de usuario y administrador",
+        "Ranking ponderado por calificación, likes y recencia",
+        "Transacciones y Aggregation Framework en MongoDB",
+        "Rate limiting y validación en varias capas",
+        "Frontend con búsqueda, filtros y panel de administración"
+      ]
+    },
     "gym": {
       "category": "CLI · SISTEMA DE GESTIÓN",
       "title": "GymMaster CLI",
@@ -247,17 +277,25 @@
     "title_1": "¿Tienes un proyecto",
     "title_accent": "en mente",
     "title_2": "?",
-    "subtitle": "Estoy abierto a proyectos freelance, colaboraciones y oportunidades. Escríbeme y hablemos sobre cómo puedo ayudarte.",
-    "email_label": "Email",
-    "email_cta": "Enviar mensaje",
-    "whatsapp_label": "WhatsApp",
-    "whatsapp_cta": "Mensaje directo",
-    "connect_label": "CONECTEMOS",
-    "connect_desc": "Sígueme para ver mi trabajo y contenido técnico.",
+    "subtitle": "Estoy abierto a proyectos freelance, colaboraciones y oportunidades laborales. Cuéntame qué necesitas y te respondo con una idea de cómo lo construiría.",
+    "available": "Abierto a oportunidades",
+    "local_time": "En Bucaramanga son las",
+    "email_label": "Escríbeme a",
+    "email_cta": "Enviar correo",
+    "copy": "Copiar correo",
+    "copied": "¡Copiado!",
+    "cv": "Descargar CV",
+    "cv_note": "Hoja de vida en PDF, en español.",
+    "cv_other": "Descargar en inglés",
+    "channels": {
+      "whatsapp": { "label": "WhatsApp", "desc": "La vía más rápida" },
+      "linkedin": { "label": "LinkedIn", "desc": "Trayectoria y recomendaciones" },
+      "github": { "label": "GitHub", "desc": "Todo mi código, público" }
+    },
     "response_note": "Respondo en menos de 24 horas. Para temas urgentes, WhatsApp es la mejor opción."
   },
   "footer": {
-    "description": "Full Stack Developer autodidacta. Construyo aplicaciones web y automatizo procesos.",
+    "description": "Full Stack Developer formado en Campuslands. Construyo aplicaciones web y automatizo procesos.",
     "nav_title": "Navegación",
     "connect_title": "Conecta",
     "rights": "Todos los derechos reservados",

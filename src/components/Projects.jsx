@@ -65,7 +65,8 @@ const Visual = ({ project }) => {
   const { t } = useTranslation();
   const v = project.visual;
   if (v.type === 'phone') return <DistribPhone />;
-  if (v.type === 'terminal') return <TerminalFrame title={v.title} lines={v.lines} note={t('projects.cli_note')} />;
+  if (v.type === 'terminal')
+    return <TerminalFrame title={v.title} lines={v.lines} note={t(v.note ?? 'projects.cli_note')} />;
   return (
     <BrowserFrame url={v.url}>
       <Screenshot src={v.src} alt={t(`projects.${project.key}.title`)} />
@@ -238,7 +239,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-6">
           {projects.map((project, i) => (
-            <ProjectCard key={project.key} project={project} index={i} wide={i === 0} />
+            <ProjectCard key={project.key} project={project} index={i} wide={i === 0 || project.wide} />
           ))}
         </div>
 

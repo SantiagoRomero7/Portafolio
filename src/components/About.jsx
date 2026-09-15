@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
-import { ArrowRight, MapPin, Code2, Zap, Palette, BookOpen } from 'lucide-react';
+import { ArrowRight, MapPin, Code2, Zap, Palette, BookOpen, Languages } from 'lucide-react';
 
 const image = '/img/perfil.png';
 
@@ -104,6 +104,10 @@ const About = () => {
                 <div className="flex items-center gap-2 text-sm text-foreground/40">
                   <MapPin size={14} />
                   <span>{t('about.location')}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-foreground/40">
+                  <Languages size={14} />
+                  <span>{t('about.languages')}</span>
                 </div>
                 <p className="text-sm text-foreground/30 leading-relaxed">
                   {t('about.open_to')}

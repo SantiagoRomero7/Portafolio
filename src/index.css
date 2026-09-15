@@ -96,6 +96,22 @@
     opacity: 1;
   }
 
+  /* Tarjeta de tecnología: el borde toma el color de la marca (--brand) al pasar el mouse */
+  .tech-tile {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .tech-tile:hover {
+    border-color: color-mix(in srgb, var(--brand) 45%, transparent);
+    transform: translateY(-3px);
+  }
+
+  /* Botón secundario con borde */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-full border border-foreground/15 px-6 py-3 text-sm font-semibold text-foreground/80 transition-all duration-300 hover:border-foreground/40 hover:text-foreground;
+  }
+
   /* Botón principal */
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground/90 text-background font-semibold text-sm transition-all duration-300 hover:bg-foreground;
