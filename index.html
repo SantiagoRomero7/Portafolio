@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Santiago Romero — Full Stack Developer</title>
     <meta
@@ -10,7 +11,9 @@
       content="Santiago Romero — Desarrollador de Software Full Stack en Bucaramanga. Aplicaciones web y móviles, APIs y automatización de procesos empresariales, con 25 soluciones en producción en Cajasan."
     />
     <meta name="author" content="Santiago Romero" />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#e5e7eb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://srmdev.vercel.app/" />
@@ -19,21 +22,32 @@
       property="og:description"
       content="Desarrollo software que funciona en producción: aplicaciones web y móviles, APIs y 25 soluciones de automatización."
     />
+    <!-- Declarar el tamaño evita que la vista previa se quede en blanco la
+         primera vez: sin él, varias redes no reservan el espacio hasta que la
+         imagen termina de bajar. Se genera desde design/og-card.html. -->
     <meta property="og:image" content="https://srmdev.vercel.app/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Santiago Romero — Desarrollo software que funciona en producción"
+    />
     <meta property="og:locale" content="es_CO" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Aplica el tema guardado antes de pintar, para evitar el destello -->
+    <!-- El papel es el tema por defecto; el modo tinta es el que se marca.
+         Se aplica antes de pintar para evitar el destello. -->
     <script>
       try {
-        if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light');
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
       } catch (e) {}
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..600&family=Geist+Mono:wght@300..500&display=swap"
       rel="stylesheet"
     />
   </head>

@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 import { ArrowRight, Briefcase, GraduationCap } from 'lucide-react';
-import { spotlight } from '../hooks/spotlight';
+import SectionHeading from './SectionHeading';
+import Reveal from './Reveal';
 
 // De lo más reciente a lo más antiguo
 const items = [
@@ -19,12 +20,7 @@ const items = [
     tags: ['React Native', 'Expo', 'Supabase', 'PostgreSQL'],
     target: 'projects',
   },
-  {
-    key: 'udes',
-    kind: 'education',
-    current: true,
-    tags: [],
-  },
+  { key: 'udes', kind: 'education', current: true, tags: [] },
   {
     key: 'campuslands',
     kind: 'education',
@@ -37,75 +33,82 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="experience" className="py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="section-label">{t('experience.label')}</div>
-          <h2 className="mb-16 max-w-3xl text-4xl font-extrabold leading-[1.1] md:text-5xl lg:text-6xl">
-            {t('experience.title_1')} <span className="accent-italic">{t('experience.title_accent')}</span>
-          </h2>
-        </motion.div>
+    <section id="experience" className="section">
+      <div className="shell">
+        <SectionHeading
+          index="02"
+          label={t('experience.label')}
+          title={t('experience.title_1')}
+          accent={t('experience.title_accent')}
+        />
 
-        <ol className="relative space-y-6 before:absolute before:bottom-6 before:left-[7px] before:top-6 before:w-px before:bg-foreground/[0.08] md:before:left-[calc(25%-1px)]">
+        {/* El raíl vertical solo existe en escritorio: en móvil estorba */}
+        <ol className="relative mt-16 lg:mt-24">
+          <span
+            aria-hidden
+            className="absolute bottom-10 left-0 top-10 hidden w-px lg:block"
+            style={{ background: 'var(--line)' }}
+          />
+
           {items.map((item, i) => {
             const base = `experience.items.${item.key}`;
             const points = t(`${base}.points`, { returnObjects: true });
             const KindIcon = item.kind === 'education' ? GraduationCap : Briefcase;
+
             return (
               <motion.li
                 key={item.key}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                className="relative grid gap-4 pl-8 md:grid-cols-4 md:gap-10 md:pl-0"
+                initial={{ opacity: 0, y: 30, filter: 'blur(6px)' }}
+                whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                viewport={{ once: true, amount: 0.12 }}
+                transition={{ duration: 0.8, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                className="group relative grid gap-x-10 gap-y-5 py-10 lg:grid-cols-12 lg:pl-12"
+                style={{ borderTop: '1px solid var(--line)' }}
               >
+                {/* Punto del raíl */}
                 <span
-                  className={`absolute left-0 top-8 h-[15px] w-[15px] rounded-full border-2 border-background md:left-[calc(25%-8px)] ${
-                    item.current ? 'bg-emerald-400 shadow-[0_0_0_4px_rgba(52,211,153,0.15)]' : 'bg-accent'
+                  aria-hidden
+                  className={`absolute left-[-5px] top-[3.2rem] hidden h-2.5 w-2.5 rounded-pill lg:block ${
+                    item.current ? 'bg-lime' : 'bg-ash'
                   }`}
+                  style={{ outline: '5px solid rgb(var(--c-canvas))' }}
                 />
 
-                <div className="md:pr-10 md:pt-7 md:text-right">
+                {/* Columna de fecha */}
+                <div className="lg:col-span-3">
                   <p
-                    className={`text-[11px] font-bold uppercase tracking-widest ${
-                      item.current ? 'text-emerald-400' : 'text-accent'
-                    }`}
+                    className={`text-label uppercase ${item.current ? 'text-ink' : 'text-smoke'}`}
                   >
                     {t(`${base}.when`)}
                   </p>
-                  <p className="mt-1 text-sm text-foreground/40">{t(`${base}.org`)}</p>
+                  <p className="mt-2 text-sm text-muted">{t(`${base}.org`)}</p>
                 </div>
 
-                <div onMouseMove={spotlight} className="spotlight card p-7 md:col-span-3 md:ml-4 lg:p-8">
-                  <div className="mb-3 flex items-center gap-3">
-                    <KindIcon size={18} className="shrink-0 text-accent" />
-                    <h3 className="text-2xl font-bold">{t(`${base}.role`)}</h3>
+                {/* Contenido */}
+                <div className="lg:col-span-9">
+                  <div className="flex items-center gap-3">
+                    <KindIcon size={16} className="shrink-0 text-muted/70" />
+                    <h3 className="h-sub">{t(`${base}.role`)}</h3>
                   </div>
-                  <p className="mb-5 leading-relaxed text-foreground/50">{t(`${base}.summary`)}</p>
+
+                  <p className="mt-4 max-w-2xl font-light leading-relaxed text-muted">{t(`${base}.summary`)}</p>
+
                   {Array.isArray(points) && points.length > 0 && (
-                    <ul className="mb-6 space-y-2">
+                    <ul className="mt-6 grid max-w-3xl gap-2.5 sm:grid-cols-2">
                       {points.map((p) => (
-                        <li key={p} className="flex gap-3 text-sm leading-relaxed text-foreground/60">
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
+                        <li key={p} className="flex gap-3 text-caption leading-relaxed text-muted">
+                          <span className="mt-[0.45rem] h-1 w-1 shrink-0 rounded-full bg-muted/50" />
                           {p}
                         </li>
                       ))}
                     </ul>
                   )}
+
                   {(item.tags.length > 0 || item.target) && (
-                    <div className="flex flex-wrap items-center justify-between gap-4">
+                    <div className="mt-7 flex flex-wrap items-center justify-between gap-5">
                       <div className="flex flex-wrap gap-2">
                         {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-md border border-foreground/[0.08] px-2.5 py-1 text-[11px] text-foreground/45"
-                          >
+                          <span key={tag} className="tag">
                             {tag}
                           </span>
                         ))}
@@ -113,11 +116,13 @@ const Experience = () => {
                       {item.target && (
                         <Link
                           to={item.target}
-                          smooth={true}
-                          offset={-80}
-                          className="inline-flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-accent transition-colors hover:text-accent-light"
+                          smooth
+                          duration={800}
+                          offset={-100}
+                          className="link-iris cursor-pointer whitespace-nowrap"
                         >
-                          {t(`${base}.cta`)} <ArrowRight size={14} />
+                          {t(`${base}.cta`)}
+                          <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                       )}
                     </div>
@@ -127,6 +132,10 @@ const Experience = () => {
             );
           })}
         </ol>
+
+        <Reveal>
+          <div style={{ borderTop: '1px solid var(--line)' }} />
+        </Reveal>
       </div>
     </section>
   );

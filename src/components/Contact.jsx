@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowUpRight, Check, Copy, Download, Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
-import { spotlight } from '../hooks/spotlight';
+import Reveal, { RevealWords } from './Reveal';
 
 const EMAIL = 'santirmrm420@gmail.com';
 
@@ -12,16 +11,14 @@ const channels = [
     Icon: MessageCircle,
     href: 'https://api.whatsapp.com/send/?phone=573172681209',
     handle: '+57 317 268 1209',
-    color: '#25D366',
   },
   {
     key: 'linkedin',
     Icon: Linkedin,
     href: 'https://www.linkedin.com/in/santiago-romero-9a673a37a/',
     handle: 'santiago-romero',
-    color: '#0A66C2',
   },
-  { key: 'github', Icon: Github, href: 'https://github.com/SantiagoRomero7', handle: '@SantiagoRomero7', color: null },
+  { key: 'github', Icon: Github, href: 'https://github.com/SantiagoRomero7', handle: '@SantiagoRomero7' },
 ];
 
 const cvFile = (lang) => `/cv/Santiago-Romero-CV-${lang === 'es' ? 'ES' : 'EN'}.pdf`;
@@ -55,129 +52,120 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-16 h-[440px] w-[860px] max-w-[140%] -translate-x-1/2 rounded-full bg-accent/[0.07] blur-3xl"
-      />
+    <section id="contact" className="section relative isolate overflow-hidden">
+      <div className="shell">
+        <Reveal y={12}>
+          <div className="pb-5" style={{ borderBottom: '1px solid var(--line)' }}>
+            <span className="eyebrow">{t('contact.label')}</span>
+          </div>
+        </Reveal>
 
-      <div className="relative mx-auto max-w-6xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="section-label">{t('contact.label')}</div>
-          <h2 className="mb-12 text-5xl font-extrabold leading-[1.02] tracking-tight md:text-7xl lg:text-8xl">
-            {t('contact.title_1')}
-            <br />
-            <span className="accent-italic">{t('contact.title_accent')}</span>
-            {t('contact.title_2')}
-          </h2>
-        </motion.div>
+        <h2 className="mt-8 text-display">
+          <RevealWords text={t('contact.title_1')} delay={0.05} />{' '}
+          <RevealWords
+            text={`${t('contact.title_accent')}${t('contact.title_2')}`}
+            delay={0.05 + t('contact.title_1').split(' ').length * 0.055}
+            highlight
+          />
+        </h2>
 
-        <div className="grid gap-12 lg:grid-cols-12">
-          <motion.div
-            className="lg:col-span-7"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-          >
-            <div className="mb-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-              <span className="inline-flex items-center gap-2 font-medium text-emerald-400">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+        <div className="mt-16 grid gap-x-14 gap-y-16 lg:mt-20 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <Reveal delay={0.1}>
+              <div className="flex flex-wrap items-center gap-x-7 gap-y-2 text-sm">
+                <span className="inline-flex items-center gap-2.5 text-ink">
+                  <span className="h-2.5 w-2.5 shrink-0 rounded-pill bg-lime" />
+                  {t('contact.available')}
                 </span>
-                {t('contact.available')}
-              </span>
-              <span className="text-foreground/40">
-                {t('contact.local_time')} <span className="font-semibold tabular-nums text-foreground/75">{time}</span>
-              </span>
-            </div>
+                <span className="text-muted">
+                  {t('contact.local_time')}{' '}
+                  <span className="nums text-ink">{time}</span>
+                </span>
+              </div>
 
-            <p className="mb-10 max-w-xl text-lg leading-relaxed text-foreground/45">{t('contact.subtitle')}</p>
+              <p className="lede mt-8 max-w-xl">{t('contact.subtitle')}</p>
+            </Reveal>
 
-            <p className="mb-3 text-[10px] font-semibold uppercase tracking-widest text-foreground/30">
-              {t('contact.email_label')}
-            </p>
-            <a href={`mailto:${EMAIL}`} className="group inline-flex max-w-full items-center gap-3">
-              <span className="break-all bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_2px] bg-left-bottom bg-no-repeat pb-1 text-[5.4vw] font-bold transition-[background-size] min-[420px]:text-2xl duration-500 group-hover:bg-[length:100%_2px] sm:text-3xl md:text-4xl">
-                {EMAIL}
-              </span>
-              <ArrowUpRight
-                size={28}
-                className="shrink-0 text-accent transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-              />
-            </a>
+            {/* El correo es la acción principal: va al tamaño de un titular */}
+            <Reveal delay={0.16}>
+              <div className="mt-12">
+                <p className="eyebrow">{t('contact.email_label')}</p>
+                <a href={`mailto:${EMAIL}`} className="group mt-4 flex max-w-full items-center gap-4">
+                  <span className="break-all bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-1.5 text-[clamp(1.35rem,4.2vw,2.5rem)] leading-tight tracking-tight transition-[background-size] duration-700 ease-out group-hover:bg-[length:100%_1px]">
+                    {EMAIL}
+                  </span>
+                  <ArrowUpRight
+                    size={26}
+                    className="shrink-0 text-ink transition-transform duration-700 ease-out group-hover:-translate-y-1 group-hover:translate-x-1"
+                  />
+                </a>
+              </div>
+            </Reveal>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={`mailto:${EMAIL}`} className="btn-primary">
-                <Mail size={16} /> {t('contact.email_cta')}
-              </a>
-              <button type="button" onClick={copy} className="btn-outline" aria-live="polite">
-                {copied ? <Check size={16} className="text-emerald-400" /> : <Copy size={16} />}
-                {copied ? t('contact.copied') : t('contact.copy')}
-              </button>
-              <a href={cvFile(lang)} download className="btn-outline">
-                <Download size={16} /> {t('contact.cv')}
-              </a>
-            </div>
-            <p className="mt-4 text-xs text-foreground/30">
-              {t('contact.cv_note')}{' '}
-              <a
-                href={cvFile(lang === 'es' ? 'en' : 'es')}
-                download
-                className="underline decoration-foreground/20 underline-offset-4 transition-colors hover:text-foreground/60"
-              >
-                {t('contact.cv_other')}
-              </a>
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="space-y-4 lg:col-span-5"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.12 }}
-          >
-            {channels.map(({ key, Icon, href, handle, color }) => (
-              <a
-                key={key}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseMove={spotlight}
-                className="spotlight card group flex items-center gap-4 p-5"
-              >
-                <span
-                  className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-105 ${
-                    color ? '' : 'bg-foreground/[0.06] text-foreground'
-                  }`}
-                  style={color ? { background: `${color}1f`, color } : undefined}
+            <Reveal delay={0.22}>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <a href={`mailto:${EMAIL}`} className="btn-primary">
+                  <Mail size={15} /> {t('contact.email_cta')}
+                </a>
+                <button type="button" onClick={copy} className="btn-outline" aria-live="polite">
+                  {copied ? <Check size={15} /> : <Copy size={15} />}
+                  {copied ? t('contact.copied') : t('contact.copy')}
+                </button>
+                <a href={cvFile(lang)} download className="btn-outline">
+                  <Download size={15} /> {t('contact.cv')}
+                </a>
+              </div>
+              <p className="mt-5 text-caption text-muted">
+                {t('contact.cv_note')}{' '}
+                <a
+                  href={cvFile(lang === 'es' ? 'en' : 'es')}
+                  download
+                  className="underline underline-offset-4 transition-colors hover:text-foreground"
+                  style={{ textDecorationColor: 'var(--line-strong)' }}
                 >
-                  <Icon size={20} />
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[10px] font-semibold uppercase tracking-widest text-foreground/35">
-                    {t(`contact.channels.${key}.label`)}
-                  </p>
-                  <p className="truncate font-semibold">{handle}</p>
-                  <p className="text-xs text-foreground/35">{t(`contact.channels.${key}.desc`)}</p>
-                </div>
-                <ArrowUpRight
-                  size={18}
-                  className="shrink-0 text-foreground/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
-                />
-              </a>
-            ))}
-            <p className="rounded-2xl border border-dashed border-foreground/10 p-5 text-xs leading-relaxed text-foreground/35">
-              {t('contact.response_note')}
-            </p>
-          </motion.div>
+                  {t('contact.cv_other')}
+                </a>
+              </p>
+            </Reveal>
+          </div>
+
+          {/* Canales: filas separadas por líneas, sin tarjetas */}
+          <div className="lg:col-span-5">
+            <Reveal delay={0.14}>
+              <div>
+                {channels.map(({ key, Icon, href, handle }) => (
+                  <a
+                    key={key}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-5 py-6 transition-colors duration-300"
+                    style={{ borderTop: '1px solid var(--line)' }}
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-paper text-ink transition-colors duration-500 group-hover:bg-inverse group-hover:text-inverse-fg">
+                      <Icon size={18} />
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <p className="eyebrow">{t(`contact.channels.${key}.label`)}</p>
+                      <p className="mt-2 truncate text-[0.95rem] text-ink">{handle}</p>
+                      <p className="mt-0.5 text-caption text-muted">{t(`contact.channels.${key}.desc`)}</p>
+                    </div>
+                    <ArrowUpRight
+                      size={18}
+                      className="shrink-0 text-smoke transition-all duration-500 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink"
+                    />
+                  </a>
+                ))}
+
+                <p
+                  className="py-6 text-caption leading-relaxed text-muted"
+                  style={{ borderTop: '1px solid var(--line)' }}
+                >
+                  {t('contact.response_note')}
+                </p>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

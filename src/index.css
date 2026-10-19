@@ -2,21 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===========================================================================
+   SISTEMA DE DISEÑO — estudio: una sola voz tipográfica sobre placa de galería
+
+   Reglas, tomadas de las referencias y aplicadas sin excepción:
+
+   1. UNA tipografía. Instrument Sans para absolutamente toda la interfaz, con
+      tracking negativo también en los titulares. Nada de una condensada para
+      los títulos y otra para el texto: esa mezcla es la que hacía que la
+      página sonara a plantilla. La mono solo aparece dentro de objetos de
+      código (terminal, reloj), que son contenido, no interfaz.
+   2. UN peso. 500 para interfaz y titulares; 400 solo para los párrafos
+      largos, que a 500 se leen pesados. La jerarquía la dan el TAMAÑO y el
+      tracking, nunca la negrita.
+   3. Caja baja. Los titulares van en mixta, no en versales: la caja alta a
+      gran tamaño grita, y lo que se buscaba era estudio, no cartel deportivo.
+      Las versales quedan solo en las etiquetas de 12px.
+   4. UN cromático. La lima es la única nota de color y siempre lleva texto
+      carbón encima. Ni menta, ni ámbar, ni amarillo: los estados se
+      distinguen por contraste tipográfico, no por color.
+   5. Plano. Cero sombras, cero degradados, cero elevación. La profundidad sale
+      de la pila de superficies (placa → tiza → blanco) y de filetes de 1px.
+   6. Radios: píldora para todo lo interactivo, 4px para los paneles, 0 para la
+      media. Nada entre medias.
+   =========================================================================== */
+
 @layer base {
   :root {
-    --color-bg: 10 10 10;
-    --color-surface: 20 20 20;
-    --color-text: 232 232 232;
-    --color-card-bg: rgba(255, 255, 255, 0.03);
-    --color-card-border: rgba(255, 255, 255, 0.06);
+    --c-canvas: 229 231 235; /* #E5E7EB placa de galería */
+    --c-paper: 244 244 244; /* #F4F4F4 tiza: fichas y bandas */
+    --c-inset: 255 255 255; /* blanco: superficies embutidas */
+    --c-concrete: 222 222 222; /* relleno neutro y estados */
+
+    --c-ink: 0 0 0; /* carbón */
+    --c-graphite: 55 55 55;
+    --c-smoke: 110 110 110;
+    --c-ash: 199 201 206;
+
+    --c-inv-bg: 0 0 0;
+    --c-inv-fg: 255 255 255;
+
+    --c-lime: 226 255 112; /* #E2FF70 — el único cromático */
+
+    --line: rgba(0, 0, 0, 0.14);
+    --line-strong: rgba(0, 0, 0, 0.48);
   }
 
-  .light {
-    --color-bg: 248 247 244;
-    --color-surface: 255 255 255;
-    --color-text: 26 26 26;
-    --color-card-bg: #ffffff;
-    --color-card-border: rgba(0, 0, 0, 0.08);
+  /* Modo tinta: el negativo de la placa. El bloque invertido se da la vuelta
+     también, así que el recurso gráfico sigue funcionando igual. */
+  .dark {
+    --c-canvas: 17 17 17;
+    --c-paper: 26 26 26;
+    --c-inset: 34 34 34;
+    --c-concrete: 48 48 48;
+
+    --c-ink: 244 244 244;
+    --c-graphite: 200 200 200;
+    --c-smoke: 138 138 138;
+    --c-ash: 52 52 52;
+
+    --c-inv-bg: 244 244 244;
+    --c-inv-fg: 17 17 17;
+
+    /* La lima no cambia: siempre va con texto carbón encima */
+    --c-lime: 226 255 112;
+
+    --line: rgba(244, 244, 244, 0.16);
+    --line-strong: rgba(244, 244, 244, 0.46);
   }
 
   * {
@@ -25,100 +77,300 @@
     box-sizing: border-box;
   }
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-body font-normal text-ink antialiased;
     overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* Mixta, peso 500 y tracking negativo. El tamaño hace la jerarquía. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-medium text-ink;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   ::selection {
-    background: rgba(200, 169, 126, 0.25);
-    @apply text-foreground;
+    background: rgb(var(--c-lime));
+    color: #000;
   }
 
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 7px;
+    height: 7px;
   }
   ::-webkit-scrollbar-track {
-    @apply bg-background;
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-foreground/20 rounded-full;
+    background: var(--line-strong);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-ink));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer components {
-  /* Section label like deam.cloud: ── SOBRE MÍ */
-  .section-label {
-    @apply flex items-center gap-4 text-xs font-semibold tracking-[0.2em] text-foreground/40 uppercase mb-8 transition-colors duration-300;
-  }
-  .section-label::before {
-    content: '';
-    @apply w-10 h-px bg-accent;
+  /* --- Estructura ------------------------------------------------------- */
+
+  .shell {
+    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-10;
   }
 
-  /* Accent italic (serif) - the signature deam.cloud style */
-  .accent-italic {
-    @apply font-serif italic text-accent;
+  .section {
+    padding-block: clamp(4.5rem, 9vw, 10rem);
   }
 
-  /* Card with subtle border */
-  .card {
-    background-color: var(--color-card-bg);
-    border: 1px solid var(--color-card-border);
-    @apply rounded-2xl;
-    transition: all 0.3s ease;
-  }
-  .light .card {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  }
-  .card:hover {
-    border-color: rgba(200, 169, 126, 0.15);
+  /* Banda de tiza: la sección sube un escalón de superficie, sin contorno ni
+     sombra. Nunca se anidan más de dos niveles en una misma pantalla. */
+  .band {
+    background-color: rgb(var(--c-paper));
+    transition: background-color 0.5s ease;
   }
 
-  /* Halo dorado que sigue al cursor (ver hooks/spotlight.js) */
-  .spotlight {
-    position: relative;
-    isolation: isolate;
-  }
-  .spotlight::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: inherit;
-    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(200, 169, 126, 0.09), transparent 45%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-  }
-  .spotlight:hover::before {
-    opacity: 1;
+  /* Bloque invertido: carbón con texto blanco, radio 4px. Se usa con cuentagotas
+     —es lo que le da el golpe gráfico a la página— y a sangre cuando remata. */
+  .band-ink {
+    background-color: rgb(var(--c-inv-bg));
+    color: rgb(var(--c-inv-fg));
+    transition: background-color 0.5s ease, color 0.5s ease;
   }
 
-  /* Tarjeta de tecnología: el borde toma el color de la marca (--brand) al pasar el mouse */
-  .tech-tile {
-    background-color: var(--color-card-bg);
-    border: 1px solid var(--color-card-border);
-    transition: border-color 0.3s ease, transform 0.3s ease;
-  }
-  .tech-tile:hover {
-    border-color: color-mix(in srgb, var(--brand) 45%, transparent);
-    transform: translateY(-3px);
+  /* Filete de 1px: TODO separador y TODO borde de la página es este. */
+  .rule {
+    border-top: 1px solid var(--line);
   }
 
-  /* Botón secundario con borde */
-  .btn-outline {
-    @apply inline-flex items-center gap-2 rounded-full border border-foreground/15 px-6 py-3 text-sm font-semibold text-foreground/80 transition-all duration-300 hover:border-foreground/40 hover:text-foreground;
+  /* --- Tipografía ------------------------------------------------------- */
+
+  /* Etiqueta de sección. Es el único sitio con versales y el único con tracking
+     positivo, que es justo como la referencia define su "section caption". */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-label font-medium uppercase text-smoke;
   }
 
-  /* Botón principal */
+  /* Titular secundario: el mismo tipo, un escalón de tamaño por debajo. */
+  .h-sub {
+    @apply font-medium;
+    font-size: clamp(1.5rem, 1rem + 1.9vw, 2.125rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+  }
+
+  /* La palabra marcada del titular: bloque de lima maciza con la letra en
+     carbón. Es la única nota de color que toca el texto, y funciona porque el
+     color va DETRÁS de la letra. La lima nunca lleva texto blanco encima. */
+  .hl {
+    background-color: rgb(var(--c-lime));
+    color: #000;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding-inline: 0.06em;
+  }
+
+  .lede {
+    @apply text-body-lg font-normal leading-relaxed text-graphite;
+  }
+
+  /* Cifra grande: mismo tipo, mismo peso, cifras tabulares. */
+  .stat {
+    @apply text-stat font-medium text-ink;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .nums {
+    font-variant-numeric: tabular-nums;
+    @apply tracking-tight;
+  }
+
+  /* --- Controles -------------------------------------------------------- */
+  /* Todo lo interactivo es una píldora. No hay radios intermedios. */
+
+  /* La lima rellena UNA acción por pantalla: la principal. */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-foreground/90 text-background font-semibold text-sm transition-all duration-300 hover:bg-foreground;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-lime px-6 py-3 text-sm font-medium text-black;
+    transition: filter 0.25s ease, transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .btn-primary:hover {
+    filter: brightness(0.94);
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
   }
 
-  /* Ghost link button */
+  /* Secundario: píldora de tiza con filete. El hormigón es su estado pulsado. */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-paper px-6 py-3 text-sm font-medium text-ink;
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  .btn-outline:hover {
+    background-color: rgb(var(--c-concrete));
+  }
+
+  /* Enlace fantasma: sin subrayado en reposo; al pasar aparece la píldora. */
   .btn-ghost {
-    @apply inline-flex items-center gap-1 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors duration-300;
+    @apply -mx-2 inline-flex items-center gap-1.5 rounded-pill px-2 py-1 text-sm font-medium text-ink;
+    transition: background-color 0.18s ease;
+  }
+  .btn-ghost:hover {
+    background-color: rgb(var(--c-lime));
+    color: #000;
+  }
+
+  /* Enlace de acción dentro del texto: filete bajo la línea base, radio cero. */
+  .link-iris {
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-ink;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--line-strong);
+    transition: border-color 0.3s ease, gap 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .link-iris:hover {
+    border-color: rgb(var(--c-ink));
+    @apply gap-2.5;
+  }
+
+  /* --- Superficies ------------------------------------------------------ */
+
+  /* Marco de media: la imagen va contenida y sin enmarcar, esquinas francas y
+     sin contorno. Nunca se mete una imagen en una tarjeta redondeada. */
+  .frame {
+    background-color: rgb(var(--c-inset));
+    @apply overflow-hidden rounded-media;
+  }
+
+  /* Panel: 4px, el radio de los bloques. Jamás un radio intermedio. */
+  .card {
+    background-color: rgb(var(--c-paper));
+    @apply rounded-card;
+    transition: background-color 0.5s ease;
+  }
+
+  /* Etiqueta: píldora de tiza, sin relleno cromático. Las tecnologías son
+     metadatos, no acciones: si fueran lima competirían con el botón. */
+  .tag {
+    @apply inline-flex items-center rounded-pill px-3 py-1.5 text-caption font-medium text-graphite;
+    background-color: rgb(var(--c-paper));
+    border: 1px solid var(--line);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .band .tag {
+    background-color: rgb(var(--c-inset));
+  }
+  .tag:hover {
+    background-color: rgb(var(--c-concrete));
+    @apply text-ink;
+  }
+
+  /* Fila de índice: ancho completo, filete, y al pasar se rellena entera de
+     tiza. Es el patrón de lista de la referencia y sustituye a la tarjeta. */
+  .index-row {
+    transition: background-color 0.3s ease;
+  }
+  .index-row:hover {
+    background-color: rgb(var(--c-paper));
+  }
+  .band .index-row:hover {
+    background-color: rgb(var(--c-inset));
+  }
+
+  /* Ficha de tecnología: superficie embutida, sin contorno. En reposo el logo
+     va en gris —treinta y cinco logos a todo color convierten la sección en un
+     álbum de cromos—; al pasar, la ficha se invierte y el logo recupera su
+     color de marca, que es cuando el color informa. */
+  .tech-chip {
+    @apply flex items-center gap-3 px-4 py-3.5;
+    background-color: rgb(var(--c-inset));
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .tech-chip svg {
+    color: rgb(var(--c-smoke));
+    transition: color 0.3s ease;
+  }
+  .tech-chip p {
+    transition: color 0.3s ease;
+  }
+  .tech-chip:hover {
+    background-color: rgb(var(--c-inv-bg));
+  }
+  .tech-chip:hover p {
+    color: rgb(var(--c-inv-fg));
+  }
+  .tech-chip:hover svg {
+    color: var(--brand);
+  }
+
+  /* --- Profundidad real ------------------------------------------------- */
+
+  /* Al inclinarse la ficha, el logo se despega de la superficie en el eje Z en
+     vez de girar pegado a ella. Es el único 3D que queda, y está donde se
+     pidió: en los logos del stack. */
+  .depth {
+    perspective: 760px;
+  }
+  .depth > * {
+    transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .depth-near {
+    transform: translateZ(42px);
+  }
+  .depth-mid {
+    transform: translateZ(20px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .depth > *,
+    .depth-near,
+    .depth-mid {
+      transform: none;
+    }
+  }
+
+  /* --- Piezas ----------------------------------------------------------- */
+
+  /* Sello circular: aro de 1.5px sin relleno, girando despacio. */
+  .badge-spin {
+    animation: badge 18s linear infinite;
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+}
+
+@layer utilities {
+  /* Sangrado a ancho completo desde dentro de .shell */
+  .bleed {
+    margin-inline: calc(50% - 50vw);
+    width: 100vw;
   }
 }

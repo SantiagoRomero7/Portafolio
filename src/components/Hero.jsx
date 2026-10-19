@@ -1,221 +1,202 @@
-import { useState } from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link, scroller } from 'react-scroll';
-import { ArrowRight, Github, Linkedin, MessageCircle } from 'lucide-react';
-import { BrowserFrame, Screenshot } from './Visuals';
-
-const stackItems = ['React', 'Node.js', 'TypeScript', 'Next.js', 'Python', 'Supabase', 'MongoDB'];
+import { Link } from 'react-scroll';
+import { ArrowDown, ArrowRight, Github, Linkedin, MessageCircle } from 'lucide-react';
+import Reveal, { RevealWords } from './Reveal';
 
 const stats = [
   { value: '25', key: 'automations' },
-  { value: '7', key: 'projects' },
+  { value: '07', key: 'projects' },
   { value: '35', key: 'tech' },
 ];
 
-// Mazo de capturas reales: reposo apilado, se abre en abanico al pasar el mouse
-const deck = [
-  {
-    key: 'dataflix',
-    src: '/projects/dataflix.webp',
-    url: 'dataflixx.netlify.app',
-    target: 'projects',
-    rest: { x: -60, y: 60, rotate: -8 },
-    open: { x: -170, y: 100, rotate: -13 },
-    depth: 10,
-  },
-  {
-    key: 'misfinanzas',
-    src: '/projects/misfinanzas.webp',
-    url: 'misfinanzas-two.vercel.app',
-    target: 'projects',
-    rest: { x: 60, y: 25, rotate: 7 },
-    open: { x: 165, y: 45, rotate: 12 },
-    depth: 18,
-  },
-  {
-    key: 'automatizacion',
-    src: '/projects/automatizacion-portada.webp',
-    url: 'portafolio-automatizacion.vercel.app',
-    target: 'featured',
-    rest: { x: 0, y: -25, rotate: -2 },
-    open: { x: 0, y: -85, rotate: 0 },
-    depth: 28,
-  },
+const socials = [
+  { href: 'https://github.com/SantiagoRomero7', Icon: Github, label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/santiago-romero-9a673a37a/', Icon: Linkedin, label: 'LinkedIn' },
+  { href: 'https://api.whatsapp.com/send/?phone=573172681209', Icon: MessageCircle, label: 'WhatsApp' },
 ];
 
-const DeckCard = ({ card, index, open, sx, sy }) => {
-  const x = useTransform(sx, (v) => v * card.depth);
-  const y = useTransform(sy, (v) => v * card.depth);
-  return (
-    <motion.div
-      className="absolute left-1/2 top-1/2 -ml-[190px] -mt-[140px] w-[380px]"
-      style={{ zIndex: index }}
-      initial={{ opacity: 0, y: 90 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.9, delay: 0.35 + index * 0.12, ease: [0.16, 1, 0.3, 1] }}
-    >
-      <motion.div style={{ x, y }}>
-        <motion.button
-          type="button"
-          aria-label={card.url}
-          onClick={() => scroller.scrollTo(card.target, { smooth: true, offset: -80, duration: 800 })}
-          initial={false}
-          animate={open ? card.open : card.rest}
-          whileHover={{ scale: 1.04 }}
-          transition={{ type: 'spring', stiffness: 160, damping: 20 }}
-          className="block w-full cursor-pointer text-left"
-        >
-          <BrowserFrame url={card.url}>
-            <Screenshot src={card.src} alt="" />
-          </BrowserFrame>
-        </motion.button>
-      </motion.div>
-    </motion.div>
-  );
-};
+// La línea de 1px dentro del bloque invertido se dibuja con el color del texto
+// invertido, no con el --line del lienzo.
+const invRule = { borderTop: '1px solid rgb(var(--c-inv-fg) / 0.18)' };
+const invRuleLeft = { borderLeft: '1px solid rgb(var(--c-inv-fg) / 0.18)' };
 
-const ProjectDeck = ({ hint }) => {
-  const [open, setOpen] = useState(false);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const sx = useSpring(mx, { stiffness: 110, damping: 18 });
-  const sy = useSpring(my, { stiffness: 110, damping: 18 });
-
-  const onMove = (e) => {
-    const r = e.currentTarget.getBoundingClientRect();
-    mx.set((e.clientX - r.left) / r.width - 0.5);
-    my.set((e.clientY - r.top) / r.height - 0.5);
-  };
-
-  return (
-    <div
-      className="relative h-[480px]"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => {
-        setOpen(false);
-        mx.set(0);
-        my.set(0);
-      }}
-      onMouseMove={onMove}
-    >
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-3xl" />
-      {deck.map((card, i) => (
-        <DeckCard key={card.key} card={card} index={i} open={open} sx={sx} sy={sy} />
-      ))}
-      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-semibold uppercase tracking-widest text-foreground/25">
-        {hint}
-      </p>
-    </div>
-  );
-};
+/**
+ * Chapa circular con el texto girando sobre su propio trazo. No decora: es el
+ * indicador de desplazamiento, y de paso la firma de la portada. Va en posición
+ * absoluta para no empujar el contenido fuera de la primera pantalla.
+ */
+const ScrollBadge = () => (
+  <Link
+    to="about"
+    smooth
+    duration={1100}
+    offset={-100}
+    aria-label="Scroll"
+    className="group relative flex h-[104px] w-[104px] cursor-pointer items-center justify-center text-ink"
+  >
+    <svg viewBox="0 0 100 100" aria-hidden className="badge-spin absolute inset-0 h-full w-full">
+      <defs>
+        <path id="badge-ring" fill="none" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0" />
+      </defs>
+      <circle cx="50" cy="50" r="49" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
+      <text fill="currentColor" fontSize="8" letterSpacing="0.5" className="uppercase">
+        <textPath href="#badge-ring" startOffset="0" textLength="226" lengthAdjust="spacing">
+          scroll · desplaza · scroll · desplaza
+        </textPath>
+      </text>
+    </svg>
+    <ArrowDown size={15} className="transition-transform duration-700 ease-out group-hover:translate-y-1" />
+  </Link>
+);
 
 const Hero = () => {
   const { t } = useTranslation();
 
-  const container = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
-  };
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } },
-  };
-
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-28">
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-12">
-        <motion.div variants={container} initial="hidden" animate="visible" className="lg:col-span-7">
-          <motion.div variants={item} className="mb-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 px-4 py-2 text-xs font-medium uppercase tracking-wider text-accent">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-              {t('hero.badge')}
+    <>
+      <section
+        id="home"
+        className="relative isolate flex min-h-[100svh] flex-col justify-center overflow-hidden pb-14 pt-32 sm:pt-36"
+      >
+        <div className="shell relative z-10 w-full">
+          {/* Cabecera de metadatos: la voz monoespaciada que usan las tres
+              referencias para situar la página antes de que hable el titular. */}
+          <Reveal y={12}>
+            <div
+              className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2 pb-5 text-label uppercase text-smoke"
+              style={{ borderBottom: '1px solid var(--line)' }}
+            >
+              <span className="text-ink">Santiago Romero</span>
+              <span>{t('hero.badge')}</span>
+              <span className="hidden sm:inline">Bucaramanga, CO</span>
+            </div>
+          </Reveal>
+
+          {/* El titular ES la imagen de la página: condensado, en caja alta y
+              comprimido, a todo el ancho. Por eso ya no hay objeto decorativo. */}
+          <h1 className="mt-8 text-display-lg">
+            <RevealWords text={t('hero.title_1')} delay={0.06} />{' '}
+            <RevealWords
+              text={t('hero.title_2')}
+              delay={0.06 + t('hero.title_1').split(' ').length * 0.05}
+              highlightLast
+            />
+          </h1>
+
+          <div className="mt-11 grid items-start gap-x-10 gap-y-10 lg:grid-cols-12">
+            <div className="lg:col-span-7">
+              <Reveal delay={0.18}>
+                <p className="lede max-w-xl">
+                  {t('hero.subtitle')
+                    .split('**')
+                    .map((part, i) =>
+                      i % 2 === 1 ? (
+                        <strong key={i} className="font-medium text-ink">
+                          {part}
+                        </strong>
+                      ) : (
+                        part
+                      ),
+                    )}
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.24}>
+                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                  <Link to="contact" smooth duration={900} offset={-100}>
+                    <button className="btn-primary">
+                      {t('hero.cta_talk')} <ArrowRight size={15} />
+                    </button>
+                  </Link>
+                  <Link to="featured" smooth duration={900} offset={-100}>
+                    <button className="btn-outline">{t('hero.cta_projects')}</button>
+                  </Link>
+
+                  <div className="ml-auto flex items-center gap-4">
+                    {socials.map(({ href, Icon, label }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={label}
+                        className="text-smoke transition-colors duration-500 hover:text-ink"
+                      >
+                        <Icon size={17} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* El bloque invertido. Es el acontecimiento gráfico del hero —lo
+                que antes intentaba ser un objeto 3D— y lleva información real. */}
+            <Reveal delay={0.3} className="lg:col-span-5">
+              <div className="band-ink rounded-card p-6 sm:p-7">
+                <p className="text-label uppercase opacity-55">{t('hero.status_label')}</p>
+
+                <p className="mt-4 flex items-start gap-3 text-body-lg leading-snug">
+                  <span className="mt-[0.45rem] h-2.5 w-2.5 shrink-0 rounded-pill bg-lime" />
+                  {t('about.available')}
+                </p>
+
+                <dl className="mt-6">
+                  {[
+                    { k: 'loc', label: 'Base', value: t('about.location') },
+                    { k: 'lang', label: 'Idiomas / Languages', value: t('about.languages') },
+                  ].map((row) => (
+                    <div
+                      key={row.k}
+                      className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3.5"
+                      style={invRule}
+                    >
+                      <dt className="text-label uppercase opacity-55">{row.label}</dt>
+                      <dd className="text-sm">{row.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <p className="pt-3.5 text-caption leading-relaxed opacity-70" style={invRule}>
+                  {t('about.open_to')}
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* Fuera del flujo: la chapa no debe empujar nada hacia abajo */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-8 hidden lg:block">
+          <div className="shell">
+            <span className="pointer-events-auto inline-block">
+              <ScrollBadge />
             </span>
-          </motion.div>
+          </div>
+        </div>
+      </section>
 
-          <motion.h1
-            variants={item}
-            className="mb-8 text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
-          >
-            {t('hero.title_1')} <span className="accent-italic">{t('hero.title_2')}</span>
-          </motion.h1>
-
-          <motion.p variants={item} className="mb-10 max-w-2xl text-lg leading-relaxed text-foreground/45 md:text-xl">
-            {t('hero.subtitle')
-              .split('**')
-              .map((part, i) =>
-                i % 2 === 1 ? (
-                  <strong key={i} className="font-semibold text-foreground">
-                    {part}
-                  </strong>
-                ) : (
-                  part
-                ),
-              )}
-          </motion.p>
-
-          <motion.div variants={item} className="mb-12 flex flex-wrap items-center gap-5">
-            <Link to="contact" smooth={true} offset={-80}>
-              <button className="btn-primary">
-                {t('hero.cta_talk')} <ArrowRight size={16} />
-              </button>
-            </Link>
-            <Link to="featured" smooth={true} offset={-80}>
-              <button className="btn-ghost">{t('hero.cta_projects')}</button>
-            </Link>
-          </motion.div>
-
-          {/* Cifras verificables */}
-          <motion.div
-            variants={item}
-            className="mb-12 grid max-w-xl grid-cols-3 gap-6 border-t border-foreground/[0.06] pt-8"
-          >
-            {stats.map((s) => (
-              <div key={s.key}>
-                <p className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">{s.value}</p>
-                <p className="mt-1 text-xs leading-snug text-foreground/35">{t(`hero.stats.${s.key}`)}</p>
+      {/* Las cifras salen del lienzo y se van a una banda de tinta a sangre.
+          Pegada a la cinta del stack forman un solo bloque negro: el
+          acontecimiento gráfico que separa la portada del resto de la página, y
+          la razón de que el hero ya no necesite ningún objeto flotante. */}
+      <div className="band-ink">
+        <div className="shell">
+          <dl className="grid grid-cols-3 py-12 sm:py-14">
+            {stats.map((s, i) => (
+              <div key={s.key} className={i > 0 ? 'pl-5 sm:pl-10' : ''} style={i > 0 ? invRuleLeft : undefined}>
+                <dt className="sr-only">{t(`hero.stats.${s.key}`)}</dt>
+                <dd>
+                  <span className="block text-stat font-medium tabular-nums">{s.value}</span>
+                  <span className="mt-3 block max-w-[20ch] text-caption leading-snug opacity-60">
+                    {t(`hero.stats.${s.key}`)}
+                  </span>
+                </dd>
               </div>
             ))}
-          </motion.div>
-
-          <motion.div variants={item} className="flex flex-col gap-8 sm:flex-row sm:items-center">
-            <div className="flex items-center gap-3">
-              {[
-                { href: 'https://github.com/SantiagoRomero7', Icon: Github, label: 'GitHub' },
-                { href: 'https://www.linkedin.com/in/santiago-romero-9a673a37a/', Icon: Linkedin, label: 'LinkedIn' },
-                { href: 'https://api.whatsapp.com/send/?phone=573172681209', Icon: MessageCircle, label: 'WhatsApp' },
-              ].map(({ href, Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="rounded-xl border border-foreground/[0.06] p-2.5 text-foreground/30 transition-all hover:border-foreground/20 hover:text-foreground"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
-            <div className="hidden h-6 w-px bg-foreground/10 sm:block" />
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="mr-1 text-[10px] font-semibold uppercase tracking-widest text-foreground/25">
-                {t('hero.stack_label')}
-              </span>
-              {stackItems.map((s) => (
-                <span key={s} className="rounded-md border border-foreground/[0.06] px-2.5 py-1 text-xs text-foreground/30">
-                  {s}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
-
-        <div className="hidden lg:col-span-5 lg:block">
-          <ProjectDeck hint={t('hero.deck_hint')} />
+          </dl>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

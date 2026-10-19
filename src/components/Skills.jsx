@@ -31,6 +31,11 @@ import {
   SiWordpress,
 } from 'react-icons/si';
 import { N8nIcon, OracleIcon, PixIcon, PowerAutomateIcon, PowerBIIcon } from './BrandIcons';
+import SectionHeading from './SectionHeading';
+import Reveal from './Reveal';
+import { tilt } from '../hooks/tilt';
+
+const IRIS = '#8052ff';
 
 // Las 6 tecnologías que definen el perfil, con su rol
 const core = [
@@ -67,7 +72,7 @@ const groups = [
     items: [
       { name: 'Node.js', Icon: SiNodedotjs, color: '#5FA04E', used: ['FoodStars', 'GymMaster', 'Pizza y Punto'] },
       { name: 'Express', Icon: SiExpress, color: null, used: ['FoodStars', 'ViajaYaAPI'] },
-      { name: 'APIs REST', Icon: Globe, color: '#c8a97e', used: ['FoodStars', 'ViajaYaAPI'] },
+      { name: 'APIs REST', Icon: Globe, color: IRIS, used: ['FoodStars', 'ViajaYaAPI'] },
       { name: 'JWT', Icon: SiJsonwebtokens, color: '#D63AFF', used: ['FoodStars', 'ViajaYaAPI'] },
       { name: 'Python', Icon: SiPython, color: '#3776AB', used: ['Cajasan'] },
     ],
@@ -90,7 +95,7 @@ const groups = [
       { name: 'n8n', Icon: N8nIcon, color: '#EA4B71', used: ['Cajasan'] },
       { name: 'Power BI', Icon: PowerBIIcon, color: '#F2C811', used: ['Cajasan'] },
       { name: 'Pix Studio', Icon: PixIcon, color: '#7C3AED', used: ['Cajasan'] },
-      { name: 'OCR', Icon: ScanText, color: '#c8a97e', used: ['Cajasan'] },
+      { name: 'OCR', Icon: ScanText, color: IRIS, used: ['Cajasan'] },
     ],
   },
   {
@@ -102,7 +107,7 @@ const groups = [
       { name: 'Vite', Icon: SiVite, color: '#9B6BFF', used: ['MisFinanzas', '@site'] },
       { name: 'GitHub Actions', Icon: SiGithubactions, color: '#2088FF', used: ['Automatizaciones'] },
       { name: 'Postman', Icon: SiPostman, color: '#FF6C37', used: ['FoodStars', 'ViajaYaAPI'] },
-      { name: 'Scrum', Icon: Repeat, color: '#c8a97e', used: ['Campuslands'] },
+      { name: 'Scrum', Icon: Repeat, color: IRIS, used: ['Campuslands'] },
     ],
   },
 ];
@@ -123,20 +128,13 @@ const usedLabel = (used, lang, fallback) =>
 const Chip = ({ item, lang, fallback }) => {
   const { Icon } = item;
   const text = usedLabel(item.used, lang, fallback);
+  // El color de marca solo existe como variable: lo aplica el CSS al pasar
   return (
-    <div
-      title={text}
-      style={{ '--brand': item.color ?? 'rgb(var(--color-text))' }}
-      className="tech-tile flex items-center gap-3 rounded-xl px-4 py-3"
-    >
-      <Icon
-        size={22}
-        style={item.color ? { color: item.color } : undefined}
-        className={`shrink-0 ${item.color ? '' : 'text-foreground'}`}
-      />
+    <div title={text} style={{ '--brand': item.color ?? 'rgb(var(--c-text))' }} className="tech-chip">
+      <Icon size={20} className="shrink-0" />
       <div className="min-w-0">
-        <p className="truncate text-sm font-semibold text-foreground/85">{item.name}</p>
-        <p className="truncate text-[11px] text-foreground/35">{text}</p>
+        <p className="truncate text-caption font-medium text-ink">{item.name}</p>
+        <p className="truncate text-[11px] text-smoke">{text}</p>
       </div>
     </div>
   );
@@ -148,72 +146,76 @@ const Skills = () => {
   const fallback = t('skills.training');
 
   return (
-    <section id="skills" className="py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
-          className="mb-14 flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
-        >
-          <div>
-            <div className="section-label">{t('skills.label')}</div>
-            <h2 className="mb-6 max-w-3xl text-4xl font-extrabold leading-[1.1] md:text-5xl lg:text-6xl">
-              {t('skills.title_1')} <span className="accent-italic">{t('skills.title_accent')}</span>
-            </h2>
-            <p className="max-w-2xl text-lg text-foreground/40">{t('skills.subtitle')}</p>
-          </div>
-          <div className="shrink-0 lg:text-right">
-            <p className="text-5xl font-extrabold tracking-tight text-accent">{total}</p>
-            <p className="text-xs uppercase tracking-widest text-foreground/35">{t('skills.summary')}</p>
-          </div>
-        </motion.div>
+    <section id="skills" className="section">
+      <div className="shell">
+        <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-end">
+          <SectionHeading
+            index="05"
+            label={t('skills.label')}
+            title={t('skills.title_1')}
+            accent={t('skills.title_accent')}
+            lede={t('skills.subtitle')}
+          />
+          <Reveal delay={0.1} className="shrink-0 lg:pb-2 lg:text-right">
+            <p className="stat">{total}</p>
+            <p className="eyebrow mt-3">{t('skills.summary')}</p>
+          </Reveal>
+        </div>
 
-        {/* Stack principal */}
-        <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground/35">
-          {t('skills.core_label')}
-        </p>
-        <div className="mb-20 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-          {core.map((item, i) => {
-            const { Icon } = item;
-            return (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                style={{ '--brand': item.color }}
-                className="tech-tile group relative overflow-hidden rounded-2xl p-5"
-              >
-                <span
-                  className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full opacity-20 blur-2xl transition-opacity duration-500 group-hover:opacity-40"
-                  style={{ background: item.color }}
-                />
-                <Icon size={34} style={{ color: item.color }} className="relative" />
-                <p className="relative mt-6 font-bold">{item.name}</p>
-                <p className="relative mt-1 text-xs leading-snug text-foreground/40">{t(`skills.core.${item.role}`)}</p>
-              </motion.div>
-            );
-          })}
+        {/* Stack principal: seis fichas separadas solo por líneas */}
+        <div className="mt-16 lg:mt-24">
+          <p className="eyebrow">{t('skills.core_label')}</p>
+          {/* Un hueco de 1px entre celdas: el lienzo asoma y hace de regla,
+              sin que ninguna ficha lleve contorno propio */}
+          <div className="mt-6 grid grid-cols-2 gap-px md:grid-cols-3 lg:grid-cols-6">
+            {core.map((item, i) => {
+              const { Icon } = item;
+              return (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 1, delay: i * 0.05, ease: [0.19, 1, 0.22, 1] }}
+                  style={{ '--brand': item.color }}
+                  className="depth group relative"
+                  {...tilt(13)}
+                >
+                  <div className="relative bg-paper px-5 py-8">
+                    {/* El logo flota por encima de la ficha: con la inclinación
+                        se separa de verdad en Z, no gira pegado al plano */}
+                    <span className="depth-near relative block w-fit">
+                      <Icon
+                        size={34}
+                        className="text-smoke transition-colors duration-500 group-hover:text-[var(--brand)]"
+                      />
+                    </span>
+                    <p className="depth-mid relative mt-7 text-body font-medium text-ink">{item.name}</p>
+                    <p className="relative mt-2 text-[11px] leading-snug text-smoke">
+                      {t(`skills.core.${item.role}`)}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Inventario por capa del sistema */}
-        <div className="border-b border-foreground/[0.06]">
+        <div className="mt-20">
           {groups.map((group, i) => (
             <motion.div
               key={group.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.45 }}
-              className="grid gap-6 border-t border-foreground/[0.06] py-9 lg:grid-cols-12"
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 1.1, ease: [0.19, 1, 0.22, 1] }}
+              className="rule grid gap-x-10 gap-y-7 py-10 lg:grid-cols-12"
             >
               <div className="lg:col-span-3">
-                <span className="text-sm font-bold text-accent">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="mt-1 text-xl font-bold">{t(`skills.groups.${group.key}.title`)}</h3>
-                <p className="mt-1 max-w-xs text-sm leading-relaxed text-foreground/40">
+                <span className="text-label text-ink">{String(i + 1).padStart(2, '0')}</span>
+                <h3 className="h-sub mt-3">{t(`skills.groups.${group.key}.title`)}</h3>
+                <p className="mt-2.5 max-w-xs text-caption leading-relaxed text-muted">
                   {t(`skills.groups.${group.key}.desc`)}
                 </p>
               </div>
@@ -226,14 +228,16 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-          <p className="text-sm text-foreground/40">{t('skills.cta_desc')}</p>
-          <Link to="contact" smooth={true} offset={-80}>
-            <button className="btn-primary text-sm">
-              {t('skills.cta_talk')} <ArrowRight size={14} />
-            </button>
-          </Link>
-        </div>
+        <Reveal>
+          <div className="rule flex flex-col items-start justify-between gap-6 py-12 sm:flex-row sm:items-center">
+            <p className="max-w-md text-graphite">{t('skills.cta_desc')}</p>
+            <Link to="contact" smooth duration={800} offset={-100} className="shrink-0">
+              <button className="btn-outline">
+                {t('skills.cta_talk')} <ArrowRight size={15} />
+              </button>
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

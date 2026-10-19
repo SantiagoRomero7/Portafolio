@@ -21,7 +21,8 @@
       "projects": "proyectos de software desarrollados",
       "tech": "tecnologías en mi stack"
     },
-    "deck_hint": "Pasa el mouse: tres de mis proyectos"
+    "deck_hint": "Pasa el mouse: tres de mis proyectos",
+    "status_label": "Estado"
   },
   "about": {
     "label": "SOBRE MÍ",

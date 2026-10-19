@@ -27,3 +27,6 @@ dist-ssr
 .env
 .env.*
 
+
+# Configuracion local de Claude Code (servidor de desarrollo)
+.claude/

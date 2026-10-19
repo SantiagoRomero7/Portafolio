@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Favicon — Santiago Romero</title>
+
+    <!--
+      Fuente de public/favicon.png (512x512). Se rasteriza con Chrome headless;
+      ver design/README.md.
+
+      Es la lima a sangre con la ese en carbón: la lima es el único cromático
+      del sistema y siempre lleva la letra en negro encima. A 16px el icono se
+      reduce a una mancha de color con una forma dentro, que es justo lo que
+      tiene que hacer un favicon: identificarse por color antes que por letra.
+      Por eso la ese va muy grande y muy cerrada de tracking.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 512px;
+        height: 512px;
+        overflow: hidden;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e2ff70;
+        color: #000;
+        font-family: 'Instrument Sans', Inter, system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      span {
+        font-size: 520px;
+        font-weight: 500;
+        line-height: 1;
+        /* Sin tracking: en una sola letra el espaciado negativo solo descentra
+           el glifo dentro de la caja. El ajuste óptico va en el transform. */
+        letter-spacing: normal;
+        /* Centrar por caja no centra el glifo: la caja de la línea reserva
+           sitio para ascendentes y descendentes que la ese no usa. Son cuatro
+           píxeles medidos sobre el render, no a ojo. */
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <span>S</span>
+  </body>
+</html>

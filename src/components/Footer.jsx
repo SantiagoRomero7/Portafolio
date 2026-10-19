@@ -1,86 +1,108 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
-import { Github, Linkedin, MessageCircle } from 'lucide-react';
+import { Link, animateScroll } from 'react-scroll';
+import { ArrowUp, Github, Linkedin, MessageCircle } from 'lucide-react';
 
+const navLinks = [
+  { key: 'nav.home', to: 'home' },
+  { key: 'nav.about', to: 'about' },
+  { key: 'nav.experience', to: 'experience' },
+  { key: 'nav.projects', to: 'featured' },
+  { key: 'nav.skills', to: 'skills' },
+  { key: 'nav.contact', to: 'contact' },
+];
+
+const socials = [
+  { href: 'https://github.com/SantiagoRomero7', Icon: Github, label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/santiago-romero-9a673a37a/', Icon: Linkedin, label: 'LinkedIn' },
+  { href: 'https://api.whatsapp.com/send/?phone=573172681209', Icon: MessageCircle, label: 'WhatsApp' },
+];
+
+// La línea de 1px que separa dentro del bloque invertido: se dibuja con el
+// color del texto invertido, no con el --line del lienzo.
+const invRule = { borderTop: '1px solid rgb(var(--c-inv-fg) / 0.18)' };
+
+/**
+ * El pie es la banda invertida que cierra la página: un bloque compacto de
+ * tinta a sangre, con la firma recortada por el borde inferior. Es el segundo y
+ * último bloque negro del sitio —el primero es la cinta del stack—, y esa
+ * escasez es lo que le da peso.
+ */
 const Footer = () => {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
-
-  const navLinks = [
-    { key: 'nav.home', to: 'home' },
-    { key: 'nav.about', to: 'about' },
-    { key: 'nav.experience', to: 'experience' },
-    { key: 'nav.projects', to: 'featured' },
-    { key: 'nav.skills', to: 'skills' },
-    { key: 'nav.contact', to: 'contact' },
-  ];
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-foreground/[0.04] py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-1.5 mb-4">
-              <span className="text-lg font-bold">Santiago Romero</span>
-            </div>
-            <p className="text-sm text-foreground/30 leading-relaxed">
-              {t('footer.description')}
+    <footer className="band-ink relative overflow-hidden pt-20">
+      <div className="shell">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <p className="text-[clamp(1.75rem,1rem+2vw,2.5rem)] font-medium leading-none tracking-[-0.045em]">
+              Santiago Romero
             </p>
-          </div>
-
-          {/* Navigation */}
-          <div>
-            <h4 className="text-[10px] font-semibold tracking-widest text-foreground/25 uppercase mb-4">
-              {t('footer.nav_title')}
-            </h4>
-            <div className="space-y-2.5">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  smooth={true}
-                  offset={-80}
-                  className="block text-sm text-foreground/30 hover:text-foreground/60 transition-colors cursor-pointer"
+            <p className="mt-5 max-w-sm leading-relaxed opacity-70">{t('footer.description')}</p>
+            <div className="mt-8 flex items-center gap-5">
+              {socials.map(({ href, Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="opacity-60 transition-opacity duration-500 hover:opacity-100"
                 >
-                  {t(link.key)}
-                </Link>
+                  <Icon size={17} />
+                </a>
               ))}
             </div>
           </div>
 
-          {/* Connect */}
-          <div>
-            <h4 className="text-[10px] font-semibold tracking-widest text-foreground/25 uppercase mb-4">
-              {t('footer.connect_title')}
-            </h4>
-            <div className="space-y-2.5">
-              <a href="https://github.com/SantiagoRomero7" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-foreground/30 hover:text-foreground/60 transition-colors">
-                <Github size={14} /> GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/santiago-romero-9a673a37a/" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-foreground/30 hover:text-foreground/60 transition-colors">
-                <Linkedin size={14} /> LinkedIn
-              </a>
-              <a href="https://api.whatsapp.com/send/?phone=573172681209" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-foreground/30 hover:text-foreground/60 transition-colors">
-                <MessageCircle size={14} /> WhatsApp
-              </a>
-            </div>
+          <div className="md:col-span-4 md:col-start-8">
+            <p className="text-label uppercase opacity-55">{t('footer.nav_title')}</p>
+            <ul className="mt-5 grid grid-cols-2 gap-x-6">
+              {navLinks.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    smooth
+                    duration={900}
+                    offset={-120}
+                    className="block cursor-pointer py-2 text-sm opacity-65 transition-opacity duration-500 hover:opacity-100"
+                  >
+                    {t(link.key)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-foreground/[0.04] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-foreground/15">
-            © {currentYear} Santiago Romero. {t('footer.rights')}.
-          </p>
-          <p className="text-xs text-foreground/15">
-            {t('footer.built_with')}
-          </p>
+        <div
+          className="mt-16 flex flex-col items-center justify-between gap-5 py-8 sm:flex-row"
+          style={invRule}
+        >
+          <p className="text-label uppercase opacity-50">© {year} Santiago Romero · {t('footer.rights')}</p>
+          <div className="flex items-center gap-6">
+            <p className="text-label uppercase opacity-50">{t('footer.built_with')}</p>
+            <button
+              type="button"
+              onClick={() => animateScroll.scrollToTop({ smooth: true, duration: 900 })}
+              aria-label={t('nav.home')}
+              className="flex h-9 w-9 items-center justify-center rounded-pill bg-lime text-black transition-transform duration-500 ease-out hover:-translate-y-1"
+            >
+              <ArrowUp size={14} />
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Firma a sangre, recortada por el borde inferior */}
+      <p
+        aria-hidden
+        className="select-none whitespace-nowrap text-center font-medium leading-[0.78] tracking-[-0.055em] opacity-[0.09]"
+        style={{ fontSize: 'clamp(4.5rem,20vw,18rem)' }}
+      >
+        Santiago
+      </p>
     </footer>
   );
 };

@@ -21,7 +21,8 @@
       "projects": "software projects developed",
       "tech": "technologies in my stack"
     },
-    "deck_hint": "Hover: three of my projects"
+    "deck_hint": "Hover: three of my projects",
+    "status_label": "Status"
   },
   "about": {
     "label": "ABOUT ME",
